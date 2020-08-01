@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainRegisterActivity"
+    android:background="@drawable/back_register">
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/spinner"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="15dp"
+        android:background="#F4F0F0"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Instructor"
+            android:textColor="#4dac9d" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Estudiante"
+            android:textColor="#4dac9d" />
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linar_nom"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="15dp"
+        android:autofillHints="hola"/>
+
+    <LinearLayout
+        android:id="@+id/linar_nom"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/linar_nombre"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/input_login">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_above="@+id/button"
+            android:layout_marginHorizontal="10dp"
+            android:hint="Nombre"
+            android:shadowColor="#4dac9d"
+            android:textColor="#4dac9d"
+            android:textColorHighlight="#4dac9d"
+            android:textColorHint="#4dac9d"
+            android:textColorLink="#4dac9d" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linar_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/linar_apellido"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/input_login">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_above="@+id/button"
+            android:layout_marginHorizontal="10dp"
+            android:hint="Apellido"
+            android:shadowColor="#4dac9d"
+            android:textColor="#4dac9d"
+            android:textColorHighlight="#4dac9d"
+            android:textColorHint="#4dac9d"
+            android:textColorLink="#4dac9d" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linar_apellido"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/linar_email"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/input_login">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_above="@+id/button"
+            android:layout_marginHorizontal="10dp"
+            android:hint="Email"
+            android:shadowColor="#4dac9d"
+            android:textColor="#4dac9d"
+            android:textColorHighlight="#4dac9d"
+            android:textColorHint="#4dac9d"
+            android:textColorLink="#4dac9d" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linar_email"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/linar_clave"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/input_login">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_above="@+id/button"
+            android:layout_marginHorizontal="10dp"
+            android:hint="Clave"
+            android:shadowColor="#4dac9d"
+            android:textColor="#4dac9d"
+            android:textColorHighlight="#4dac9d"
+            android:textColorHint="#4dac9d"
+            android:textColorLink="#4dac9d" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linar_clave"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/button"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/input_login">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_above="@+id/button"
+            android:layout_marginHorizontal="10dp"
+            android:hint="Confirmar Clave"
+            android:shadowColor="#4dac9d"
+            android:textColor="#4dac9d"
+            android:textColorHighlight="#4dac9d"
+            android:textColorHint="#4dac9d"
+            android:textColorLink="#4dac9d" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="46dp"
+        android:layout_marginBottom="110dp"
+        android:background="@drawable/boton_main"
+        android:text="Registrar"
+        android:textColor="#ffff"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="629dp" />
+
+
+
+
+</RelativeLayout>
