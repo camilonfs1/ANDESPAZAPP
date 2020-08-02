@@ -4,30 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back_register"
     tools:context=".view.MainRegisterActivity">
 
     <ScrollView
-
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-
+            android:orientation="vertical"
+            android:layout_marginHorizontal="100dp">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="15dp"
-                android:gravity="center"
                 android:text="REGISTRO"
+                android:gravity="center"
                 android:textColor="#4dac9d"
                 android:textSize="25dp"
-                android:textStyle="bold" />
-
+                android:textStyle="bold"
+                android:layout_marginBottom="15dp"/>
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -45,7 +41,7 @@
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/radio_teacher"
+                    android:id="@+id/radio_techer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -60,7 +56,6 @@
                     android:text="Estudiante"
                     android:textColor="#4dac9d" />
             </RadioGroup>
-
             <RadioGroup
                 android:id="@+id/radio_grup_andes"
                 android:layout_width="match_parent"
@@ -96,7 +91,7 @@
             </RadioGroup>
 
             <Spinner
-                android:id="@+id/spinner"
+                android:id="@+id/spin_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/linar_nom"
@@ -109,7 +104,7 @@
                 android:layout_marginEnd="40dp"
                 android:layout_marginRight="40dp"
                 android:layout_marginBottom="15dp"
-                android:autofillHints="hola" />
+                android:autofillHints="hola"/>
 
             <LinearLayout
                 android:id="@+id/linar_nom"
@@ -128,6 +123,7 @@
                 android:background="@drawable/input_login">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txt_full_name"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_marginHorizontal="10dp"
@@ -138,7 +134,6 @@
                     android:textColorHint="#4dac9d"
                     android:textColorLink="#4dac9d" />
             </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/lin_departmen"
                 android:layout_width="match_parent"
@@ -153,41 +148,36 @@
                 android:layout_marginEnd="45dp"
                 android:layout_marginRight="45dp"
                 android:layout_marginBottom="15dp">
-
                 <Spinner
                     android:id="@+id/spin_department"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"/>
 
             </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/lin_age"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:orientation="horizontal"
                 android:layout_above="@+id/lin_email"
                 android:layout_marginStart="40dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginEnd="40dp"
                 android:layout_marginRight="40dp"
-                android:layout_marginBottom="15dp"
 
-                android:orientation="horizontal">
-
+                android:layout_marginBottom="15dp">
                 <Spinner
                     android:id="@+id/spin_age"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
+                    android:layout_weight="1"/>
                 <Spinner
                     android:id="@+id/spin_school"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"/>
             </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/lin_email"
                 android:layout_width="match_parent"
@@ -233,7 +223,6 @@
                 android:layout_marginRight="40dp"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/input_login">
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/txt_pass"
                     android:layout_width="match_parent"
@@ -275,7 +264,6 @@
                     android:textColorHint="#4dac9d"
                     android:textColorLink="#4dac9d" />
             </LinearLayout>
-
             <Button
                 android:id="@+id/btn_register"
                 android:layout_width="match_parent"
@@ -285,11 +273,11 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="50dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginEnd="50dp"
-                android:layout_marginRight="46dp"
-                android:layout_marginBottom="110dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginEnd="60dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/boton_main"
                 android:text="Registrar"
                 android:textColor="#ffff"
@@ -298,6 +286,10 @@
 
         </LinearLayout>
     </ScrollView>
+
+
+
+
 
 
 </RelativeLayout>
