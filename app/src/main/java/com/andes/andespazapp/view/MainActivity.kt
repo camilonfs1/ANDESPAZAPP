@@ -1,11 +1,11 @@
-package com.andes.andespazapp
+package com.andes.andespazapp.view
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.andes.andespazapp.view.MainRegisterActivity
+import com.andes.andespazapp.R
 import com.andes.andespazapp.view.Student.MainStudentMenu
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*

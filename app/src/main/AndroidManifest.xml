@@ -9,7 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.Teacher.MainTeacher"></activity>
+        <activity android:name=".view.Complaints.Receive_Complaints"></activity>
+        <activity android:name=".view.Complaints.Sent_Complaint" />
+        <activity android:name=".view.Chat.Chat_List_Selector" />
+        <activity android:name=".view.Chat.Chat_Module" />
+        <activity android:name=".view.CRUD.ProfileManager" />
+        <activity android:name=".view.Admin.Blog_Manager_Admin" />
+        <activity android:name=".view.Admin.Workshop_Manager_Admin" />
+        <activity android:name=".view.CRUD.SchoolManager" />
+        <activity android:name=".view.CRUD.TeachersManager" />
+        <activity android:name=".view.CRUD.StudentsManager" />
+        <activity android:name=".view.Module_Blog.Blog_main" />
+        <activity android:name=".view.Teacher.MainTeacher" />
         <activity android:name=".view.Admin.MainAdmin" />
         <activity android:name=".view.Student.MainStudentMenu" />
         <activity android:name=".view.MainRegisterActivity" />
@@ -20,7 +31,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".view.MainActivity" />
     </application>
 
 </manifest>
