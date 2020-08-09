@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/rectable_menu"
-    tools:context=".view.Student.MainStudentMenu">
+    tools:context=".View.Student.MainStudentMenu">
 
     <LinearLayout
         android:orientation="vertical"

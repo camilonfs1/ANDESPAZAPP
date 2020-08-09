@@ -1,12 +1,12 @@
-package com.andes.andespazapp.view.Chat
+package com.andes.andespazapp.View.CRUD
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.andes.andespazapp.R
 
-class Chat_Module : AppCompatActivity() {
+class TeachersManager : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_chat__module)
+        setContentView(R.layout.activity_teachers_manager)
     }
 }

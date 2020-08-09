@@ -8,11 +8,10 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.andes.andespazapp.Model.Blog_item
-import com.andes.andespazapp.R
 import kotlinx.android.synthetic.main.blog_horizontal_item.view.*
+import kotlinx.android.synthetic.main.blog_vertical_item.view.*
 
-class AdapterRecyclerHorizontal_blog(private var blogitem: ArrayList<Blog_item>,resource : Int ):    RecyclerView.Adapter<AdapterRecyclerHorizontal_blog.ViewHolder>() {
-
+class AdapterRecyclerVertical_blog(private var blogitem: ArrayList<Blog_item>,resource : Int ):  RecyclerView.Adapter<AdapterRecyclerVertical_blog.ViewHolder>()  {
     var items: ArrayList<Blog_item>? = null
     var resource: Int?  = null
 
@@ -33,24 +32,22 @@ class AdapterRecyclerHorizontal_blog(private var blogitem: ArrayList<Blog_item>,
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items?.get(position)
-        holder.activity?.text = item!!.title
-        holder.linear_botton?.setBackgroundColor(Color.parseColor(item!!.color))
-        holder.linerr_top?.setBackgroundColor(Color.parseColor(item!!.color))
+        holder.title?.text = item!!.title
+        holder.days?.text = item!!.date.toString()+" días"
+        holder.commnetary?.text = item!!.num_commentari.toString()+" Comentarios"
     }
 
     //ViewHolder inner class
     class ViewHolder(v: View) : RecyclerView.ViewHolder(v) {
         var vista = v
-        var activity: TextView? = null
-        var linear_botton: LinearLayout? = null
-        var linerr_top: LinearLayout? = null
+        var title: TextView? = null
+        var days: TextView? = null
+        var commnetary: TextView?  =  null
 
-         init {
-             linerr_top = vista.linear_top
-            linear_botton = vista.linear_botton
-            activity = vista.txt_card_blog_horizontal_item
+        init {
+            title = vista.txt_card_blog_vertical_item
+            days = vista.txt_num_day_V
+            commnetary = vista.txt_num_commentary_V
         }
     }
-
 }
-

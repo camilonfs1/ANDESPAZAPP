@@ -1,12 +1,12 @@
-package com.andes.andespazapp.view.Admin
+package com.andes.andespazapp.View.Admin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.andes.andespazapp.R
 
-class Blog_Manager_Admin : AppCompatActivity() {
+class MainAdmin : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_blog__manager__admin)
+        setContentView(R.layout.activity_main_admin_menu)
     }
 }

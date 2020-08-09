@@ -9,29 +9,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.Complaints.Receive_Complaints"></activity>
-        <activity android:name=".view.Complaints.Sent_Complaint" />
-        <activity android:name=".view.Chat.Chat_List_Selector" />
-        <activity android:name=".view.Chat.Chat_Module" />
-        <activity android:name=".view.CRUD.ProfileManager" />
-        <activity android:name=".view.Admin.Blog_Manager_Admin" />
-        <activity android:name=".view.Admin.Workshop_Manager_Admin" />
-        <activity android:name=".view.CRUD.SchoolManager" />
-        <activity android:name=".view.CRUD.TeachersManager" />
-        <activity android:name=".view.CRUD.StudentsManager" />
-        <activity android:name=".view.Module_Blog.Blog_main" />
-        <activity android:name=".view.Teacher.MainTeacher" />
-        <activity android:name=".view.Admin.MainAdmin" />
-        <activity android:name=".view.Student.MainStudentMenu" />
-        <activity android:name=".view.MainRegisterActivity" />
-        <activity android:name=".view.Splash">
+        <activity android:name=".View.Complaints.Receive_Complaints"></activity>
+        <activity android:name=".View.Complaints.Sent_Complaint" />
+        <activity android:name=".View.Chat.Chat_List_Selector" />
+        <activity android:name=".View.Chat.Chat_Module" />
+        <activity android:name=".View.CRUD.ProfileManager" />
+        <activity android:name=".View.Admin.Blog_Manager_Admin" />
+        <activity android:name=".View.Admin.Workshop_Manager_Admin" />
+        <activity android:name=".View.CRUD.SchoolManager" />
+        <activity android:name=".View.CRUD.TeachersManager" />
+        <activity android:name=".View.CRUD.StudentsManager" />
+        <activity android:name=".View.Module_Blog.Blog_main" />
+        <activity android:name=".View.Teacher.MainTeacher" />
+        <activity android:name=".View.Admin.MainAdmin" />
+        <activity android:name=".View.Student.MainStudentMenu" />
+        <activity android:name=".View.MainRegisterActivity" />
+        <activity android:name=".View.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.MainActivity" />
+        <activity android:name=".View.MainActivity" />
     </application>
 
 </manifest>

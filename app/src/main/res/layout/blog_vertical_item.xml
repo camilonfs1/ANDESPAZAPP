@@ -24,8 +24,8 @@
                 android:gravity="center"
                 android:orientation="vertical">
                 <TextView
-                    android:id="@+id/txt_name_student"
-                    android:text="Segunda discusión, sobre una propuesta para el desarrollo de la ANDES antes del 2021 en el tema principal"
+                    android:id="@+id/txt_card_blog_vertical_item"
+                    android:text="Hola mundo"
                     android:textSize="15dp"
                     android:textColor="#000000"
                     android:gravity="center_vertical"
@@ -48,6 +48,7 @@
                             android:layout_height="match_parent"
                             android:src="@drawable/comentario_icon"/>
                         <TextView
+                            android:id="@+id/txt_num_commentary_V"
                             android:layout_marginTop="6dp"
                             android:text="10 Comentarios"
                             android:textSize="12dp"
@@ -62,6 +63,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
                         <TextView
+                            android:id="@+id/txt_num_day_V"
                             android:layout_marginTop="6dp"
                             android:text="Hace: 10 dias"
                             android:textSize="12dp"

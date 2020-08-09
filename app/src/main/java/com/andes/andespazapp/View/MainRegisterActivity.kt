@@ -1,12 +1,12 @@
-package com.andes.andespazapp.view.CRUD
+package com.andes.andespazapp.View
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.andes.andespazapp.R
 
-class ProfileManager : AppCompatActivity() {
+class MainRegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_profile_manager)
+        setContentView(R.layout.activity_main_register)
     }
 }

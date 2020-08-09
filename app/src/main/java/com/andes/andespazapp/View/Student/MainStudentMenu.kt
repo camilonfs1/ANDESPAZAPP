@@ -1,12 +1,11 @@
-package com.andes.andespazapp.view.Student
+package com.andes.andespazapp.View.Student
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.cardview.widget.CardView
-import com.andes.andespazapp.Model.Blog_item
 import com.andes.andespazapp.R
-import com.andes.andespazapp.view.Module_Blog.Blog_main
+import com.andes.andespazapp.View.Module_Blog.Blog_main
 import kotlinx.android.synthetic.main.activity_main_student_menu.*
 
 class MainStudentMenu : AppCompatActivity() {

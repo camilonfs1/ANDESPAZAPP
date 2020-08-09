@@ -1,12 +1,12 @@
-package com.andes.andespazapp.view.Admin
+package com.andes.andespazapp.View.Chat
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.andes.andespazapp.R
 
-class Workshop_Manager_Admin : AppCompatActivity() {
+class Chat_List_Selector : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_workshop__manager)
+        setContentView(R.layout.activity_chat__list__selector)
     }
 }

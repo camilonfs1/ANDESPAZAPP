@@ -1,4 +1,4 @@
-package com.andes.andespazapp.view
+package com.andes.andespazapp.View
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
