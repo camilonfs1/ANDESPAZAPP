@@ -32,6 +32,7 @@ class Blog_main : AppCompatActivity() {
         setContentView(R.layout.activity_dialog_main)
         main_blog_item_H = recycler_blog_horizontal
         main_blog_item_V = recycler_blog_Vertical
+
         items = ArrayList()
         items_H = ArrayList()
         items_V = ArrayList()
