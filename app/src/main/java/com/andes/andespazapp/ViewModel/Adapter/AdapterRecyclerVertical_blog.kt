@@ -1,14 +1,11 @@
 package com.andes.andespazapp.ViewModel.Adapter
 
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.andes.andespazapp.Model.Blog_item
-import kotlinx.android.synthetic.main.blog_horizontal_item.view.*
 import kotlinx.android.synthetic.main.blog_vertical_item.view.*
 
 class AdapterRecyclerVertical_blog(private var blogitem: ArrayList<Blog_item>,resource : Int ):  RecyclerView.Adapter<AdapterRecyclerVertical_blog.ViewHolder>()  {
