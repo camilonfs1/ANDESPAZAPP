@@ -6,19 +6,19 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.andes.andespazapp.Model.Blog_item
+import com.andes.andespazapp.R
 import kotlinx.android.synthetic.main.blog_vertical_item.view.*
 
-class AdapterRecyclerVertical_blog(private var blogitem: ArrayList<Blog_item>,resource : Int ):  RecyclerView.Adapter<AdapterRecyclerVertical_blog.ViewHolder>()  {
+class AdapterRecyclerVertical_blog:  RecyclerView.Adapter<AdapterRecyclerVertical_blog.ViewHolder>()  {
     var items: ArrayList<Blog_item>? = null
-    var resource: Int?  = null
+    private var BlogViewModel = com.andes.andespazapp.ViewModel.BlogViewModel()
 
     init {
-        this.items = blogitem
-        this.resource =resource
+        this.items = BlogViewModel.verticalAd()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val vista = LayoutInflater.from(parent.context).inflate(resource!!, parent, false)//create instance context
+        val vista = LayoutInflater.from(parent.context).inflate(R.layout.blog_vertical_item, parent, false)//create instance context
         var Holder = ViewHolder(vista)
         return Holder
     }

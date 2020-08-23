@@ -20,7 +20,6 @@ class Blog_main : AppCompatActivity() {
     var main_blog_item_H : RecyclerView? = null
     var main_blog_item_V: RecyclerView? = null
     var home: ImageView?= null
-    var ViewModel :BlogViewModel? = null
     var adaptador_H: AdapterRecyclerHorizontal_blog? = null
     var adaptador_V: AdapterRecyclerVertical_blog? = null
     var layoutmanager: RecyclerView.LayoutManager? =  null
@@ -32,20 +31,17 @@ class Blog_main : AppCompatActivity() {
         main_blog_item_V = recycler_blog_Vertical
 
         home = image_home
-        ViewModel = BlogViewModel()
 
-        adaptador_H = ViewModel!!.horizontalAd(this)
+        adaptador_H = AdapterRecyclerHorizontal_blog()
         layoutmanager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         main_blog_item_H?.layoutManager = layoutmanager
         main_blog_item_H?.adapter = adaptador_H
 
         //------------------------------------------------------------------------------------------
-
-        adaptador_V = ViewModel!!.verticalAd(this)
+        adaptador_V = AdapterRecyclerVertical_blog()
         layoutmanager = LinearLayoutManager(this,LinearLayoutManager.VERTICAL, false)
         main_blog_item_V?.layoutManager = layoutmanager
         main_blog_item_V?.adapter = adaptador_V
-
 
         home!!.setOnClickListener {
             val intent = Intent(this, MainStudentMenu::class.java)

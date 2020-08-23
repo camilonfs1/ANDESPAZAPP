@@ -9,20 +9,20 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.andes.andespazapp.Model.Blog_item
 import com.andes.andespazapp.R
+import com.andes.andespazapp.ViewModel.BlogViewModel
 import kotlinx.android.synthetic.main.blog_horizontal_item.view.*
 
-class AdapterRecyclerHorizontal_blog(private var blogitem: ArrayList<Blog_item>,resource : Int ):    RecyclerView.Adapter<AdapterRecyclerHorizontal_blog.ViewHolder>() {
+class AdapterRecyclerHorizontal_blog:    RecyclerView.Adapter<AdapterRecyclerHorizontal_blog.ViewHolder>() {
 
     var items: ArrayList<Blog_item>? = null
-    var resource: Int?  = null
+    private var BlogViewModel = BlogViewModel()
 
     init {
-        this.items = blogitem
-        this.resource =resource
+        this.items = BlogViewModel.horizontalAd()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val vista = LayoutInflater.from(parent.context).inflate(resource!!, parent, false)//create instance context
+        val vista = LayoutInflater.from(parent.context).inflate(R.layout.blog_horizontal_item, parent, false)//create instance context
         var Holder = ViewHolder(vista)
         return Holder
     }
