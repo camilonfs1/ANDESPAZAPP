@@ -13,7 +13,6 @@ import com.andes.andespazapp.View.Student.MainStudentMenu
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 
-
 class MainActivity : AppCompatActivity() {
     private var register: TextView? = null
     private var mAuth: FirebaseAuth? = null

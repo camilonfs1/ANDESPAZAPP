@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="15dp"
     android:gravity="center"
-    tools:context=".View.Chat.Chat_List_Selector"
+    tools:context=".View.Chat.NewMensage"
     android:background="#fec516"
     android:orientation="vertical">
     <LinearLayout

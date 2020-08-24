@@ -28,7 +28,7 @@ class Blog_Firebase {
         return items!!
     }
 
+    fun write(){
 
-
-
+    }
 }

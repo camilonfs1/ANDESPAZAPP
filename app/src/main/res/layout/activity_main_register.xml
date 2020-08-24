@@ -509,7 +509,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
                         <ImageView
-                            android:src="@drawable/icon_6"
+                            android:src="@drawable/icon_12"
                             android:layout_width="40dp"
                             android:layout_height="40dp"/>
 
@@ -530,7 +530,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
                         <ImageView
-                            android:src="@drawable/icon_6"
+                            android:src="@drawable/icon_11"
                             android:layout_width="40dp"
                             android:layout_height="40dp"/>
 
