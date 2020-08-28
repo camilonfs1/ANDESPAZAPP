@@ -5,12 +5,12 @@ import com.andes.andespazapp.Model.Course
 class Courses_Firebase {
     var items: ArrayList<Course>? = ArrayList()
     fun read(): ArrayList<Course>{
-        items!!.add(Course("curso 1","Boyaca","oiuiuosnkjkaso238"))
-        items!!.add(Course("curso 2","Tolima","oiuiuosnkjkaso238"))
-        items!!.add(Course("curso 3","Costa","oiuiuosnkjkaso238"))
-        items!!.add(Course("curso 4","Nariño","oiuiuosnkjkaso238"))
-        items!!.add(Course("curso 5","Medellin","oiuiuosnkjkaso238"))
-        items!!.add(Course("curso 5","Bogota","oiuiuosnkjkaso238"))
+        items!!.add(Course("curso 1","1","1"))
+        items!!.add(Course("curso 2","2","2"))
+        items!!.add(Course("curso 3","3","3"))
+        items!!.add(Course("curso 4","4","4"))
+        items!!.add(Course("curso 5","5","5"))
+        items!!.add(Course("curso 6","6","6"))
 
         return items!!
     }

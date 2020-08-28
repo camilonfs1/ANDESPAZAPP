@@ -36,7 +36,7 @@ class DB_Administrator (context: Context): SQLiteOpenHelper(context,DATABASE_NAM
         val db = this.writableDatabase
         var cv = ContentValues()
         cv.put(COL_NAME,user.name)
-        cv.put(COL_AGE,user.id)
+        cv.put(COL_AGE,user.key)
         var result = db.insert(TABLE_NAME,null,cv)
 
         if(result == -1.toLong()){
@@ -55,7 +55,7 @@ class DB_Administrator (context: Context): SQLiteOpenHelper(context,DATABASE_NAM
         if(result.moveToFirst()){
             do {
                 var user = User()
-                user.id = result.getString(result.getColumnIndex(COL_ID)).toString()
+                user.key = result.getString(result.getColumnIndex(COL_ID)).toString()
                 user.name = result.getString(result.getColumnIndex(COL_NAME)).toString()
                 res = user
             } while (result.moveToNext())
