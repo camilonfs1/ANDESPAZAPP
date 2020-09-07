@@ -9,15 +9,18 @@ import android.widget.SpinnerAdapter
 import com.andes.andespazapp.Model.Firebase.Region_Firebase
 import com.andes.andespazapp.Model.Region
 
-class AdapterSpinnerRegion: AdapterView.OnItemSelectedListener  {
+class AdapterSpinnerRegion : AdapterView.OnItemSelectedListener {
 
-    var db : Region_Firebase = Region_Firebase()
+    var db: Region_Firebase = Region_Firebase()
     var list_of_items: ArrayList<Region>? = null
     var namesRegion: ArrayList<String> = ArrayList()
 
+    init {
+        this.list_of_items = db.readDB()
+    }
 
     fun full(context: Context): SpinnerAdapter {
-        list_of_items = db.readDB()
+        // list_of_items = db.readDB()
         list_of_items!!.forEach {
             namesRegion.add(it.name)
         }
@@ -30,5 +33,14 @@ class AdapterSpinnerRegion: AdapterView.OnItemSelectedListener  {
     }
 
     override fun onNothingSelected(parent: AdapterView<*>?) {
+    }
+
+    fun getkey(region : String):String {
+        list_of_items!!.forEach {
+            if(it.name == region){
+                return it.key
+            }
+        }
+        return "0"
     }
 }

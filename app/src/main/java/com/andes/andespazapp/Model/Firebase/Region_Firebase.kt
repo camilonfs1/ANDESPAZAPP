@@ -8,6 +8,9 @@ class Region_Firebase {
     fun readDB(): ArrayList<Region>{
         item = ArrayList()
         item!!.add(
+            Region("0", "Region : ", "01")
+        )
+        item!!.add(
             Region("1", "Norte", "1")
         )
         item!!.add(

@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
 
         btn_enter!!.setOnClickListener{
-            writeDB()
+            //writeDB()
             val intent = Intent(this, MainStudentMenu::class.java)
             startActivity(intent)
 
@@ -42,9 +42,9 @@ class MainActivity : AppCompatActivity() {
         val currentUser = mAuth!!.currentUser
     }
 
-    fun writeDB(){
-        var User = User("camilo vargas", "123")
+   /* fun writeDB(){
+        //var User = User("camilo vargas", "123")
         var db = DB_Administrator(this)
         db.insertData(User)
-    }
+    }*/
 }

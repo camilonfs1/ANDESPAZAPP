@@ -29,8 +29,18 @@ class AdapterSpinnerSchool: AdapterView.OnItemSelectedListener {
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+
     }
 
     override fun onNothingSelected(parent: AdapterView<*>?) {
+    }
+
+    fun getkey(course : String):String {
+        list_of_items!!.forEach {
+            if(it.name == course){
+                return it.key.toString()
+            }
+        }
+        return "0"
     }
 }

@@ -14,4 +14,9 @@
     <color name="color7">#81C784</color>
     <color name="color8">#AED581</color>
     <color name="color9">#DCE775</color>
+
+    <color name="color_click">#BDE2FF</color>
+    <color name="color_noClick">#FF0000</color>
+
+
 </resources>
