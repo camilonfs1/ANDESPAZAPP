@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import com.andes.andespazapp.DB.DB_Administrator
 import com.andes.andespazapp.R
+import com.andes.andespazapp.View.CRUD.CRUD_Individual_User
 import com.andes.andespazapp.View.Complaints.Receive_Complaints
 import com.andes.andespazapp.View.Complaints.Sent_Complaint
 import com.andes.andespazapp.View.Learn.Main_Learn
@@ -16,6 +17,9 @@ import kotlinx.android.synthetic.main.activity_main_student_menu.*
 class MainStudentMenu : AppCompatActivity() {
     var btn_blog: CardView? = null
     var btn_complain: CardView? = null
+    var btn_profile: CardView? = null
+
+
     var btn_lear: CardView? = null
     var txt_name:TextView? = null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,6 +27,7 @@ class MainStudentMenu : AppCompatActivity() {
         setContentView(R.layout.activity_main_student_menu)
         btn_complain = btn_complaint
         btn_blog = card_blog_student
+        btn_profile = profile_student_card
         btn_lear = btn_learn
         txt_name = txt_name_student
 
@@ -31,6 +36,11 @@ class MainStudentMenu : AppCompatActivity() {
 
         txt_name!!.setText(user.id)*/
 
+        btn_profile!!.setOnClickListener{
+            val intent = Intent(this, CRUD_Individual_User::class.java)
+            intent.putExtra("id", "123456")
+            startActivity(intent)
+        }
 
 
         btn_lear!!.setOnClickListener{
