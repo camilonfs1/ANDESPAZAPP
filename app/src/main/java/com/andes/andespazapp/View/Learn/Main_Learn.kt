@@ -20,6 +20,8 @@ class Main_Learn : AppCompatActivity() {
        var viewPager1 = viewPager2
        viewPager1?.setAdapter(adapter)
        viewPager1!!.setPadding(130, 0, 130, 0)
+
+        ///https://co.pinterest.com/pin/730568370794971612/
     }
 
 }

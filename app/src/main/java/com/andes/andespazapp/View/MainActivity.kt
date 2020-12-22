@@ -14,9 +14,11 @@ import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
     private var register: TextView? = null
     private var mAuth: FirebaseAuth? = null
     private var btn_enter: Button? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -24,12 +26,13 @@ class MainActivity : AppCompatActivity() {
         btn_enter = btn_inter
 
         mAuth = FirebaseAuth.getInstance()
+        var connect  = ApiRest_Connection()
 
         btn_enter!!.setOnClickListener{
             //writeDB()
-            val intent = Intent(this, MainStudentMenu::class.java)
-            startActivity(intent)
-
+           /* val intent = Intent(this, MainStudentMenu::class.java)
+            startActivity(intent)*/
+            connect.connection()
         }
         register!!.setOnClickListener {
             val intent = Intent(this, MainRegisterActivity::class.java)

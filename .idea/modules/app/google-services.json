@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "79142261365",
+    "firebase_url": "https://andespazapp.firebaseio.com",
+    "project_id": "andespazapp",
+    "storage_bucket": "andespazapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:79142261365:android:fda5da1308559194609e3c",
+        "android_client_info": {
+          "package_name": "com.andes.andespazapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "79142261365-c3g9gdho3erpk1nnhgs4222jhbmf5vc1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.andes.andespazapp",
+            "certificate_hash": "b627aa3a7a5796e0e91f6839f375be02c41c7509"
+          }
+        },
+        {
+          "client_id": "79142261365-fe7k6dbq3q285nkhm7r1rbk0ncskk49i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAO0Re3oWDvHSgURSDVfKxNYFuXSCv-YsI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "79142261365-fe7k6dbq3q285nkhm7r1rbk0ncskk49i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
