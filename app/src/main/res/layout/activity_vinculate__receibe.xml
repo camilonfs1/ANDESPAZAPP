@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#673AB7"
+    android:padding="15dp"
+    android:gravity="center"
+    tools:context=".View.Vinculate.Vinculate_Receibe">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@drawable/linear_layuout_back">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Formulario vinculate a la ANDES"
+            android:gravity="center"
+            android:textStyle="italic|bold"
+            android:textSize="25dp"
+            android:textColor="#673AB7"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre:"
+            android:textStyle="bold"/>
+        <Spinner
+            android:id="@+id/txt_complaint_tipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/txtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:hint="Envia un mensaje:"
+            android:inputType="textEmailSubject"
+            android:textStyle="bold"
+            android:gravity="top"/>
+
+        <EditText
+            android:id="@+id/txtPassConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Telefono de contacto"
+            android:textStyle="bold"
+            android:inputType="textPassword"/>
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enviar"
+            android:layout_gravity="bottom"
+            android:textColor="@android:color/white"
+            android:background="@drawable/btn_back"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

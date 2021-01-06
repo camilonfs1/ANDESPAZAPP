@@ -19,20 +19,23 @@ class MainActivity : AppCompatActivity() {
     private var mAuth: FirebaseAuth? = null
     private var btn_enter: Button? = null
 
+    private lateinit var auth: FirebaseAuth
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         register = txt_register
         btn_enter = btn_inter
+        val currentUser = auth.currentUser
 
         mAuth = FirebaseAuth.getInstance()
-        var connect  = ApiRest_Connection()
 
         btn_enter!!.setOnClickListener{
             //writeDB()
-           /* val intent = Intent(this, MainStudentMenu::class.java)
-            startActivity(intent)*/
-            connect.connection()
+            val intent = Intent(this, MainStudentMenu::class.java)
+            startActivity(intent)
         }
         register!!.setOnClickListener {
             val intent = Intent(this, MainRegisterActivity::class.java)

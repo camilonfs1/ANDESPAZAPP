@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".View.Learn.qz"></activity>
+        <activity android:name=".View.Vinculate.Vinculate_Receibe"></activity>
+        <activity android:name=".View.Vinculate.Vinculate_Sent" />
+        <activity android:name=".View.Vinculate.Vinculate_Main" />
+        <activity android:name=".View.Complaints.DDHH_Complaints" />
+        <activity android:name=".View.Learn.qz" />
         <activity android:name=".View.Learn.Receibe_activity" />
         <activity android:name=".View.Learn.MainMemory" />
         <activity android:name=".View.Learn.Activity" />

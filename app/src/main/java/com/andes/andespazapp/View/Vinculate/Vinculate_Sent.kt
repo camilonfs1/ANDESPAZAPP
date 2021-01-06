@@ -1,16 +1,12 @@
-package com.andes.andespazapp.View.Chat
+package com.andes.andespazapp.View.Vinculate
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.andes.andespazapp.R
 
-class NewMensage : AppCompatActivity() {
+class Vinculate_Sent : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_chat__list__selector)
-
-
+        setContentView(R.layout.activity_vinculate__sent)
     }
-
-
 }
