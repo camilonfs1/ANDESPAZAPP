@@ -1,9 +1,13 @@
 package com.andes.andespazapp.View.Module_Blog
 
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Window
 import android.widget.ImageView
+import androidx.annotation.RequiresApi
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.andes.andespazapp.Model.Blog_item
@@ -24,9 +28,15 @@ class Blog_main : AppCompatActivity() {
     var adaptador_V: AdapterRecyclerVertical_blog? = null
     var layoutmanager: RecyclerView.LayoutManager? =  null
 
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dialog_main)
+
+        val window: Window = this@Blog_main.window
+        window.statusBarColor = ContextCompat.getColor(this@Blog_main, R.color.colorAccent)
+
+
         main_blog_item_H = recycler_blog_horizontal
         main_blog_item_V = recycler_blog_Vertical
 

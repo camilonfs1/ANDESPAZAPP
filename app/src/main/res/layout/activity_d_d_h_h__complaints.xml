@@ -25,33 +25,35 @@
             android:textColor="#673AB7"/>
 
         <EditText
+            android:id="@+id/primero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nombre:"
+            android:hint="Primero:"
             android:textStyle="bold"/>
         <Spinner
             android:id="@+id/txt_complaint_tipe"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <EditText
-            android:id="@+id/txtEmail"
+
+            android:id="@+id/segundo"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:hint="Envia un mensaje:"
+            android:hint="Segundo:"
             android:inputType="textEmailSubject"
             android:textStyle="bold"
             android:gravity="top"/>
 
         <EditText
-            android:id="@+id/txtPassConfirm"
+            android:id="@+id/tercero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Telefono de contacto"
+            android:hint="Tercero:"
             android:textStyle="bold"
             android:inputType="textPassword"/>
 
         <Button
-            android:id="@+id/btnRegister"
+            android:id="@+id/enviar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Enviar"

@@ -1,14 +1,22 @@
 package com.andes.andespazapp.View.Student
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
+import android.os.Build
 import android.os.Bundle
+import android.view.Window
 import android.widget.TextView
+import androidx.annotation.RequiresApi
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import androidx.core.content.ContextCompat
 import com.andes.andespazapp.DB.DB_Administrator
+import com.andes.andespazapp.Model.User
 import com.andes.andespazapp.R
 import com.andes.andespazapp.View.CRUD.CRUD_Individual_User
-import com.andes.andespazapp.View.Complaints.Receive_Complaints
+import com.andes.andespazapp.View.Complaints.DDHH_Complaints
 import com.andes.andespazapp.View.Complaints.Sent_Complaint
 import com.andes.andespazapp.View.Learn.Main_Learn
 import com.andes.andespazapp.View.Module_Blog.Blog_main
@@ -19,17 +27,27 @@ class MainStudentMenu : AppCompatActivity() {
     var btn_complain: CardView? = null
     var btn_profile: CardView? = null
 
+    var btn_ddhh: CardView? = null
 
     var btn_lear: CardView? = null
     var txt_name:TextView? = null
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_student_menu)
+
+        //Start()
+
+        //This lines change statusBarcolor by specific color in colors.xml
+        val window: Window = this@MainStudentMenu.window
+        window.statusBarColor = ContextCompat.getColor(this@MainStudentMenu, R.color.color3)
+
         btn_complain = btn_complaint
         btn_blog = card_blog_student
         btn_profile = profile_student_card
         btn_lear = btn_learn
         txt_name = txt_name_student
+        btn_ddhh = ddhh_card
 
         /*var db = DB_Administrator(this)
         var user = db.readData("6")
@@ -41,7 +59,6 @@ class MainStudentMenu : AppCompatActivity() {
             intent.putExtra("id", "123456")
             startActivity(intent)
         }
-
 
         btn_lear!!.setOnClickListener{
             val intent = Intent(this, Main_Learn::class.java)
@@ -55,6 +72,14 @@ class MainStudentMenu : AppCompatActivity() {
             val intent = Intent(this, Sent_Complaint::class.java)
             startActivity(intent)
         }
+        btn_ddhh!!.setOnClickListener{
+            val intent = Intent(this, DDHH_Complaints::class.java)
+            startActivity(intent)
+        }
     }
 
+
+
 }
+
+

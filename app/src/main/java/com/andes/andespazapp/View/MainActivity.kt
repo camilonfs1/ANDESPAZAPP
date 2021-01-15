@@ -4,36 +4,41 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.andes.andespazapp.DB.DB_Administrator
 import com.andes.andespazapp.Model.User
 import com.andes.andespazapp.R
 import com.andes.andespazapp.View.Student.MainStudentMenu
+import com.andes.andespazapp.ViewModel.Login_ViewModel
+import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     private var register: TextView? = null
-    private var mAuth: FirebaseAuth? = null
     private var btn_enter: Button? = null
+    private var txt_email: TextInputEditText? =null
+    private var txt_pass: TextInputEditText?=null
 
     private lateinit var auth: FirebaseAuth
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        txt_email = input_email
+        txt_pass = input_password
         register = txt_register
         btn_enter = btn_inter
-        val currentUser = auth.currentUser
 
-        mAuth = FirebaseAuth.getInstance()
-
+        var login = Login_ViewModel()
         btn_enter!!.setOnClickListener{
-            //writeDB()
+            //login.login_funtion(this,txt_email!!.text.toString(),txt_pass!!.text.toString()) -----> NO BORRAR, LOGIN FUNCIONAL
+
+
             val intent = Intent(this, MainStudentMenu::class.java)
             startActivity(intent)
         }
@@ -42,15 +47,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-    override fun onStart() {
-        super.onStart()
-        // Check if user is signed in (non-null) and update UI accordingly.
-        val currentUser = mAuth!!.currentUser
-    }
 
-   /* fun writeDB(){
-        //var User = User("camilo vargas", "123")
-        var db = DB_Administrator(this)
-        db.insertData(User)
-    }*/
+
+
 }

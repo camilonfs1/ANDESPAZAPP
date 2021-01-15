@@ -1,7 +1,5 @@
 package com.andes.andespazapp.Model
 
-import android.util.Log
-import com.andes.andespazapp.View.Chat.Chat_Module.Companion.TAG
 
 class User {
     var key: String? = null
