@@ -160,7 +160,7 @@ class CRUD_Individual_User : AppCompatActivity() {
                     txtname!!.text.toString(),
                     user1.region.toString(),
                     user1.age.toString(),
-                    user1.course.toString(),
+                    user1.identify.toString(),
                     txtemail!!.text.toString(),
                     icon!!
                 )

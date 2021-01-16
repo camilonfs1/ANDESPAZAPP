@@ -25,6 +25,7 @@ class DDHH_Complaints : AppCompatActivity() {
 
 
     var databaseHandler: DB_Administrator?=null
+    var user:User? = null
 
 
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
@@ -44,10 +45,14 @@ class DDHH_Complaints : AppCompatActivity() {
 
         btnenviar = enviar
 
+        user = User("1","estudiante",true,"camilo","123456789","bogota","15","camilo12@gmail.com",1)
+
         btnenviar!!.setOnClickListener {
             var ddhhh = ddhh(txtprimero!!.text.toString(),txtsegundo!!.text.toString(),txttercero!!.text.toString())
 
-           if(databaseHandler!!.insertData2("uno","dos","tres")){
+
+
+           if(databaseHandler!!.insertData2(user!!,"dos","tres")){
                 Toast.makeText(this, "carga",Toast.LENGTH_LONG).show()
            }
            // databaseHandler!!.insertData2(ddhhh)
@@ -55,9 +60,9 @@ class DDHH_Complaints : AppCompatActivity() {
             var lista = databaseHandler!!.getprice()
 
             var i=0
-            for(Item :String in lista){
+            for(Item :User in lista){
                 i++
-                System.out.println(Item+" - "+ i)
+                System.out.println(Item.name+" - "+ Item.key+" - "+Item.email)
             }
 
                       //Start()
