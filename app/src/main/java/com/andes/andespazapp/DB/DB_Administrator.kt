@@ -50,7 +50,7 @@ class DB_Administrator (context: Context): SQLiteOpenHelper(context,DATABASE_NAM
         onCreate(db)
     }
 
-    fun insertData_user(user:User,producto2:String,producto3:String):Boolean{
+    fun insertData_user(user:User):Boolean{
         val db = this.writableDatabase
         var values = ContentValues()
         values.put("roll",user.roll)
@@ -64,13 +64,12 @@ class DB_Administrator (context: Context): SQLiteOpenHelper(context,DATABASE_NAM
         var result = db.insert(TABLE1, null, values)
         if(result == -1.toLong()){
             System.out.println("falla")
+            return false
         }else{
             System.out.println("all ok")
+            return true
         }
-
-
         db.close()
-        return true
     }
 
     fun getprice(): ArrayList<User>{

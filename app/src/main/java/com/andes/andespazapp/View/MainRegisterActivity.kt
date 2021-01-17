@@ -17,13 +17,15 @@ import org.w3c.dom.Text
 import java.util.EnumSet.range
 import androidx.core.view.isVisible as isVisible1
 
+//------------------------------------->  OK
+
+
+
 class MainRegisterActivity : AppCompatActivity() {
 
     var spinCourse: Spinner? = null
-    var spinRegion: Spinner? = null
     var spinAge: Spinner? = null
-
-
+    
     //icon_1_card
     var icon_11: LinearLayout? = null
     var icon_12: LinearLayout? = null
@@ -54,6 +56,7 @@ class MainRegisterActivity : AppCompatActivity() {
     var txt_pass: TextView? = null
     var txt_confirm_pass: TextView? = null
     var txt_id: TextView? = null
+    var txtRegion: TextView? = null
 
 
     var roll: String? = null
@@ -75,7 +78,7 @@ class MainRegisterActivity : AppCompatActivity() {
         txt_pass = txt_pass_register
         txt_confirm_pass = txt_confirm_pass_register
         txt_id = txt_id_register
-
+        txtRegion = txt_region
 
 
         btn_regis = btn_register
@@ -108,141 +111,88 @@ class MainRegisterActivity : AppCompatActivity() {
 
         icon_11!!.setOnClickListener {
             icon = 1
-            icon_selected(icon_11!!)
-        }
-        icon_12!!.setOnClickListener {
+            icon_selected(icon_11!!)}
+        icon_12!!.setOnClickListener{
             icon = 2
-            icon_selected(icon_12!!)
-        }
-        icon_13!!.setOnClickListener {
+            icon_selected(icon_12!!)}
+        icon_13!!.setOnClickListener{
             icon = 3
-            icon_selected(icon_13!!)
-        }
-        icon_14!!.setOnClickListener {
+            icon_selected(icon_13!!)}
+        icon_14!!.setOnClickListener{
             icon = 4
-            icon_selected(icon_14!!)
-        }
-        icon_21!!.setOnClickListener {
+            icon_selected(icon_14!!)}
+        icon_21!!.setOnClickListener{
             icon = 5
-            icon_selected(icon_21!!)
-        }
-        icon_22!!.setOnClickListener {
+            icon_selected(icon_21!!)}
+        icon_22!!.setOnClickListener{
             icon = 6
-            icon_selected(icon_22!!)
-        }
-        icon_23!!.setOnClickListener {
+            icon_selected(icon_22!!)}
+        icon_23!!.setOnClickListener{
             icon = 7
-            icon_selected(icon_23!!)
-        }
-        icon_24!!.setOnClickListener {
+            icon_selected(icon_23!!)}
+        icon_24!!.setOnClickListener{
             icon = 8
-            icon_selected(icon_24!!)
-        }
-        icon_31!!.setOnClickListener {
+            icon_selected(icon_24!!)}
+        icon_31!!.setOnClickListener{
             icon = 9
-            icon_selected(icon_31!!)
-        }
-        icon_32!!.setOnClickListener {
+            icon_selected(icon_31!!)}
+        icon_32!!.setOnClickListener{
             icon = 10
-            icon_selected(icon_32!!)
-        }
-        icon_33!!.setOnClickListener {
+            icon_selected(icon_32!!)}
+        icon_33!!.setOnClickListener{
             icon = 11
-            icon_selected(icon_33!!)
-        }
-        icon_34!!.setOnClickListener {
+            icon_selected(icon_33!!)}
+        icon_34!!.setOnClickListener{
             icon = 12
-            icon_selected(icon_34!!)
-        }
+            icon_selected(icon_34!!)}
 
         spinCourse = spin_school
-        spinRegion = spin_region
         spinAge = spin_age_register
-        spinRegion!!.adapter = adapterRegion.full(this)
-
-
-        spinCourse!!.onItemSelectedListener.toString()
 
         radiogroup_andes?.setOnCheckedChangeListener { group, checkedId ->
             val radio: RadioButton = findViewById(checkedId)
-            if (radio.text.toString() == "Si") {
-                andes = true
-            } else {
-                andes = false
-            }
+            if (radio.text.toString() == "Si") {andes = true
+            } else {andes = false}
         }
         radiogroup_roll?.setOnCheckedChangeListener { group, checkedId ->
             val radio: RadioButton = findViewById(checkedId)
             roll = radio.text.toString()
-            if (roll == "Instructor") {
-                spinCourse!!.adapter = null
-            } else {
-                spinCourse!!.adapter = adapterCourse.full(this)
-            }
+
         }
         btn_regis!!.setOnClickListener {
-            if (roll == null) {
-                Toast.makeText(this, "Valida tu Roll", Toast.LENGTH_SHORT).show()
-            } else if (andes == null) {
-                Toast.makeText(this, "Valida si eres de la ANDES", Toast.LENGTH_SHORT).show()
-            } else if (nameTxt!!.text.toString() == "") {
-                Toast.makeText(this, "Ingresa un nombre", Toast.LENGTH_SHORT).show()
-            } else if (txt_id!!.text.toString() == "") {
-                Toast.makeText(this, "Ingresa un numero de identificacion", Toast.LENGTH_SHORT)
-                    .show()
-            } else if (spinRegion!!.getSelectedItem().toString() == "Region : ") {
-                Toast.makeText(this, "Ingresa una region", Toast.LENGTH_SHORT).show()
-            } else if (spinAge!!.getSelectedItem().toString() == "Edad :") {
-                Toast.makeText(this, "Ingresa una edad", Toast.LENGTH_SHORT).show()
-            } else if (roll == "Estudiante" && spinCourse!!.getSelectedItem()
-                    .toString() == "Curso : "
-            ) {
-                Toast.makeText(this, "Ingresa un curso", Toast.LENGTH_SHORT).show()
-            } else if (txt_Email!!.text.toString() == "" && valida_email()) {
-                Toast.makeText(this, "Ingresa un Email", Toast.LENGTH_SHORT).show()
-            } else if (txt_pass!!.text.toString() == "") {
-                Toast.makeText(this, "Ingresa contraseña valida", Toast.LENGTH_SHORT).show()
-            } else if (txt_confirm_pass!!.text.toString() != (txt_pass!!.text.toString())) {
-                Toast.makeText(this, "Ingresa contraseña valida e igual", Toast.LENGTH_SHORT).show()
-            } else if (icon == 0) {
-                Toast.makeText(this, "Selecciona un icono", Toast.LENGTH_SHORT).show()
+            if (roll == null)                                                                            {Toast.makeText(this, "Valida tu Roll", Toast.LENGTH_SHORT).show()
+            } else if (andes == null)                                                                    {Toast.makeText(this, "Valida si eres de la ANDES", Toast.LENGTH_SHORT).show()
+            } else if (nameTxt!!.text.toString() == "")                                                  {Toast.makeText(this, "Ingresa un nombre", Toast.LENGTH_SHORT).show()
+            } else if (txt_id!!.text.toString() == "")                                                   {Toast.makeText(this, "Ingresa un numero de identificacion", Toast.LENGTH_SHORT).show()
+            } else if (txtRegion!!.text.toString() == "Region : ")                                       {Toast.makeText(this, "Ingresa una region", Toast.LENGTH_SHORT).show()
+            } else if (spinAge!!.getSelectedItem().toString() == "Edad :")                               {Toast.makeText(this, "Ingresa una edad", Toast.LENGTH_SHORT).show()
+            } else if (roll == "Estudiante" && spinCourse!!.getSelectedItem().toString() == "Curso : ")  {Toast.makeText(this, "Ingresa un curso", Toast.LENGTH_SHORT).show()
+            } else if (txt_Email!!.text.toString() == "" && valida_email())                              {Toast.makeText(this, "Ingresa un Email", Toast.LENGTH_SHORT).show()
+            } else if (txt_pass!!.text.toString() == "")                                                 {Toast.makeText(this, "Ingresa contraseña valida", Toast.LENGTH_SHORT).show()
+            } else if (txt_confirm_pass!!.text.toString() != (txt_pass!!.text.toString()))               {Toast.makeText(this, "Ingresa contraseña valida e igual", Toast.LENGTH_SHORT).show()
+            } else if (icon == 0)                                                                        {Toast.makeText(this, "Selecciona un icono", Toast.LENGTH_SHORT).show()
             } else {
-                var curso = ""
-                if (roll == "Instructor") {
-                    curso = ""
-                } else {
-                    curso = adapterCourse.getkey(spinCourse!!.getSelectedItem().toString())
-                }
-
-                var regionkey = adapterRegion.getkey(spinRegion!!.getSelectedItem().toString())
-
-
                 var user = User(
-                    txt_id!!.text.toString(),
-                    roll!!,
-                    andes!!,
+                    "1",roll!!,andes!!,
                     nameTxt!!.text.toString(),
-                    regionkey,
+                    txt_id!!.text.toString(),
+                    txtRegion!!.text.toString(),
                     spinAge!!.getSelectedItem().toString(),
-                    curso,
                     txt_Email!!.text.toString(),
                     icon
                 )
                 registerView.writebd(user, txt_pass!!.text.toString(), this)
+                registerView.writelocal(user,this)
             }
         }
     }
-
-
     fun icon_selected(cardSelecte: LinearLayout) {
         for (i in card) {
             var cardItem = i
             cardItem.setBackgroundColor(Color.parseColor("#FFFFFF"))
         }
         cardSelecte.setBackgroundColor(Color.parseColor("#01ff90"))
-
     }
-
     fun valida_email(): Boolean {
         return true
     }

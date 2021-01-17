@@ -3,6 +3,7 @@ package com.andes.andespazapp.Model.Firebase
 import android.content.Context
 import android.content.Intent
 import android.widget.Toast
+import com.andes.andespazapp.DB.DB_Administrator
 import com.andes.andespazapp.Model.User
 import com.andes.andespazapp.View.MainRegisterActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -13,6 +14,9 @@ class Register_Firebase {
     private var mDatabase: DatabaseReference? = null
     private var mMessageReference: DatabaseReference? = null
     private var mAuth: FirebaseAuth? = FirebaseAuth.getInstance()
+
+    //local
+    var databaseHandler: DB_Administrator?=null
 
 
     fun RegisterUser(user: User,context: Context,Pass:String){
@@ -43,6 +47,12 @@ class Register_Firebase {
                     ).show()
                 }
             }
+    }
+    fun reg_local(context: Context, user:User){
+        databaseHandler = DB_Administrator(context)
+        if(databaseHandler!!.insertData_user(user!!)){
+            Toast.makeText(context, "carga",Toast.LENGTH_LONG).show()
+        }
     }
     private fun regNew(context: Context) {
         var intent = Intent(context, MainRegisterActivity::class.java)

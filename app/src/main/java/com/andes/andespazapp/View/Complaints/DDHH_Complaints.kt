@@ -50,15 +50,10 @@ class DDHH_Complaints : AppCompatActivity() {
         btnenviar!!.setOnClickListener {
             var ddhhh = ddhh(txtprimero!!.text.toString(),txtsegundo!!.text.toString(),txttercero!!.text.toString())
 
-
-
-           if(databaseHandler!!.insertData2(user!!,"dos","tres")){
+           if(databaseHandler!!.insertData_user(user!!)){
                 Toast.makeText(this, "carga",Toast.LENGTH_LONG).show()
            }
-           // databaseHandler!!.insertData2(ddhhh)
-
             var lista = databaseHandler!!.getprice()
-
             var i=0
             for(Item :User in lista){
                 i++
