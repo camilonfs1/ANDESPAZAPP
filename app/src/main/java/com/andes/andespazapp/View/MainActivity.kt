@@ -6,6 +6,7 @@ import android.os.PersistableBundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.andes.andespazapp.DB.DB_Administrator
 import com.andes.andespazapp.Model.User
@@ -36,11 +37,17 @@ class MainActivity : AppCompatActivity() {
 
         var login = Login_ViewModel()
         btn_enter!!.setOnClickListener{
-            //login.login_funtion(this,txt_email!!.text.toString(),txt_pass!!.text.toString()) -----> NO BORRAR, LOGIN FUNCIONAL
+
+            if(txt_email!!.text.toString()==""||txt_pass!!.text.toString()==""){
+                Toast.makeText(this,"Ingresa los datos completos",Toast.LENGTH_LONG).show()
+            }else{
+                login.login_funtion(this,txt_email!!.text.toString(),txt_pass!!.text.toString())
+            }
 
 
-            val intent = Intent(this, MainStudentMenu::class.java)
-            startActivity(intent)
+
+            /*val intent = Intent(this, MainStudentMenu::class.java)
+            startActivity(intent)*/
         }
         register!!.setOnClickListener {
             val intent = Intent(this, MainRegisterActivity::class.java)

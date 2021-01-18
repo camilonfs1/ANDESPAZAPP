@@ -13,7 +13,7 @@ class Login_Firebase {
         mAuth?.signInWithEmailAndPassword(Email,Pass)!!
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    updateUI(context)
+                    updateUI(context, Email)
                 } else {
                     Toast.makeText(
                         context,
@@ -23,10 +23,10 @@ class Login_Firebase {
                 }
             }
     }
-    private fun updateUI(context: Context) {
-        val mUser = mAuth!!.currentUser
+    private fun updateUI(context: Context, email:String) {
+
         var intent = Intent(context, MainStudentMenu::class.java)
-        intent.putExtra("mUser", mUser)
+        intent.putExtra("mUser", "")
         context.startActivity(intent)
     }
 

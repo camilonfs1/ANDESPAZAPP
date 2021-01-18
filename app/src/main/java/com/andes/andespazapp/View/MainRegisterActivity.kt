@@ -25,7 +25,7 @@ class MainRegisterActivity : AppCompatActivity() {
 
     var spinCourse: Spinner? = null
     var spinAge: Spinner? = null
-    
+
     //icon_1_card
     var icon_11: LinearLayout? = null
     var icon_12: LinearLayout? = null
@@ -39,10 +39,6 @@ class MainRegisterActivity : AppCompatActivity() {
     var icon_32: LinearLayout? = null
     var icon_33: LinearLayout? = null
     var icon_34: LinearLayout? = null
-
-
-    var adapterCourse = AdapterSpinnerSchool()
-    var adapterRegion = AdapterSpinnerRegion()
 
     var btn_regis: Button? = null
 
@@ -66,7 +62,6 @@ class MainRegisterActivity : AppCompatActivity() {
 
     var card = ArrayList<LinearLayout>()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_register)
@@ -79,7 +74,6 @@ class MainRegisterActivity : AppCompatActivity() {
         txt_confirm_pass = txt_confirm_pass_register
         txt_id = txt_id_register
         txtRegion = txt_region
-
 
         btn_regis = btn_register
 
@@ -149,6 +143,8 @@ class MainRegisterActivity : AppCompatActivity() {
         spinCourse = spin_school
         spinAge = spin_age_register
 
+
+
         radiogroup_andes?.setOnCheckedChangeListener { group, checkedId ->
             val radio: RadioButton = findViewById(checkedId)
             if (radio.text.toString() == "Si") {andes = true
@@ -166,7 +162,6 @@ class MainRegisterActivity : AppCompatActivity() {
             } else if (txt_id!!.text.toString() == "")                                                   {Toast.makeText(this, "Ingresa un numero de identificacion", Toast.LENGTH_SHORT).show()
             } else if (txtRegion!!.text.toString() == "Region : ")                                       {Toast.makeText(this, "Ingresa una region", Toast.LENGTH_SHORT).show()
             } else if (spinAge!!.getSelectedItem().toString() == "Edad :")                               {Toast.makeText(this, "Ingresa una edad", Toast.LENGTH_SHORT).show()
-            } else if (roll == "Estudiante" && spinCourse!!.getSelectedItem().toString() == "Curso : ")  {Toast.makeText(this, "Ingresa un curso", Toast.LENGTH_SHORT).show()
             } else if (txt_Email!!.text.toString() == "" && valida_email())                              {Toast.makeText(this, "Ingresa un Email", Toast.LENGTH_SHORT).show()
             } else if (txt_pass!!.text.toString() == "")                                                 {Toast.makeText(this, "Ingresa contraseña valida", Toast.LENGTH_SHORT).show()
             } else if (txt_confirm_pass!!.text.toString() != (txt_pass!!.text.toString()))               {Toast.makeText(this, "Ingresa contraseña valida e igual", Toast.LENGTH_SHORT).show()

@@ -22,22 +22,20 @@ class Register_Firebase {
     fun RegisterUser(user: User,context: Context,Pass:String){
         mDatabase = FirebaseDatabase.getInstance().reference
         mMessageReference = FirebaseDatabase.getInstance().getReference("message")
-        if(user.roll=="Instructor"){
-            mDatabase = mDatabase!!.child("Docente").child(user.key!!)
-        }else if(user.roll=="Estudiante"){
-            mDatabase = mDatabase!!.child("Estudiante").child(user.key!!)
-        }
+
+        mDatabase = mDatabase!!.child("Usuarios").child(user.identify!!)
 
         mAuth!!.createUserWithEmailAndPassword(user.email!!, Pass!!)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     mDatabase!!.child("Nombre").setValue(user.name!!)
+                    mDatabase!!.child("Roll").setValue(user.roll!!)
                     mDatabase!!.child("Edad").setValue(user.age!!)
                     mDatabase!!.child("Region").setValue(user.region!!)
                     mDatabase!!.child("Andes").setValue(user.andes_asociate!!)
                     mDatabase!!.child("Email").setValue(user.email!!)
                     mDatabase!!.child("icon").setValue(user.icon!!)
-                    mDatabase!!.child("Id").setValue(user.key!!)
+                    mDatabase!!.child("Id").setValue(user.identify!!)
                     Toast.makeText(context,"Usuario registrado!!",Toast.LENGTH_LONG).show()
                     regNew(context)
                 }else{
@@ -50,8 +48,8 @@ class Register_Firebase {
     }
     fun reg_local(context: Context, user:User){
         databaseHandler = DB_Administrator(context)
-        if(databaseHandler!!.insertData_user(user!!)){
-            Toast.makeText(context, "carga",Toast.LENGTH_LONG).show()
+        if(databaseHandler!!.insertData_user(user!!)==user){
+            System.out.println("Usuario cargado en base de datos local")
         }
     }
     private fun regNew(context: Context) {

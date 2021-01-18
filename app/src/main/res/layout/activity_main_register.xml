@@ -153,13 +153,12 @@
                     android:layout_height="40dp"
                     android:layout_marginHorizontal="10dp"
                     android:autoText="false"
-                    android:hint="Luegar de recidencia"
+                    android:hint="Lugar de recidencia"
                     android:shadowColor="#4dac9d"
                     android:textColor="#4dac9d"
                     android:textColorHighlight="#4dac9d"
                     android:textColorHint="#4dac9d"
-                    android:textColorLink="#4dac9d"
-                    android:inputType="number"/>
+                    android:textColorLink="#4dac9d"/>
 
             </LinearLayout>
             <RadioGroup

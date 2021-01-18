@@ -20,7 +20,7 @@ class DB_Administrator (context: Context): SQLiteOpenHelper(context,DATABASE_NAM
     private var TABLE3 ="VBG"
 
     var table_user = "create table user (\n" +
-            "\tkey INTEGER PRIMARY KEY AUTOINCREMENT,\n" +
+            "\tkey INTEGER PRIMARY,\n" +
             "\troll varchar(10) not null,\n" +
             "\tandes_asociate varchar(25) not null,\n" +
             "\tname varchar(250) not null,\n" +
@@ -50,24 +50,48 @@ class DB_Administrator (context: Context): SQLiteOpenHelper(context,DATABASE_NAM
         onCreate(db)
     }
 
-    fun insertData_user(user:User):Boolean{
-        val db = this.writableDatabase
-        var values = ContentValues()
-        values.put("roll",user.roll)
-        values.put("andes_asociate",1)
-        values.put("name",user.name)
-        values.put("identify",user.identify)
-        values.put("region",user.region)
-        values.put("age",user.age)
-        values.put("email",user.email)
-        values.put("icon",user.icon)
-        var result = db.insert(TABLE1, null, values)
-        if(result == -1.toLong()){
-            System.out.println("falla")
-            return false
+    fun insertData_user(user:User):User{
+        var db = this.readableDatabase
+        var aso = false
+        val query = "Select * from "+ TABLE1+ " where key = "+user.key
+        var result1 = db.rawQuery(query,null)
+        if(result1.moveToFirst()){
+            var user = User()
+            var key = result1.getString(result1.getColumnIndex("key"))
+            var roll = result1.getString(result1.getColumnIndex("name"))
+            var andes_asociate = result1.getString(result1.getColumnIndex("andes_asociate"))
+            var name = result1.getString(result1.getColumnIndex("name"))
+            var identify = result1.getString(result1.getColumnIndex("identify"))
+            var region = result1.getString(result1.getColumnIndex("region"))
+            var age = result1.getString(result1.getColumnIndex("age"))
+            var email = result1.getString(result1.getColumnIndex("email"))
+            var icon = result1.getString(result1.getColumnIndex("icon"))
+            if(andes_asociate=="1"){aso = true}else {aso =false}
+            var icono = Integer.parseInt(icon)
+            user = User(key,roll,aso,name,identify,region,age,email,icono)
+            System.out.println("Usuario ya existente")
+            return user
         }else{
-            System.out.println("all ok")
-            return true
+            db = this.writableDatabase
+            var values = ContentValues()
+            values.put("key",user.identify)
+            values.put("roll",user.roll)
+            values.put("andes_asociate",1)
+            values.put("name",user.name)
+            values.put("identify",user.identify)
+            values.put("region",user.region)
+            values.put("age",user.age)
+            values.put("email",user.email)
+            values.put("icon",user.icon)
+            var result = db.insert(TABLE1, null, values)
+            if(result == -1.toLong()){
+                System.out.println("falla")
+                return user
+            }else{
+                System.out.println("all ok")
+                return user
+            }
+
         }
         db.close()
     }

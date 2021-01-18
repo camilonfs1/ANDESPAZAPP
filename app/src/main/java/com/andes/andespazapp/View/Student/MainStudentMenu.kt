@@ -19,16 +19,21 @@ import com.andes.andespazapp.View.CRUD.CRUD_Individual_User
 import com.andes.andespazapp.View.Complaints.DDHH_Complaints
 import com.andes.andespazapp.View.Complaints.Sent_Complaint
 import com.andes.andespazapp.View.Learn.Main_Learn
+import com.andes.andespazapp.View.MainActivity
 import com.andes.andespazapp.View.Module_Blog.Blog_main
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main_student_menu.*
 
 class MainStudentMenu : AppCompatActivity() {
+
+    var mAuth: FirebaseAuth? = null
+
+
     var btn_blog: CardView? = null
     var btn_complain: CardView? = null
     var btn_profile: CardView? = null
-
     var btn_ddhh: CardView? = null
-
+    var btn_close_back: CardView? = null
     var btn_lear: CardView? = null
     var txt_name:TextView? = null
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
@@ -48,11 +53,24 @@ class MainStudentMenu : AppCompatActivity() {
         btn_lear = btn_learn
         txt_name = txt_name_student
         btn_ddhh = ddhh_card
+        btn_close_back = btn_close
+
+        var id = intent.getStringExtra("id")
+        var roll = intent.getStringExtra("roll")
+
+        if(roll == "" || id ==""){
+            startActivity(Intent(this, MainActivity::class.java))
+        }
+
 
         /*var db = DB_Administrator(this)
         var user = db.readData("6")
 
         txt_name!!.setText(user.id)*/
+
+        btn_close_back!!.setOnClickListener{
+            SigOut()
+        }
 
         btn_profile!!.setOnClickListener{
             val intent = Intent(this, CRUD_Individual_User::class.java)
@@ -77,7 +95,11 @@ class MainStudentMenu : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
+    fun SigOut() {
+        mAuth!!.signOut()
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
+    }
 
 
 }
