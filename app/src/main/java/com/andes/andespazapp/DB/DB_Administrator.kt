@@ -20,7 +20,7 @@ class DB_Administrator (context: Context): SQLiteOpenHelper(context,DATABASE_NAM
     private var TABLE3 ="VBG"
 
     var table_user = "create table user (\n" +
-            "\tkey INTEGER PRIMARY,\n" +
+            "\tkey INTEGER PRIMARY KEY,\n" +
             "\troll varchar(10) not null,\n" +
             "\tandes_asociate varchar(25) not null,\n" +
             "\tname varchar(250) not null,\n" +

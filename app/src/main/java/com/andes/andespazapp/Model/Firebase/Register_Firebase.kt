@@ -5,6 +5,7 @@ import android.content.Intent
 import android.widget.Toast
 import com.andes.andespazapp.DB.DB_Administrator
 import com.andes.andespazapp.Model.User
+import com.andes.andespazapp.View.MainActivity
 import com.andes.andespazapp.View.MainRegisterActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -22,7 +23,7 @@ class Register_Firebase {
     fun RegisterUser(user: User,context: Context,Pass:String){
         mDatabase = FirebaseDatabase.getInstance().reference
         mMessageReference = FirebaseDatabase.getInstance().getReference("message")
-
+        val mUser = mAuth!!.currentUser
         mDatabase = mDatabase!!.child("Usuarios").child(user.identify!!)
 
         mAuth!!.createUserWithEmailAndPassword(user.email!!, Pass!!)
@@ -53,7 +54,7 @@ class Register_Firebase {
         }
     }
     private fun regNew(context: Context) {
-        var intent = Intent(context, MainRegisterActivity::class.java)
+        var intent = Intent(context, MainActivity::class.java)
         context.startActivity(intent)
     }
 }
