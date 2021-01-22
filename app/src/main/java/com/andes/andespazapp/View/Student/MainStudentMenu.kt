@@ -9,6 +9,8 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
+import com.andes.andespazapp.DB.DB_Administrator
+import com.andes.andespazapp.Model.User
 import com.andes.andespazapp.R
 import com.andes.andespazapp.View.CRUD.CRUD_Individual_User
 import com.andes.andespazapp.View.Complaints.DDHH_Complaints
@@ -20,9 +22,11 @@ import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main_student_menu.*
 
 class MainStudentMenu : AppCompatActivity() {
-
+    var databaseHandler: DB_Administrator?=null
     var mAuth: FirebaseAuth? = null
 
+    var name: TextView? =null
+    var roll: TextView? = null
 
     var btn_blog: CardView? = null
     var btn_complain: CardView? = null
@@ -36,7 +40,18 @@ class MainStudentMenu : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_student_menu)
 
+        name = txt_name_student
+        roll = txt_roll
+
+
+
+        var id = intent.getStringExtra("id")
         //Start()
+        databaseHandler = DB_Administrator(this)
+        var res = databaseHandler!!.getUser(id) as User
+
+        name!!.text=res.name
+        roll!!.text = res.roll
 
         //This lines change statusBarcolor by specific color in colors.xml
         val window: Window = this@MainStudentMenu.window

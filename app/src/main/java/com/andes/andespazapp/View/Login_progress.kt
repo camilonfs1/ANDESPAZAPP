@@ -66,8 +66,11 @@ class Login_progress : AppCompatActivity() {
                                     Email,
                                     icon
                                 )
+                                System.out.println("--------------------------------WRITE")
                                 writedb(user)
+
                             }else{
+                                System.out.println("--------------------------------NO WRITE")
                                 next(readdb(Id) as User)
 
                             }
@@ -85,7 +88,7 @@ class Login_progress : AppCompatActivity() {
     }
     fun readdb(id : String) : Any{
         databaseHandler = DB_Administrator(this)
-        var res = databaseHandler!!.gerUser(id,0)
+        var res = databaseHandler!!.getUser(id)
         return res
     }
     fun writedb(user:User){
@@ -95,7 +98,7 @@ class Login_progress : AppCompatActivity() {
     }
     fun next(user:User ){
         val intent = Intent(this, MainStudentMenu::class.java)
-        intent.putExtra("id", "123456")
+        intent.putExtra("id", user.identify)
         startActivity(intent)
     }
 }

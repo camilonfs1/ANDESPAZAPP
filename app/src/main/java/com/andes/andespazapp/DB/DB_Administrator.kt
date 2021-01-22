@@ -99,7 +99,7 @@ class DB_Administrator (context: Context): SQLiteOpenHelper(context,DATABASE_NAM
         db.close()
     }
 
-    fun gerUser(id:String,flag : Int):Any{
+    fun getUser(id:String):Any{
         var aso = false
         val db = this.readableDatabase
         val query = "Select * from "+ TABLE1 + " where key = "+id
