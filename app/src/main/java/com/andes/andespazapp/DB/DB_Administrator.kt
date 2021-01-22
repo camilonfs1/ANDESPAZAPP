@@ -2,11 +2,14 @@ package com.andes.andespazapp.DB
 
 import android.content.ContentValues
 import android.content.Context
+import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import com.andes.andespazapp.Model.User
 import com.andes.andespazapp.Model.ddhh
+import com.andes.andespazapp.View.CRUD.CRUD_Individual_User
 import java.lang.Boolean.FALSE
 import java.security.AccessControlContext
 
@@ -95,6 +98,7 @@ class DB_Administrator (context: Context): SQLiteOpenHelper(context,DATABASE_NAM
         }
         db.close()
     }
+
     fun gerUser(id:String,flag : Int):Any{
         var aso = false
         val db = this.readableDatabase

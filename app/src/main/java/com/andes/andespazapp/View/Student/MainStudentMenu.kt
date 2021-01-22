@@ -1,19 +1,14 @@
 package com.andes.andespazapp.View.Student
 
 import android.content.Intent
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import android.os.Bundle
 import android.view.Window
 import android.widget.TextView
 import androidx.annotation.RequiresApi
-import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
-import com.andes.andespazapp.DB.DB_Administrator
-import com.andes.andespazapp.Model.User
 import com.andes.andespazapp.R
 import com.andes.andespazapp.View.CRUD.CRUD_Individual_User
 import com.andes.andespazapp.View.Complaints.DDHH_Complaints
@@ -55,12 +50,12 @@ class MainStudentMenu : AppCompatActivity() {
         btn_ddhh = ddhh_card
         btn_close_back = btn_close
 
-        var id = intent.getStringExtra("id")
+       /* var id = intent.getStringExtra("id")
         var roll = intent.getStringExtra("roll")
 
         if(roll == "" || id ==""){
             startActivity(Intent(this, MainActivity::class.java))
-        }
+        }*/
 
 
         /*var db = DB_Administrator(this)
