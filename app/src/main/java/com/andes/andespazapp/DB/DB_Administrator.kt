@@ -53,7 +53,7 @@ class DB_Administrator (context: Context): SQLiteOpenHelper(context,DATABASE_NAM
     fun insertData_user(user:User):User{
         var db = this.readableDatabase
         var aso = false
-        val query = "Select * from "+ TABLE1+ " where key = "+user.key
+        val query = "Select * from "+ TABLE1+ " where key = "+user.identify
         var result1 = db.rawQuery(query,null)
         if(result1.moveToFirst()){
             var user = User()
@@ -94,6 +94,30 @@ class DB_Administrator (context: Context): SQLiteOpenHelper(context,DATABASE_NAM
 
         }
         db.close()
+    }
+    fun gerUser(id:String,flag : Int):Any{
+        var aso = false
+        val db = this.readableDatabase
+        val query = "Select * from "+ TABLE1 + " where key = "+id
+        val result = db.rawQuery(query,null)
+        if(result.moveToFirst()){
+                    var user = User()
+                    var key = result.getString(result.getColumnIndex("key"))
+                    var roll = result.getString(result.getColumnIndex("name"))
+                    var andes_asociate = result.getString(result.getColumnIndex("andes_asociate"))
+                    var name = result.getString(result.getColumnIndex("name"))
+                    var identify = result.getString(result.getColumnIndex("identify"))
+                    var region = result.getString(result.getColumnIndex("region"))
+                    var age = result.getString(result.getColumnIndex("age"))
+                    var email = result.getString(result.getColumnIndex("email"))
+                    var icon = result.getString(result.getColumnIndex("icon"))
+                    if(andes_asociate=="1"){aso = true}else {aso =false}
+                    var icono = Integer.parseInt(icon)
+                    user = User(key,roll,aso,name,identify,region,age,email,icono)
+                    System.out.println("Usuario ya existente")
+                    return user
+        }
+        return false
     }
 
     fun getprice(): ArrayList<User>{
