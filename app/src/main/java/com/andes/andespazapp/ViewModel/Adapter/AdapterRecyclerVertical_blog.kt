@@ -1,5 +1,6 @@
 package com.andes.andespazapp.ViewModel.Adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.andes.andespazapp.Model.Blog_item
 import com.andes.andespazapp.R
+import com.andes.andespazapp.View.Module_Blog.Detail_Blog
 import kotlinx.android.synthetic.main.blog_vertical_item.view.*
 
 class AdapterRecyclerVertical_blog:  RecyclerView.Adapter<AdapterRecyclerVertical_blog.ViewHolder>()  {
@@ -32,6 +34,14 @@ class AdapterRecyclerVertical_blog:  RecyclerView.Adapter<AdapterRecyclerVertica
         holder.title?.text = item!!.title
         holder.days?.text = item!!.date.toString()+" días"
         holder.commnetary?.text = item!!.num_commentari.toString()+" Comentarios"
+
+        holder.vista.setOnClickListener(object : View.OnClickListener  {
+            override fun onClick(v: View?) {
+                var intent = Intent(v!!.context, Detail_Blog::class.java)
+                v.context.startActivity(intent)
+            }
+
+        })
     }
 
     //ViewHolder inner class

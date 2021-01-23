@@ -15,10 +15,8 @@ class Register_Firebase {
     private var mDatabase: DatabaseReference? = null
     private var mMessageReference: DatabaseReference? = null
     private var mAuth: FirebaseAuth? = FirebaseAuth.getInstance()
-
     //local
     var databaseHandler: DB_Administrator?=null
-
 
     fun RegisterUser(user: User,context: Context,Pass:String){
         mDatabase = FirebaseDatabase.getInstance().reference
