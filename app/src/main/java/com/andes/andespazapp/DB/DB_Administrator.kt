@@ -19,8 +19,7 @@ val DATABASE_NAME ="BASE PRINCIAL"
 class DB_Administrator (context: Context): SQLiteOpenHelper(context,DATABASE_NAME,null,1) {
 
     private var TABLE1 ="user"
-    private var TABLE2 ="DDHH"
-    private var TABLE3 ="VBG"
+    private var TABLE2 ="blog"
 
     var table_user = "create table user (\n" +
             "\tkey INTEGER PRIMARY KEY,\n" +
@@ -34,13 +33,20 @@ class DB_Administrator (context: Context): SQLiteOpenHelper(context,DATABASE_NAM
             "\ticon integer not null\n" +
             ")"
 
-    var table2 = "CREATE TABLE "+TABLE2+" (id INTEGER PRIMARY KEY, product TEXT)"
-    var table3 = "CREATE TABLE "+TABLE3+" (id INTEGER PRIMARY KEY, product TEXT)"
+    var table_blog = "create table blog(\n" +
+            "\tkey INTEGER PRIMARY KEY,\n" +
+            "\tname_owner varchar(100),\n" +
+            "\ttitle varchar(500),\n" +
+            "\tdate integer,\n" +
+            "\tnum_commentari integer,\n" +
+            "\tavatar_owner integer,\n" +
+            "\tcolor varchar(10)\n" +
+            ")"
+
 
     override fun onCreate(db: SQLiteDatabase?) {
         db?.execSQL(table_user)
-        db?.execSQL(table2)
-        db?.execSQL(table3)
+        db?.execSQL(table_blog)
     }
 
 
@@ -48,7 +54,6 @@ class DB_Administrator (context: Context): SQLiteOpenHelper(context,DATABASE_NAM
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         db?.execSQL("DROP TABLE IF EXISTS "+TABLE1)
         db?.execSQL("DROP TABLE IF EXISTS "+TABLE2)
-        db?.execSQL("DROP TABLE IF EXISTS "+TABLE3)
 
         onCreate(db)
     }
@@ -98,7 +103,6 @@ class DB_Administrator (context: Context): SQLiteOpenHelper(context,DATABASE_NAM
         }
         db.close()
     }
-
     fun getUser(id:String):Any{
         var aso = false
         val db = this.readableDatabase
@@ -123,7 +127,6 @@ class DB_Administrator (context: Context): SQLiteOpenHelper(context,DATABASE_NAM
         }
         return false
     }
-
     fun getprice(): ArrayList<User>{
         val db = this.readableDatabase
         var aso = false
@@ -151,6 +154,13 @@ class DB_Administrator (context: Context): SQLiteOpenHelper(context,DATABASE_NAM
         }
 
         return  valores
+    }
+
+    fun inserData_Blog(){
+
+    }
+    fun getBlog(){
+
     }
 
 
