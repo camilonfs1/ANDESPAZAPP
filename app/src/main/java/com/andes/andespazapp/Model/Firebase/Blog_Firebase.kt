@@ -7,6 +7,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.andes.andespazapp.DB.DB_Administrator
 import com.andes.andespazapp.Model.Blog_item
+import com.andes.andespazapp.Model.Commentary
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import java.sql.DriverManager
@@ -17,6 +18,7 @@ class Blog_Firebase {
     private var mDatabase1: DatabaseReference? = null
 
     var items: ArrayList<Blog_item>? = ArrayList()
+    var commen: ArrayList<Commentary>? = ArrayList()
     private var mDatabase: FirebaseDatabase? = null
     private var mDatabaseReference: DatabaseReference? = null
 
@@ -77,5 +79,18 @@ class Blog_Firebase {
             }
         })
         return mutableData
+    }
+
+    fun getBlogDetail(): ArrayList<Commentary>{
+        commen= ArrayList()
+        commen!!.add(Commentary("1","123","comentario 1","2","1"))
+        commen!!.add(Commentary("1","123","comentario 1","3","1"))
+        commen!!.add(Commentary("1","123","comentario 1","1","1"))
+        commen!!.add(Commentary("1","123","comentario 1","1","1"))
+        commen!!.add(Commentary("1","123","comentario 1","1","1"))
+        commen!!.add(Commentary("1","123","comentario 1","1","1"))
+        commen!!.add(Commentary("1","123","comentario que no debe salir","1","1"))
+
+        return commen!!
     }
 }

@@ -38,16 +38,16 @@ class MainActivity : AppCompatActivity() {
         var login = Login_ViewModel()
         btn_enter!!.setOnClickListener{
 
-            if(txt_email!!.text.toString()==""||txt_pass!!.text.toString()==""){
+            /*if(txt_email!!.text.toString()==""||txt_pass!!.text.toString()==""){
                 Toast.makeText(this,"Ingresa los datos completos",Toast.LENGTH_LONG).show()
             }else{
                 login.login_funtion(this,txt_email!!.text.toString(),txt_pass!!.text.toString())
-            }
+            }*/
 
 
 
-            /*val intent = Intent(this, MainStudentMenu::class.java)
-            startActivity(intent)*/
+            val intent = Intent(this, MainStudentMenu::class.java)
+            startActivity(intent)
         }
         register!!.setOnClickListener {
             val intent = Intent(this, MainRegisterActivity::class.java)

@@ -96,7 +96,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_blog_Vertical"
+        android:id="@+id/recycler_commentary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/commentary"

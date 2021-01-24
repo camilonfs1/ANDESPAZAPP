@@ -45,13 +45,20 @@ class MainStudentMenu : AppCompatActivity() {
 
 
 
-        var id = intent.getStringExtra("id")
-        //Start()
+       /* var id = intent.getStringExtra("id")
+        if(id=="" || id ==null){
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }else{
+            var res = databaseHandler!!.getUser(id) as User
+            name!!.text=res.name
+            roll!!.text = res.roll
+        }*/
         databaseHandler = DB_Administrator(this)
-        var res = databaseHandler!!.getUser(id) as User
 
-        name!!.text=res.name
-        roll!!.text = res.roll
+
+
+
 
         //This lines change statusBarcolor by specific color in colors.xml
         val window: Window = this@MainStudentMenu.window
