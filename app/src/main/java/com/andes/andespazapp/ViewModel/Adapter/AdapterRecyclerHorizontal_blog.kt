@@ -41,36 +41,39 @@ class AdapterRecyclerHorizontal_blog:RecyclerView.Adapter<AdapterRecyclerHorizon
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items?.get(position)
         holder.activity?.text = item!!.title
+        holder.key?.text = item!!.key
+        holder.name?.text = item!!.name_owner
         holder.linear_botton?.setBackgroundColor(Color.parseColor(item!!.color))
         holder.linerr_top?.setBackgroundColor(Color.parseColor(item!!.color))
-
 
         holder.vista.setOnClickListener(object : View.OnClickListener  {
             override fun onClick(v: View?) {
                 var intent = Intent(v!!.context,Detail_Blog::class.java)
+                intent.putExtra("key",  holder.key?.text )
+                intent.putExtra("owner",  items?.get(position)!!.name_owner )
+                intent.putExtra("date",  items?.get(position)!!.date )
                 v.context.startActivity(intent)
             }
 
         })
     }
-
     //ViewHolder inner class
     class ViewHolder(v: View) : RecyclerView.ViewHolder(v) {
         var vista = v
         var activity: TextView? = null
         var linear_botton: LinearLayout? = null
         var linerr_top: LinearLayout? = null
+        var key:TextView? = null
+        var name:TextView? = null
+
 
          init {
              linerr_top = vista.linear_top
+             key = vista.key
+             name = vista.txt_name_student
             linear_botton = vista.linear_botton
             activity = vista.txt_card_blog_horizontal_item
         }
     }
-
-
-
-
-
 }
 

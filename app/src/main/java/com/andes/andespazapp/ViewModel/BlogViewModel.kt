@@ -12,7 +12,8 @@ class BlogViewModel {
     private var Blog_Db : Blog_Firebase =  Blog_Firebase()
     private var colors: ArrayList<String>? = null
 
-    private var comments: ArrayList<Commentary>? = null
+    private var commentsaux: ArrayList<Commentary>? = null
+    private var commentsmain: ArrayList<Commentary>? = null
 
    fun horizontalAd(): ArrayList<Blog_item>{
        colors = ArrayList()
@@ -49,9 +50,16 @@ class BlogViewModel {
         return items_V!!
     }
 
-    fun commentary(): ArrayList<Commentary>{
-        comments= ArrayList()
-        comments = Blog_Db.getBlogDetail()
-        return  comments!!
+    fun commentary(owner:String): ArrayList<Commentary>{
+        commentsmain= ArrayList()
+        commentsaux= ArrayList()
+        commentsaux = Blog_Db.getBlogDetail()
+
+        for(i in 0 until commentsaux!!.size){
+
+            System.out.println("------------------------->"+commentsaux!!.get(i).commentary+"-----"+owner)
+        }
+
+        return  commentsaux!!
     }
 }

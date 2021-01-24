@@ -24,21 +24,21 @@ class Blog_Firebase {
 
     fun ReadDB(): ArrayList<Blog_item>{
 
-        items!!.add(Blog_item("1", "camilo vargas",   "Discusión numero uno, propuesta para el desarrollo del tema propuesta", 1, 1, 1,"#fffff"))
-        items!!.add(Blog_item("1", "camilo vargas",   "DEBATE ANDES segunda", 1, 1, 1,"#fffff"))
-        items!!.add(Blog_item("1", "camilo vargas",   "DEBATE ANDES tercera", 1, 1, 1,"#fffff"))
-        items!!.add(Blog_item("1", "camilo vargas",   "DEBATE ANDES cuarta", 1, 1, 1,"#fffff"))
-        items!!.add(Blog_item("1", "camilo vargas",   "DEBATE ANDES quinta", 1, 1, 1,"#fffff"))
-        items!!.add(Blog_item("1", "camilo vargas",   "Discusión numero uno, propuesta para el desarrollo del tema propuesta", 1, 1, 1,"#fffff"))
-        items!!.add(Blog_item("1", "camilo vargas",   "DEBATE ANDES segunda", 1, 1, 1,"#fffff"))
-        items!!.add(Blog_item("1", "camilo vargas",   "DEBATE ANDES tercera", 1, 1, 1,"#fffff"))
-        items!!.add(Blog_item("1", "camilo vargas",   "DEBATE ANDES cuarta", 1, 1, 1,"#fffff"))
-        items!!.add(Blog_item("1", "camilo vargas",   "DEBATE ANDES quinta", 1, 1, 1,"#fffff"))
-        items!!.add(Blog_item("1", "camilo vargas",   "Discusión numero uno, propuesta para el desarrollo del tema propuesta", 1, 1, 1,"#fffff"))
-        items!!.add(Blog_item("1", "camilo vargas",   "DEBATE ANDES segunda", 1, 10, 1,"#fffff"))
-        items!!.add(Blog_item("1", "camilo vargas",   "DEBATE ANDES tercera", 1, 1, 1,"#fffff"))
-        items!!.add(Blog_item("1", "camilo vargas",   "DEBATE ANDES cuarta", 6, 1, 1,"#fffff"))
-        items!!.add(Blog_item("1", "camilo vargas",   "DEBATE ANDES quinta", 1, 1, 1,"#fffff"))
+        items!!.add(Blog_item("1", "camilo vargas0",   "Discusión numero uno, propuesta para el desarrollo del tema propuesta", 1, 1, 1,"#fffff"))
+        items!!.add(Blog_item("2", "camilo vargas1",   "DEBATE ANDES segunda", 1, 1, 1,"#fffff"))
+        items!!.add(Blog_item("3", "camilo vargas2",   "DEBATE ANDES tercera", 1, 1, 1,"#fffff"))
+        items!!.add(Blog_item("4", "camilo vargas3",   "DEBATE ANDES cuarta", 1, 1, 1,"#fffff"))
+        items!!.add(Blog_item("5", "camilo vargas4",   "DEBATE ANDES quinta", 1, 1, 1,"#fffff"))
+        items!!.add(Blog_item("6", "camilo vargas5",   "Discusión numero uno, propuesta para el desarrollo del tema propuesta", 1, 1, 1,"#fffff"))
+        items!!.add(Blog_item("7", "camilo vargas6",   "DEBATE ANDES segunda", 1, 1, 1,"#fffff"))
+        items!!.add(Blog_item("8", "camilo vargas7",   "DEBATE ANDES tercera", 1, 1, 1,"#fffff"))
+        items!!.add(Blog_item("9", "camilo vargas8",   "DEBATE ANDES cuarta", 1, 1, 1,"#fffff"))
+        items!!.add(Blog_item("10", "camilo vargas9",   "DEBATE ANDES quinta", 1, 1, 1,"#fffff"))
+        items!!.add(Blog_item("11", "camilo vargas10",   "Discusión numero uno, propuesta para el desarrollo del tema propuesta", 1, 1, 1,"#fffff"))
+        items!!.add(Blog_item("12", "camilo vargas11",   "DEBATE ANDES segunda", 1, 10, 1,"#fffff"))
+        items!!.add(Blog_item("13", "camilo vargas12",   "DEBATE ANDES tercera", 1, 1, 1,"#fffff"))
+        items!!.add(Blog_item("14", "camilo vargas13",   "DEBATE ANDES cuarta", 6, 1, 1,"#fffff"))
+        items!!.add(Blog_item("15", "camilo vargas14",   "DEBATE ANDES quinta", 1, 1, 1,"#fffff"))
 
         return items!!
     }
@@ -89,7 +89,7 @@ class Blog_Firebase {
         commen!!.add(Commentary("1","123","comentario 1","1","1"))
         commen!!.add(Commentary("1","123","comentario 1","1","1"))
         commen!!.add(Commentary("1","123","comentario 1","1","1"))
-        commen!!.add(Commentary("1","123","comentario que no debe salir","1","1"))
+        commen!!.add(Commentary("1","123","comentario que no debe salir","1","2"))
 
         return commen!!
     }

@@ -22,7 +22,12 @@ class Detail_Blog : AppCompatActivity() {
 
         commentaryRecicler = recycler_commentary
 
-        adaptador_C = Adapter_commentary()
+        var key = intent.getStringExtra("key")
+        var owner = intent.getStringExtra("owner")
+        var date = intent.getStringExtra("date")
+
+        System.out.println("holaaaaaaaaaaaaaaaaaaa-------------->"+key+owner+date)
+        adaptador_C = Adapter_commentary("hola")
         layoutmanager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         commentaryRecicler?.layoutManager = layoutmanager
         commentaryRecicler?.adapter = adaptador_C
