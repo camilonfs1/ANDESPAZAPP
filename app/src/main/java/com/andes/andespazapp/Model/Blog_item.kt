@@ -19,4 +19,6 @@ class Blog_item(key:String, name_owner: String,   title: String, date: Int, num_
         this.color = color
     }
 
+
+
 }

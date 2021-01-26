@@ -54,12 +54,11 @@ class BlogViewModel {
         commentsmain= ArrayList()
         commentsaux= ArrayList()
         commentsaux = Blog_Db.getBlogDetail()
-
         for(i in 0 until commentsaux!!.size){
-
-            System.out.println("------------------------->"+commentsaux!!.get(i).commentary+"-----"+owner)
+            if (commentsaux!!.get(i).mother_key.equals(owner)){
+                commentsmain!!.add(commentsaux!!.get(i))
+            }
         }
-
-        return  commentsaux!!
+        return  commentsmain!!
     }
 }

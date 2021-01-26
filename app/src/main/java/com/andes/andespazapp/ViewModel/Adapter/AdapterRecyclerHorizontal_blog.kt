@@ -52,6 +52,8 @@ class AdapterRecyclerHorizontal_blog:RecyclerView.Adapter<AdapterRecyclerHorizon
                 intent.putExtra("key",  holder.key?.text )
                 intent.putExtra("owner",  items?.get(position)!!.name_owner )
                 intent.putExtra("date",  items?.get(position)!!.date )
+                intent.putExtra("color",  items?.get(position)!!.color )
+                intent.putExtra("title",  items?.get(position)!!.title )
                 v.context.startActivity(intent)
             }
 

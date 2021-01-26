@@ -83,13 +83,13 @@ class Blog_Firebase {
 
     fun getBlogDetail(): ArrayList<Commentary>{
         commen= ArrayList()
-        commen!!.add(Commentary("1","123","comentario 1","2","1"))
-        commen!!.add(Commentary("1","123","comentario 1","3","1"))
-        commen!!.add(Commentary("1","123","comentario 1","1","1"))
-        commen!!.add(Commentary("1","123","comentario 1","1","1"))
-        commen!!.add(Commentary("1","123","comentario 1","1","1"))
-        commen!!.add(Commentary("1","123","comentario 1","1","1"))
-        commen!!.add(Commentary("1","123","comentario que no debe salir","1","2"))
+        commen!!.add(Commentary("1","camilo","comentario 1","2","1"))
+        commen!!.add(Commentary("1","sergio","comentario 1","3","1"))
+        commen!!.add(Commentary("1","loany","comentario 1","1","1"))
+        commen!!.add(Commentary("1","mario","comentario 1","1","1"))
+        commen!!.add(Commentary("1","junito","comentario 1","1","1"))
+        commen!!.add(Commentary("1","maria","comentario 1","1","1"))
+        commen!!.add(Commentary("1","marianita","comentario que no debe salir","1","2"))
 
         return commen!!
     }

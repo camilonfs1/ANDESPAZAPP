@@ -33,12 +33,11 @@ class Adapter_commentary(owner:String): RecyclerView.Adapter<Adapter_commentary.
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items?.get(position)
-        holder.commnetary?.text = item!!.commentary
-        holder.owner?.text = item!!.owner
+            holder.commnetary?.text = item!!.commentary
+            holder.owner?.text = item!!.owner
 
 
     }
-
     //ViewHolder inner class
     class ViewHolder(v: View) : RecyclerView.ViewHolder(v) {
         var vista = v

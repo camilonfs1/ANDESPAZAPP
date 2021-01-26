@@ -21,23 +21,17 @@ class User_Firebase {
         mUserReference?.addValueEventListener(object : ValueEventListener  {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
-
                     var name = snapshot.child("Name").value as String
                     var Roll = snapshot.child("Roll").value as String
-
-
                 } else {
                     System.out.println("--------------------------------No User")
-
                 }
             }
             override fun onCancelled(databaseError: DatabaseError) {
 
             }
         })
-
         return user
-
     }
 
     fun UpdateDB(user:User, context: Context){

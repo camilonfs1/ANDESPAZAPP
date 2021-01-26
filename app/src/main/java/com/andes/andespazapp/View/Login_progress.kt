@@ -19,10 +19,10 @@ import com.google.firebase.database.*
 class Login_progress : AppCompatActivity() {
     private var mAuth: FirebaseAuth? = FirebaseAuth.getInstance()
     var databaseHandler: DB_Administrator?=null
-
     private var mDatabaseReference: DatabaseReference? = null
     private var mDatabase: FirebaseDatabase? = null
     private var mUserReference: DatabaseReference? = null
+
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,8 +32,8 @@ class Login_progress : AppCompatActivity() {
         var email = intent.getStringExtra("email")
         readDB(email)
     }
-    private fun readDB(email:String){//This function read database firebase, search user and consult local databse if key or identify isnot register in local then download all data and regist all data in local
 
+    private fun readDB(email:String){//This function read database firebase, search user and consult local databse if key or identify isnot register in local then download all data and regist all data in local
         mDatabase = FirebaseDatabase.getInstance()
         mDatabaseReference = mDatabase!!.reference
         mAuth = FirebaseAuth.getInstance()
@@ -46,7 +46,6 @@ class Login_progress : AppCompatActivity() {
                         var key = e.child("Email").value
                         if(key==email){
                             var Id=e.child("Id").value.toString()
-
                             if(readdb(Id) is Boolean){
                                 var Nombre=e.child("Nombre").value.toString()
                                 var Roll=e.child("Roll").value.toString()
@@ -55,24 +54,12 @@ class Login_progress : AppCompatActivity() {
                                 var Andes=e.child("Andes").value as Boolean
                                 var Email=e.child("Email").value.toString()
                                 var icon=Integer.parseInt(e.child("icon").value.toString())
-                                var user = User(
-                                    Id!!,
-                                    Roll!!,
-                                    Andes!!,
-                                    Nombre,
-                                    Id,
-                                    Region,
-                                    Edad,
-                                    Email,
-                                    icon
-                                )
+                                var user = User(Id!!,Roll!!, Andes!!,Nombre,Id,Region,Edad,Email,icon)
                                 System.out.println("--------------------------------WRITE")
                                 writedb(user)
-
                             }else{
                                 System.out.println("--------------------------------NO WRITE")
                                 next(readdb(Id) as User)
-
                             }
                         }
                     }

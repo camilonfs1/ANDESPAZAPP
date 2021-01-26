@@ -1,7 +1,11 @@
 package com.andes.andespazapp.View.Module_Blog
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.LinearLayout
+import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.andes.andespazapp.R
@@ -14,20 +18,32 @@ class Detail_Blog : AppCompatActivity() {
     var commentaryRecicler: RecyclerView? =null
     var adaptador_C: Adapter_commentary? = null
     var layoutmanager: RecyclerView.LayoutManager? =  null
-
-
+    var owner_mother: TextView? = null
+    var blog_text : TextView?  = null
+    var linear_top:LinearLayout? = null
+    var linear_bottom:LinearLayout? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail__blog)
 
         commentaryRecicler = recycler_commentary
+        owner_mother = txt_owner
+        blog_text = txt_blog_mother
+
+        linear_top = linear_topr
+        linear_bottom = linear_botton
 
         var key = intent.getStringExtra("key")
         var owner = intent.getStringExtra("owner")
-        var date = intent.getStringExtra("date")
+        var color = intent.getStringExtra("color")
+        var title = intent.getStringExtra("title")
 
-        System.out.println("holaaaaaaaaaaaaaaaaaaa-------------->"+key+owner+date)
-        adaptador_C = Adapter_commentary("hola")
+        owner_mother!!.text=owner
+        blog_text!!.text  = title
+        linear_top!!.setBackgroundColor(Color.parseColor(color))
+        linear_bottom!!.setBackgroundColor(Color.parseColor(color))
+
+        adaptador_C = Adapter_commentary(key)
         layoutmanager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         commentaryRecicler?.layoutManager = layoutmanager
         commentaryRecicler?.adapter = adaptador_C
