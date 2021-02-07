@@ -54,6 +54,8 @@ class DB_Administrator (context: Context): SQLiteOpenHelper(context,DATABASE_NAM
             "\tmother_key(10)\n" +
             ")"
 
+
+
     override fun onCreate(db: SQLiteDatabase?) {
         db?.execSQL(table_user)
         db?.execSQL(table_blog)
@@ -167,71 +169,23 @@ class DB_Administrator (context: Context): SQLiteOpenHelper(context,DATABASE_NAM
         return  valores
     }
 
-    fun inserData_Blog(blog : Blog_item): Blog_item{
-        var db = this.readableDatabase
-        var aso = false
-        val query = "Select * from "+ TABLE2+ " where key = "+blog.key
-        var result1 = db.rawQuery(query,null)
-        if(result1.moveToFirst()){
-            var key = result1.getString(result1.getColumnIndex("key"))
-            var name_owner = result1.getString(result1.getColumnIndex("name_owner"))
-            var title = result1.getString(result1.getColumnIndex("title"))
-            var date = result1.getString(result1.getColumnIndex("date")) as Int
-            var num_commentari = result1.getString(result1.getColumnIndex("num_commentari")) as Int
-            var avatar_owner = result1.getString(result1.getColumnIndex("avatar_owner"))as Int
-            var color = result1.getString(result1.getColumnIndex("color"))
 
-             var blog = Blog_item(key,name_owner,title,date,num_commentari,avatar_owner,color)
-            System.out.println("Usuario ya existente")
-            return blog
-        }else{
-            db = this.writableDatabase
-            var values = ContentValues()
-            values.put("key",blog.key)
-            values.put("name_owner",blog.name_owner)
-            values.put("title",blog.title)
-            values.put("date",blog.date)
-            values.put("num_commentari",blog.num_commentari)
-            values.put("avatar_owner",blog.avatar_owner)
-            values.put("color",blog.color)
-            var result = db.insert(TABLE1, null, values)
-            if(result == -1.toLong()){
-                System.out.println("falla")
-                return blog
-            }else{
-                System.out.println("all ok")
-                return blog
-            }
+    //
+    fun consult_blogId(id:Int):Any{
+        //if exit, return item
 
-        }
-        db.close()
+        //If not exit retur 0
+
+        return 0
     }
-    fun getBlog(id:String):Any{
-        var aso = false
-        val db = this.readableDatabase
-        val query = "Select * from "+ TABLE1 + " where key = "+id
-        val result = db.rawQuery(query,null)
-        if(result.moveToFirst()){
-            var key = result.getString(result.getColumnIndex("key"))
-            var name_owner = result.getString(result.getColumnIndex("name_owner"))
-            var title = result.getString(result.getColumnIndex("title"))
-            var date = result.getString(result.getColumnIndex("date")) as Int
-            var num_commentari = result.getString(result.getColumnIndex("num_commentari")) as Int
-            var avatar_owner = result.getString(result.getColumnIndex("avatar_owner"))as Int
-            var color = result.getString(result.getColumnIndex("color"))
 
-            var blog = Blog_item(key,name_owner,title,date,num_commentari,avatar_owner,color)
-            System.out.println("Usuario ya existente")
-            return blog
-        }
-        return false
-    }
-    fun insert_commentary(){
+    fun write_blogitem(item: Blog_item){
+        //Only write item in local database
 
     }
-    fun getCommentary(){
 
-    }
+
+
 
 
 }

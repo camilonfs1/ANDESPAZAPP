@@ -39,7 +39,10 @@ class AdapterRecyclerHorizontal_blog:RecyclerView.Adapter<AdapterRecyclerHorizon
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+
         val item = items?.get(position)
+
+        //View data on blog main
         holder.activity?.text = item!!.title
         holder.key?.text = item!!.key
         holder.name?.text = item!!.name_owner
@@ -48,17 +51,23 @@ class AdapterRecyclerHorizontal_blog:RecyclerView.Adapter<AdapterRecyclerHorizon
 
         holder.vista.setOnClickListener(object : View.OnClickListener  {
             override fun onClick(v: View?) {
+
+                //Sent object to detail blog
                 var intent = Intent(v!!.context,Detail_Blog::class.java)
+
+                //Detail object blog
                 intent.putExtra("key",  holder.key?.text )
                 intent.putExtra("owner",  items?.get(position)!!.name_owner )
                 intent.putExtra("date",  items?.get(position)!!.date )
                 intent.putExtra("color",  items?.get(position)!!.color )
                 intent.putExtra("title",  items?.get(position)!!.title )
+
                 v.context.startActivity(intent)
             }
 
         })
     }
+
     //ViewHolder inner class
     class ViewHolder(v: View) : RecyclerView.ViewHolder(v) {
         var vista = v

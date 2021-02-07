@@ -15,8 +15,12 @@ class BlogViewModel {
     private var commentsaux: ArrayList<Commentary>? = null
     private var commentsmain: ArrayList<Commentary>? = null
 
+
+    //Return blog item horizontal list
    fun horizontalAd(): ArrayList<Blog_item>{
+
        colors = ArrayList()
+        //Change color for first nine blot items
        colors!!.add("#673AB7")
        colors!!.add("#7986CB")
        colors!!.add("#64B5F6")
@@ -26,10 +30,13 @@ class BlogViewModel {
        colors!!.add("#81C784")
        colors!!.add("#AED581")
        colors!!.add("#DCE775")
+
        items =ArrayList()
        items_H =ArrayList()
 
-       items = Blog_Db.ReadDB()
+        //Read database local
+       items = Blog_Db.get_blogItems()
+
        for (i in 0 until items!!.size){
            if(i<=8){
                items_H!!.add(items!!.get(i))
@@ -38,10 +45,12 @@ class BlogViewModel {
        }
        return items_H!!
    }
+
+    //Return blog itme vertical list
     fun verticalAd(): ArrayList<Blog_item>{
         items_V =ArrayList()
         items =ArrayList()
-        items = Blog_Db.ReadDB()
+        items = Blog_Db.get_blogItems()
         for (i in 0 until items!!.size){
             if(i>=8){
                 items_V!!.add(items!!.get(i))
@@ -50,6 +59,7 @@ class BlogViewModel {
         return items_V!!
     }
 
+    //Return commentary list
     fun commentary(owner:String): ArrayList<Commentary>{
         commentsmain= ArrayList()
         commentsaux= ArrayList()
