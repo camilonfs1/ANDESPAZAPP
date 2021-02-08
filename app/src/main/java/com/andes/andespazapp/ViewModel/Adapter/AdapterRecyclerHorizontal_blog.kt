@@ -1,5 +1,6 @@
 package com.andes.andespazapp.ViewModel.Adapter
 
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.view.LayoutInflater
@@ -14,14 +15,14 @@ import com.andes.andespazapp.View.Module_Blog.Detail_Blog
 import com.andes.andespazapp.ViewModel.BlogViewModel
 import kotlinx.android.synthetic.main.blog_horizontal_item.view.*
 
-class AdapterRecyclerHorizontal_blog:RecyclerView.Adapter<AdapterRecyclerHorizontal_blog.ViewHolder>()  {
+class AdapterRecyclerHorizontal_blog(context: Context):RecyclerView.Adapter<AdapterRecyclerHorizontal_blog.ViewHolder>()  {
 
     var items: ArrayList<Blog_item>? = null
 
     private var BlogViewModel = BlogViewModel()
 
     init {
-        this.items = BlogViewModel.horizontalAd()
+        this.items = BlogViewModel.horizontalAd(context)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

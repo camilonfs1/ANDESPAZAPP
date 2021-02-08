@@ -42,13 +42,13 @@ class Blog_main : AppCompatActivity() {
         home = image_home
 
         //Horizontal recycler
-        adaptador_H = AdapterRecyclerHorizontal_blog()
+        adaptador_H = AdapterRecyclerHorizontal_blog(this)
         layoutmanager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         main_blog_item_H?.layoutManager = layoutmanager
         main_blog_item_H?.adapter = adaptador_H
 
         //Vertical recycler
-        adaptador_V = AdapterRecyclerVertical_blog()
+        adaptador_V = AdapterRecyclerVertical_blog(this)
         layoutmanager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         main_blog_item_V?.layoutManager = layoutmanager
         main_blog_item_V?.adapter = adaptador_V

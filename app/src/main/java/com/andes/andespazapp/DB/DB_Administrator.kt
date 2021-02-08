@@ -2,26 +2,19 @@ package com.andes.andespazapp.DB
 
 import android.content.ContentValues
 import android.content.Context
-import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import android.widget.Toast
-import androidx.core.content.ContextCompat
 import com.andes.andespazapp.Model.Blog_item
 import com.andes.andespazapp.Model.User
-import com.andes.andespazapp.Model.ddhh
-import com.andes.andespazapp.View.CRUD.CRUD_Individual_User
-import java.lang.Boolean.FALSE
-import java.security.AccessControlContext
 
-val DATABASE_NAME ="BASE PRINCIAL"
+val DATABASE_NAME = "BASE PRINCIAL"
 
 
-class DB_Administrator (context: Context): SQLiteOpenHelper(context,DATABASE_NAME,null,1) {
+class DB_Administrator(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, 1) {
 
-    private var TABLE1 ="user"
-    private var TABLE2 ="blog"
-    private var TABLE3 ="commentary"
+    private var TABLE1 = "user"
+    private var TABLE2 = "blog"
+    private var TABLE3 = "comentary"
 
 
     var table_user = "create table user (\n" +
@@ -36,7 +29,7 @@ class DB_Administrator (context: Context): SQLiteOpenHelper(context,DATABASE_NAM
             "\ticon integer not null\n" +
             ")"
 
-    var table_blog = "create table blog(\n" +
+    var table_blog = "create table blog (\n" +
             "\tkey INTEGER PRIMARY KEY,\n" +
             "\tname_owner varchar(100),\n" +
             "\ttitle varchar(500),\n" +
@@ -46,14 +39,13 @@ class DB_Administrator (context: Context): SQLiteOpenHelper(context,DATABASE_NAM
             "\tcolor varchar(10)\n" +
             ")"
 
-    var table_commentary = "create table commentary(\n" +
+    var table_commentary = "create table comentary (\n" +
             "\tkey INTEGER PRIMARY KEY,\n" +
             "\towner varchar(30),\n" +
-            "\tcommentary varchar(500),\n" +
-            "\tdate varchar(30),\n" +
-            "\tmother_key(10)\n" +
+            "\tcommentary varchar(250),\n" +
+            "\tdate varchar (30),\n" +
+            "\tmother_key INTEGER(10)\n" +
             ")"
-
 
 
     override fun onCreate(db: SQLiteDatabase?) {
@@ -64,19 +56,19 @@ class DB_Administrator (context: Context): SQLiteOpenHelper(context,DATABASE_NAM
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        db?.execSQL("DROP TABLE IF EXISTS "+TABLE1)
-        db?.execSQL("DROP TABLE IF EXISTS "+TABLE2)
-        db?.execSQL("DROP TABLE IF EXISTS "+TABLE3)
+        db?.execSQL("DROP TABLE IF EXISTS " + TABLE1)
+        db?.execSQL("DROP TABLE IF EXISTS " + TABLE2)
+        db?.execSQL("DROP TABLE IF EXISTS " + TABLE3)
 
         onCreate(db)
     }
 
-    fun insertData_user(user:User):User{
+    fun insertData_user(user: User): User {
         var db = this.readableDatabase
         var aso = false
-        val query = "Select * from "+ TABLE1+ " where key = "+user.identify
-        var result1 = db.rawQuery(query,null)
-        if(result1.moveToFirst()){
+        val query = "Select * from " + TABLE1 + " where key = " + user.identify
+        var result1 = db.rawQuery(query, null)
+        if (result1.moveToFirst()) {
             var user = User()
             var key = result1.getString(result1.getColumnIndex("key"))
             var roll = result1.getString(result1.getColumnIndex("name"))
@@ -87,28 +79,32 @@ class DB_Administrator (context: Context): SQLiteOpenHelper(context,DATABASE_NAM
             var age = result1.getString(result1.getColumnIndex("age"))
             var email = result1.getString(result1.getColumnIndex("email"))
             var icon = result1.getString(result1.getColumnIndex("icon"))
-            if(andes_asociate=="1"){aso = true}else {aso =false}
+            if (andes_asociate == "1") {
+                aso = true
+            } else {
+                aso = false
+            }
             var icono = Integer.parseInt(icon)
-            user = User(key,roll,aso,name,identify,region,age,email,icono)
+            user = User(key, roll, aso, name, identify, region, age, email, icono)
             System.out.println("Usuario ya existente")
             return user
-        }else{
+        } else {
             db = this.writableDatabase
             var values = ContentValues()
-            values.put("key",user.identify)
-            values.put("roll",user.roll)
-            values.put("andes_asociate",1)
-            values.put("name",user.name)
-            values.put("identify",user.identify)
-            values.put("region",user.region)
-            values.put("age",user.age)
-            values.put("email",user.email)
-            values.put("icon",user.icon)
+            values.put("key", user.identify)
+            values.put("roll", user.roll)
+            values.put("andes_asociate", 1)
+            values.put("name", user.name)
+            values.put("identify", user.identify)
+            values.put("region", user.region)
+            values.put("age", user.age)
+            values.put("email", user.email)
+            values.put("icon", user.icon)
             var result = db.insert(TABLE1, null, values)
-            if(result == -1.toLong()){
+            if (result == -1.toLong()) {
                 System.out.println("falla")
                 return user
-            }else{
+            } else {
                 System.out.println("all ok")
                 return user
             }
@@ -116,38 +112,43 @@ class DB_Administrator (context: Context): SQLiteOpenHelper(context,DATABASE_NAM
         }
         db.close()
     }
-    fun getUser(id:String):Any{
+
+    fun getUser(id: String): Any {
         var aso = false
         val db = this.readableDatabase
-        val query = "Select * from "+ TABLE1 + " where key = "+id
-        val result = db.rawQuery(query,null)
-        if(result.moveToFirst()){
-                    var user = User()
-                    var key = result.getString(result.getColumnIndex("key"))
-                    var roll = result.getString(result.getColumnIndex("name"))
-                    var andes_asociate = result.getString(result.getColumnIndex("andes_asociate"))
-                    var name = result.getString(result.getColumnIndex("name"))
-                    var identify = result.getString(result.getColumnIndex("identify"))
-                    var region = result.getString(result.getColumnIndex("region"))
-                    var age = result.getString(result.getColumnIndex("age"))
-                    var email = result.getString(result.getColumnIndex("email"))
-                    var icon = result.getString(result.getColumnIndex("icon"))
-                    if(andes_asociate=="1"){aso = true}else {aso =false}
-                    var icono = Integer.parseInt(icon)
-                    user = User(key,roll,aso,name,identify,region,age,email,icono)
-                    System.out.println("Usuario ya existente")
-                    return user
+        val query = "Select * from " + TABLE1 + " where key = " + id
+        val result = db.rawQuery(query, null)
+        if (result.moveToFirst()) {
+            var key = result.getString(result.getColumnIndex("key"))
+            var roll = result.getString(result.getColumnIndex("name"))
+            var andes_asociate = result.getString(result.getColumnIndex("andes_asociate"))
+            var name = result.getString(result.getColumnIndex("name"))
+            var identify = result.getString(result.getColumnIndex("identify"))
+            var region = result.getString(result.getColumnIndex("region"))
+            var age = result.getString(result.getColumnIndex("age"))
+            var email = result.getString(result.getColumnIndex("email"))
+            var icon = result.getString(result.getColumnIndex("icon"))
+            if (andes_asociate == "1") {
+                aso = true
+            } else {
+                aso = false
+            }
+            var icono = Integer.parseInt(icon)
+            var user = User(key, roll, aso, name, identify, region, age, email, icono)
+            System.out.println("Usuario ya existente")
+            return user
         }
         return false
     }
-    fun getprice(): ArrayList<User>{
+
+    fun getprice(): ArrayList<User> {
         val db = this.readableDatabase
         var aso = false
 
         val valores = ArrayList<User>()
-        val query = "Select * from "+ TABLE1//+ " where id = 123"
-        val result = db.rawQuery(query,null)
-        if(result.moveToFirst()){
+        val query = "Select * from " + TABLE1//+ " where id = 123"
+        val result = db.rawQuery(query, null)
+        if (result.moveToFirst()) {
             do {
                 var user = User()
                 var key = result.getString(result.getColumnIndex("key"))
@@ -159,33 +160,84 @@ class DB_Administrator (context: Context): SQLiteOpenHelper(context,DATABASE_NAM
                 var age = result.getString(result.getColumnIndex("age"))
                 var email = result.getString(result.getColumnIndex("email"))
                 var icon = result.getString(result.getColumnIndex("icon"))
-                if(andes_asociate=="1"){aso = true}else {aso =false}
+                if (andes_asociate == "1") {
+                    aso = true
+                } else {
+                    aso = false
+                }
                 var icono = Integer.parseInt(icon)
-                user = User(key,roll,aso,name,identify,region,age,email,icono)
+                user = User(key, roll, aso, name, identify, region, age, email, icono)
                 valores.add(user)
             } while (result.moveToNext())
         }
 
-        return  valores
+        return valores
     }
 
+    //--------------------------------------->  Blog
+    fun consult_blogId(id: Int): Any {
 
-    //
-    fun consult_blogId(id:Int):Any{
+        System.out.println("------------------>llega" + id)
+
+
+        var db = this.readableDatabase
+        val query = "Select * from " + TABLE2 + " where key = " + id
+        val result = db.rawQuery(query, null)
         //if exit, return item
+        if (result.moveToFirst()) {
 
-        //If not exit retur 0
+            var key = result.getString(result.getColumnIndex("key"))
+            var name_owner = result.getString(result.getColumnIndex("name_owner"))
+            var title = result.getString(result.getColumnIndex("title"))
+            var date = result.getString(result.getColumnIndex("date"))
+            var num_commentari = result.getString(result.getColumnIndex("num_commentari"))
+            var avatar_owner = result.getString(result.getColumnIndex("avatar_owner"))
+            var color = result.getString(result.getColumnIndex("color"))
 
+            var item = Blog_item(
+                key,
+                name_owner,
+                title,
+                Integer.parseInt(date.toString()),
+                Integer.parseInt(num_commentari.toString()),
+                Integer.parseInt(avatar_owner.toString()),
+                color
+            )
+
+            return item!!
+
+        }//If not exit return 0
+        else {
+            return 0
+        }
         return 0
     }
 
-    fun write_blogitem(item: Blog_item){
-        //Only write item in local database
+    //Only write blog item in local db
+    fun write_blogitem(item: Blog_item) {
+        var db = this.readableDatabase
+        System.out.println("-->"+item.avatar_owner)
+        System.out.println("-->"+item.color)
+        db = this.writableDatabase
+        var values = ContentValues()
+        values.put("key", item.key)
+        values.put("name_owner", item.name_owner)
+        values.put("title", item.title)
+        values.put("date", item.date)
+        values.put("num_commentari", item.num_commentari)
+        values.put("avatar_owner", item.avatar_owner)
+        values.put("color", item.color)
 
+        var result = db.insert(TABLE3, null, values)
+        if (result == -1.toLong()) {
+            System.out.println("falla")
+        } else {
+            System.out.println("all ok")
+        }
+
+        db.close()
     }
 
-
-
-
-
 }
+
+

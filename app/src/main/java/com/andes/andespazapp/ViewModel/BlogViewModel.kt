@@ -1,5 +1,6 @@
 package com.andes.andespazapp.ViewModel
 
+import android.content.Context
 import android.util.Log
 import com.andes.andespazapp.Model.Blog_item
 import com.andes.andespazapp.Model.Commentary
@@ -17,7 +18,7 @@ class BlogViewModel {
 
 
     //Return blog item horizontal list
-   fun horizontalAd(): ArrayList<Blog_item>{
+   fun horizontalAd(context:Context): ArrayList<Blog_item>{
 
        colors = ArrayList()
         //Change color for first nine blot items
@@ -35,9 +36,10 @@ class BlogViewModel {
        items_H =ArrayList()
 
         //Read database local
-       items = Blog_Db.get_blogItems()
+       items = Blog_Db.get_blogItems(context)
 
        for (i in 0 until items!!.size){
+           System.out.println("bloggg ------------------->"+items!!.get(i).title)
            if(i<=8){
                items_H!!.add(items!!.get(i))
                items_H!!.get(i).color = colors!!.get(i)
@@ -47,10 +49,10 @@ class BlogViewModel {
    }
 
     //Return blog itme vertical list
-    fun verticalAd(): ArrayList<Blog_item>{
+    fun verticalAd(context:Context): ArrayList<Blog_item>{
         items_V =ArrayList()
         items =ArrayList()
-        items = Blog_Db.get_blogItems()
+        items = Blog_Db.get_blogItems(context)
         for (i in 0 until items!!.size){
             if(i>=8){
                 items_V!!.add(items!!.get(i))
