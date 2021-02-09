@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.Window
+import android.widget.Button
 import android.widget.ImageView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
@@ -21,7 +22,7 @@ class Blog_main : AppCompatActivity() {
     var main_blog_item_H: RecyclerView? = null
     var main_blog_item_V: RecyclerView? = null
 
-    var home: ImageView? = null
+    var home: Button? = null
 
     var adaptador_H: AdapterRecyclerHorizontal_blog? = null
     var adaptador_V: AdapterRecyclerVertical_blog? = null
@@ -39,7 +40,7 @@ class Blog_main : AppCompatActivity() {
         main_blog_item_H = recycler_blog_horizontal
         main_blog_item_V = recycler_blog_Vertical
 
-        home = image_home
+        home = btn_home
 
         //Horizontal recycler
         adaptador_H = AdapterRecyclerHorizontal_blog(this)

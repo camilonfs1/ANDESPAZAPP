@@ -176,10 +176,6 @@ class DB_Administrator(context: Context) : SQLiteOpenHelper(context, DATABASE_NA
 
     //--------------------------------------->  Blog
     fun consult_blogId(id: Int): Any {
-
-        System.out.println("------------------>llega" + id)
-
-
         var db = this.readableDatabase
         val query = "Select * from " + TABLE2 + " where key = " + id
         val result = db.rawQuery(query, null)
@@ -203,21 +199,22 @@ class DB_Administrator(context: Context) : SQLiteOpenHelper(context, DATABASE_NA
                 Integer.parseInt(avatar_owner.toString()),
                 color
             )
-
+            System.out.println("Existe")
+            db.close()
             return item!!
 
         }//If not exit return 0
         else {
+            db.close()
             return 0
         }
+        db.close()
         return 0
     }
 
     //Only write blog item in local db
     fun write_blogitem(item: Blog_item) {
         var db = this.readableDatabase
-        System.out.println("-->"+item.avatar_owner)
-        System.out.println("-->"+item.color)
         db = this.writableDatabase
         var values = ContentValues()
         values.put("key", item.key)
@@ -228,7 +225,7 @@ class DB_Administrator(context: Context) : SQLiteOpenHelper(context, DATABASE_NA
         values.put("avatar_owner", item.avatar_owner)
         values.put("color", item.color)
 
-        var result = db.insert(TABLE3, null, values)
+        var result = db.insert(TABLE2, null, values)
         if (result == -1.toLong()) {
             System.out.println("falla")
         } else {
@@ -236,6 +233,38 @@ class DB_Administrator(context: Context) : SQLiteOpenHelper(context, DATABASE_NA
         }
 
         db.close()
+    }
+
+
+    fun getallBlog(): ArrayList<Blog_item> {
+        val db = this.readableDatabase
+        var aso = false
+        val items = ArrayList<Blog_item>()
+        val query = "Select * from " + TABLE2//+ " where id = 123"
+        val result = db.rawQuery(query, null)
+        if (result.moveToFirst()) {
+            do {
+                var key = result.getString(result.getColumnIndex("key"))
+                var name_owner = result.getString(result.getColumnIndex("name_owner"))
+                var title = result.getString(result.getColumnIndex("title"))
+                var date = result.getString(result.getColumnIndex("date"))
+                var num_commentari = result.getString(result.getColumnIndex("num_commentari"))
+                var avatar_owner = result.getString(result.getColumnIndex("avatar_owner"))
+                var color = result.getString(result.getColumnIndex("color"))
+
+                var item = Blog_item(
+                    key,
+                    name_owner,
+                    title,
+                    Integer.parseInt(date.toString()),
+                    Integer.parseInt(num_commentari.toString()),
+                    Integer.parseInt(avatar_owner.toString()),
+                    color
+                )
+                items.add(item)
+            } while (result.moveToNext())
+        }
+        return items
     }
 
 }

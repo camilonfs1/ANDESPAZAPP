@@ -36,10 +36,8 @@ class BlogViewModel {
        items_H =ArrayList()
 
         //Read database local
-       items = Blog_Db.get_blogItems(context)
-
+       items = Blog_Db.get_blogItems(context,0)
        for (i in 0 until items!!.size){
-           System.out.println("bloggg ------------------->"+items!!.get(i).title)
            if(i<=8){
                items_H!!.add(items!!.get(i))
                items_H!!.get(i).color = colors!!.get(i)
@@ -52,7 +50,7 @@ class BlogViewModel {
     fun verticalAd(context:Context): ArrayList<Blog_item>{
         items_V =ArrayList()
         items =ArrayList()
-        items = Blog_Db.get_blogItems(context)
+        items = Blog_Db.get_blogItems(context,1)
         for (i in 0 until items!!.size){
             if(i>=8){
                 items_V!!.add(items!!.get(i))
