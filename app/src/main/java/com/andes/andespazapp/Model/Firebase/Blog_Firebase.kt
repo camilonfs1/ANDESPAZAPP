@@ -23,6 +23,21 @@ class Blog_Firebase {
     var commen: ArrayList<Commentary>? = ArrayList()
     var LocalDB: DB_Administrator? = null
 
+    fun new_blogItem(blogItem: Blog_item){
+
+        mDatabase = FirebaseDatabase.getInstance()
+
+        mDatabaseReference = mDatabase!!.reference!!.child("Qualifications").child(blogItem.key.toString())
+        mDatabaseReference!!.child("key").setValue(blogItem.title)
+        mDatabaseReference!!.child("name_owner").setValue(blogItem.name_owner)
+        mDatabaseReference!!.child("tittle").setValue(blogItem.title)
+        mDatabaseReference!!.child("date").setValue(blogItem.date)
+        mDatabaseReference!!.child("num_commentari").setValue(blogItem.num_commentari)
+        mDatabaseReference!!.child("avatar_owner").setValue(blogItem.avatar_owner)
+        mDatabaseReference!!.child("color").setValue(blogItem.color)
+
+    }
+
 
     fun get_blogItems(context: Context, flag: Int): ArrayList<Blog_item> {
         var ids: ArrayList<Int>? = ArrayList()
@@ -106,7 +121,7 @@ class Blog_Firebase {
 
 
     //REad item in local db
-    fun ReadLocalDB(context: Context):ArrayList<Blog_item> {
+    fun ReadLocalDB(context: Context): ArrayList<Blog_item> {
         LocalDB = DB_Administrator(context)
         return LocalDB!!.getallBlog()
     }
@@ -128,66 +143,67 @@ class Blog_Firebase {
 
 
     fun FIREBASE(): ArrayList<Blog_item> {
-         items!!.add(
-             Blog_item(
-                 "1",
-                 "camilo vargas0",
-                 "Discusión numero uno, propuesta para el desarrollo del tema propuesta",
-                 1,
-                 1,
-                 1,
-                 "#fffff"
-             )
-         )
-         items!!.add(
-             Blog_item(
-                 "2",
-                 "camilo vargas1",
-                 "DEBATE ANDES segunda",
-                 1, 1,
-                 1, "#fffff"
-             )
-         )
-         items!!.add(
-             Blog_item(
-                 "3",
-                 "camilo vargas2",
-                 "DEBATE ANDES tercera", 1, 1, 1, "#fffff"
-             )
-         )
-         items!!.add(Blog_item("4", "camilo vargas3", "DEBATE ANDES cuarta", 1, 1, 1, "#fffff"))
-         items!!.add(Blog_item("5", "camilo vargas4", "DEBATE ANDES quinta", 1, 1, 1, "#fffff"))
-         items!!.add(
-             Blog_item(
-                 "6",
-                 "camilo vargas5",
-                 "Discusión numero uno, propuesta para el desarrollo del tema propuesta",
-                 1,
-                 1,
-                 1,
-                 "#fffff"
-             )
-         )
-         items!!.add(Blog_item("7", "camilo vargas6", "DEBATE ANDES segunda", 1, 1, 1, "#fffff"))
-         items!!.add(Blog_item("8", "camilo vargas7", "DEBATE ANDES tercera", 1, 1, 1, "#fffff"))
-         items!!.add(Blog_item("9", "camilo vargas8", "DEBATE ANDES cuarta", 1, 1, 1, "#fffff"))
-         items!!.add(Blog_item("10", "camilo vargas9", "DEBATE ANDES quinta", 1, 1, 1, "#fffff"))
-         items!!.add(
-             Blog_item(
-                 "11",
-                 "camilo vargas10",
-                 "Discusión numero uno, propuesta para el desarrollo del tema propuesta",
-                 1,
-                 1,
-                 1,
-                 "#fffff"
-             )
-         )
-         items!!.add(Blog_item("12", "camilo vargas11", "DEBATE ANDES segunda", 1, 10, 1, "#fffff"))
-         items!!.add(Blog_item("13", "camilo vargas12", "DEBATE ANDES tercera", 1, 1, 1, "#fffff"))
-         items!!.add(Blog_item("14", "camilo vargas13", "DEBATE ANDES cuarta", 6, 1, 1, "#fffff"))
-         items!!.add(Blog_item("15", "camilo vargas14", "DEBATE ANDES quinta", 1, 1, 1, "#fffff"))
+        items!!.add(
+            Blog_item(
+                "1",
+                "camilo vargas0",
+                "Discusión numero uno, propuesta para el desarrollo del tema propuesta",
+                1,
+                1,
+                1,
+                "#fffff"
+            )
+        )
+        items!!.add(
+            Blog_item(
+                "2",
+                "camilo vargas1",
+                "DEBATE ANDES segunda",
+                1, 1,
+                1, "#fffff"
+            )
+        )
+        items!!.add(
+            Blog_item(
+                "3",
+                "camilo vargas2",
+                "DEBATE ANDES tercera", 1, 1, 1, "#fffff"
+            )
+        )
 
-         return items!!
-     }
+        items!!.add(Blog_item("4", "camilo vargas3", "DEBATE ANDES cuarta", 1, 1, 1, "#fffff"))
+        items!!.add(Blog_item("5", "camilo vargas4", "DEBATE ANDES quinta", 1, 1, 1, "#fffff"))
+        items!!.add(
+            Blog_item(
+                "6",
+                "camilo vargas5",
+                "Discusión numero uno, propuesta para el desarrollo del tema propuesta",
+                1,
+                1,
+                1,
+                "#fffff"
+            )
+        )
+        items!!.add(Blog_item("7", "camilo vargas6", "DEBATE ANDES segunda", 1, 1, 1, "#fffff"))
+        items!!.add(Blog_item("8", "camilo vargas7", "DEBATE ANDES tercera", 1, 1, 1, "#fffff"))
+        items!!.add(Blog_item("9", "camilo vargas8", "DEBATE ANDES cuarta", 1, 1, 1, "#fffff"))
+        items!!.add(Blog_item("10", "camilo vargas9", "DEBATE ANDES quinta", 1, 1, 1, "#fffff"))
+        items!!.add(
+            Blog_item(
+                "11",
+                "camilo vargas10",
+                "Discusión numero uno, propuesta para el desarrollo del tema propuesta",
+                1,
+                1,
+                1,
+                "#fffff"
+            )
+        )
+        items!!.add(Blog_item("12", "camilo vargas11", "DEBATE ANDES segunda", 1, 10, 1, "#fffff"))
+        items!!.add(Blog_item("13", "camilo vargas12", "DEBATE ANDES tercera", 1, 1, 1, "#fffff"))
+        items!!.add(Blog_item("14", "camilo vargas13", "DEBATE ANDES cuarta", 6, 1, 1, "#fffff"))
+        items!!.add(Blog_item("15", "camilo vargas14", "DEBATE ANDES quinta", 1, 1, 1, "#fffff"))
+
+        return items!!
+    }
 }

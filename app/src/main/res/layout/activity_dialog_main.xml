@@ -11,6 +11,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:layout_marginLeft="10dp"
             android:id="@+id/txt_name_student"
             android:text="Blog"
             android:textSize="24dp"
@@ -28,7 +29,7 @@
 
             <Button
                 android:layout_weight="1"
-                android:id="@+id/btnSentChatlog"
+                android:id="@+id/btn_postBlog"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_toStartOf="@+id/image_home"

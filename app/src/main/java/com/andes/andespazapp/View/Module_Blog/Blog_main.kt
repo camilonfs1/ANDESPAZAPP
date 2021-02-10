@@ -23,6 +23,7 @@ class Blog_main : AppCompatActivity() {
     var main_blog_item_V: RecyclerView? = null
 
     var home: Button? = null
+    var post: Button? = null
 
     var adaptador_H: AdapterRecyclerHorizontal_blog? = null
     var adaptador_V: AdapterRecyclerVertical_blog? = null
@@ -41,6 +42,7 @@ class Blog_main : AppCompatActivity() {
         main_blog_item_V = recycler_blog_Vertical
 
         home = btn_home
+        post = btn_postBlog
 
         //Horizontal recycler
         adaptador_H = AdapterRecyclerHorizontal_blog(this)
@@ -57,6 +59,12 @@ class Blog_main : AppCompatActivity() {
         //Button home
         home!!.setOnClickListener {
             val intent = Intent(this, MainStudentMenu::class.java)
+            startActivity(intent)
+        }
+
+        //Button new blog
+        post!!.setOnClickListener {
+            val intent = Intent(this, NewBlogItem::class.java)
             startActivity(intent)
         }
     }
