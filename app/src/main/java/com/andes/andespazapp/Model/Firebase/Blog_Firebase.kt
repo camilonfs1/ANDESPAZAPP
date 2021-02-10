@@ -53,7 +53,6 @@ class Blog_Firebase {
             for (id in ids!!) {
                 var item = ReadLocalDB_id(id, context)
                 if (item is Blog_item) {//Exist
-                    System.out.println("------------------>Existe" + id)
                 } else if (item == 0) {//Not exist
                     not_exits_ids!!.add(id)
                 }
@@ -63,10 +62,8 @@ class Blog_Firebase {
             for (id in not_exits_ids!!) {
                 var item_uax = ReadObjectFirebase(id)
                 if (item_uax.key != "-1") {
-                    System.out.println("------------------>No Existe " + item_uax.key)
                     news!!.add(item_uax)
                 } else {
-                    System.out.println("------------------>Error no encontrado " + item_uax.key)
                 }
             }
 

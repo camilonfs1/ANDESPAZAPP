@@ -1,18 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="15dp"
+    android:gravity="center"
+    android:background="#673AB7"
     tools:context=".View.Module_Blog.NewBlogItem">
 
-    <Button
-        android:id="@+id/post_btn"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:gravity="center_vertical"
-        app:fabSize="normal"
-        tools:ignore="MissingConstraints" />
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@drawable/linear_layuout_back">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Postea una discucion para el blog :"
+            android:textStyle="italic|bold"
+            android:textSize="20dp"
+            android:textColor="#673AB7"/>
+
+        <EditText
+            android:id="@+id/txt_tittle"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:hint="Post:"
+            android:textStyle="bold"
+            android:gravity="top"/>
+
+
+        <Button
+            android:id="@+id/btn_newBlog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Postear"
+            android:layout_gravity="bottom"
+            android:textColor="@android:color/white"
+            android:background="@drawable/btn_back"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

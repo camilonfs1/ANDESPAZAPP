@@ -4,18 +4,10 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
-import androidx.cardview.widget.CardView
-import androidx.core.view.get
-import androidx.core.view.isInvisible
 import com.andes.andespazapp.Model.User
 import com.andes.andespazapp.R
-import com.andes.andespazapp.ViewModel.Adapter.AdapterSpinnerRegion
-import com.andes.andespazapp.ViewModel.Adapter.AdapterSpinnerSchool
 import com.andes.andespazapp.ViewModel.RegisterViewModel
 import kotlinx.android.synthetic.main.activity_main_register.*
-import org.w3c.dom.Text
-import java.util.EnumSet.range
-import androidx.core.view.isVisible as isVisible1
 
 //------------------------------------->  OK
 

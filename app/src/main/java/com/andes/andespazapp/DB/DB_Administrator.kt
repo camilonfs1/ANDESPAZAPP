@@ -135,7 +135,6 @@ class DB_Administrator(context: Context) : SQLiteOpenHelper(context, DATABASE_NA
             }
             var icono = Integer.parseInt(icon)
             var user = User(key, roll, aso, name, identify, region, age, email, icono)
-            System.out.println("Usuario ya existente")
             return user
         }
         return false
@@ -265,6 +264,15 @@ class DB_Administrator(context: Context) : SQLiteOpenHelper(context, DATABASE_NA
             } while (result.moveToNext())
         }
         return items
+    }
+
+    fun maxcommentarynum():Int{
+        val db = this.readableDatabase
+        val query = "Select key from " + TABLE2
+        val result = db.rawQuery(query, null)
+        System.out.println("key maximo-------->"+result)
+
+        return  0
     }
 
 }
