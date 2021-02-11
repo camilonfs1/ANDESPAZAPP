@@ -43,9 +43,10 @@ class MainStudentMenu : AppCompatActivity() {
         name = txt_name_student
         roll = txt_roll
 
+        databaseHandler = DB_Administrator(this)
 
 
-       /* var id = intent.getStringExtra("id")
+       var id = intent.getStringExtra("id")
         if(id=="" || id ==null){
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
@@ -53,7 +54,7 @@ class MainStudentMenu : AppCompatActivity() {
             var res = databaseHandler!!.getUser(id) as User
             name!!.text=res.name
             roll!!.text = res.roll
-        }*/
+        }
         databaseHandler = DB_Administrator(this)
 
 
@@ -72,12 +73,11 @@ class MainStudentMenu : AppCompatActivity() {
         btn_ddhh = ddhh_card
         btn_close_back = btn_close
 
-       /* var id = intent.getStringExtra("id")
         var roll = intent.getStringExtra("roll")
 
         if(roll == "" || id ==""){
             startActivity(Intent(this, MainActivity::class.java))
-        }*/
+        }
 
 
         /*var db = DB_Administrator(this)
@@ -101,6 +101,7 @@ class MainStudentMenu : AppCompatActivity() {
         }
         btn_blog!!.setOnClickListener{
             val intent = Intent(this, Blog_main::class.java)
+            intent.putExtra("id", id)
             startActivity(intent)
         }
         btn_complain!!.setOnClickListener{
@@ -113,7 +114,6 @@ class MainStudentMenu : AppCompatActivity() {
         }
     }
     fun SigOut() {
-        mAuth!!.signOut()
         startActivity(Intent(this, MainActivity::class.java))
         finish()
     }

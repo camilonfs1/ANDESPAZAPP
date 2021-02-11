@@ -38,6 +38,8 @@ class Blog_main : AppCompatActivity() {
         val window: Window = this@Blog_main.window
         window.statusBarColor = ContextCompat.getColor(this@Blog_main, R.color.colorAccent)
 
+
+
         main_blog_item_H = recycler_blog_horizontal
         main_blog_item_V = recycler_blog_Vertical
 
@@ -62,9 +64,12 @@ class Blog_main : AppCompatActivity() {
             startActivity(intent)
         }
 
+        var id = intent.getStringExtra("id")
+
         //Button new blog
         post!!.setOnClickListener {
             val intent = Intent(this, NewBlogItem::class.java)
+            intent.putExtra("id", id)
             startActivity(intent)
         }
     }

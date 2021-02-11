@@ -84,6 +84,7 @@ class Login_progress : AppCompatActivity() {
         next(user)
     }
     fun next(user:User ){
+
         val intent = Intent(this, MainStudentMenu::class.java)
         intent.putExtra("id", user.identify)
         startActivity(intent)

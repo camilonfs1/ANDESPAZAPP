@@ -28,13 +28,13 @@ class Blog_Firebase {
         mDatabase = FirebaseDatabase.getInstance()
 
         mDatabaseReference = mDatabase!!.reference!!.child("Qualifications").child(blogItem.key.toString())
-        mDatabaseReference!!.child("key").setValue(blogItem.title)
-        mDatabaseReference!!.child("name_owner").setValue(blogItem.name_owner)
-        mDatabaseReference!!.child("tittle").setValue(blogItem.title)
-        mDatabaseReference!!.child("date").setValue(blogItem.date)
-        mDatabaseReference!!.child("num_commentari").setValue(blogItem.num_commentari)
-        mDatabaseReference!!.child("avatar_owner").setValue(blogItem.avatar_owner)
-        mDatabaseReference!!.child("color").setValue(blogItem.color)
+        mDatabaseReference!!.child("key").setValue(blogItem.key.toString())
+        mDatabaseReference!!.child("name_owner").setValue(blogItem.name_owner.toString())
+        mDatabaseReference!!.child("tittle").setValue(blogItem.title.toString())
+        mDatabaseReference!!.child("date").setValue(blogItem.date.toString())
+        mDatabaseReference!!.child("num_commentari").setValue(blogItem.num_commentari.toString())
+        mDatabaseReference!!.child("avatar_owner").setValue(blogItem.avatar_owner.toString())
+        mDatabaseReference!!.child("color").setValue(blogItem.color.toString())
 
     }
 

@@ -25,13 +25,12 @@
             android:textColor="#673AB7"/>
 
         <EditText
-            android:id="@+id/txt_tittle"
+            android:id="@+id/post_text"
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:hint="Post:"
             android:textStyle="bold"
             android:gravity="top"/>
-
 
         <Button
             android:id="@+id/btn_newBlog"

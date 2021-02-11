@@ -266,13 +266,20 @@ class DB_Administrator(context: Context) : SQLiteOpenHelper(context, DATABASE_NA
         return items
     }
 
-    fun maxcommentarynum():Int{
+    fun maxcommentarynum(): Int {
         val db = this.readableDatabase
         val query = "Select key from " + TABLE2
         val result = db.rawQuery(query, null)
-        System.out.println("key maximo-------->"+result)
-
-        return  0
+        var aux = 0
+        if (result.moveToFirst()) {
+            do {
+                var key = result.getString(result.getColumnIndex("key"))
+                if(Integer.parseInt(key.toString()) > aux){
+                    aux =  Integer.parseInt(key.toString())
+                }
+            } while (result.moveToNext())
+        }
+        return aux
     }
 
 }
