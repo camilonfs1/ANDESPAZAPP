@@ -1,5 +1,6 @@
 package com.andes.andespazapp.Model
 
+
 class Blog_item(key:String, name_owner: String,   title: String, date: Int, num_commentari: Int, avatar_owner:Int, color: String) {
     var key: String?= null
     var name_owner: String?= null

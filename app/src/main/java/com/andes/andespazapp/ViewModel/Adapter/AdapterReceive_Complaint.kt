@@ -5,7 +5,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.andes.andespazapp.Model.Blog_item
 import com.andes.andespazapp.Model.Complaint
 import kotlinx.android.synthetic.main.complaint_item.view.*
 

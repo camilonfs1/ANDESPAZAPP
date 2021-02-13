@@ -236,7 +236,10 @@ class DB_Administrator(context: Context) : SQLiteOpenHelper(context, DATABASE_NA
 
 
     fun getallBlog(): ArrayList<Blog_item> {
+
+
         val db = this.readableDatabase
+        db?.execSQL(table_blog)
         var aso = false
         val items = ArrayList<Blog_item>()
         val query = "Select * from " + TABLE2//+ " where id = 123"

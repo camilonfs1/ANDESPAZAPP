@@ -1,7 +1,6 @@
 package com.andes.andespazapp.ViewModel
 
 import android.content.Context
-import android.util.Log
 import com.andes.andespazapp.Model.Blog_item
 import com.andes.andespazapp.Model.Commentary
 import com.andes.andespazapp.Model.Firebase.Blog_Firebase

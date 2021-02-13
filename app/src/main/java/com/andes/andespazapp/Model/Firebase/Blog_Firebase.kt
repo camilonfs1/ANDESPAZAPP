@@ -5,10 +5,11 @@ import com.andes.andespazapp.DB.DB_Administrator
 import com.andes.andespazapp.Model.Blog_item
 import com.andes.andespazapp.Model.Commentary
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.*
 
 class Blog_Firebase {
+
+
 
 
     private var FireData: FirebaseDatabase? = null
@@ -27,7 +28,7 @@ class Blog_Firebase {
 
         mDatabase = FirebaseDatabase.getInstance()
 
-        mDatabaseReference = mDatabase!!.reference!!.child("Qualifications").child(blogItem.key.toString())
+        mDatabaseReference = mDatabase!!.reference!!.child("Blog").child(blogItem.key.toString())
         mDatabaseReference!!.child("key").setValue(blogItem.key.toString())
         mDatabaseReference!!.child("name_owner").setValue(blogItem.name_owner.toString())
         mDatabaseReference!!.child("tittle").setValue(blogItem.title.toString())
@@ -40,6 +41,7 @@ class Blog_Firebase {
 
 
     fun get_blogItems(context: Context, flag: Int): ArrayList<Blog_item> {
+        FIREBASE(1,items!!)
         var ids: ArrayList<Int>? = ArrayList()
         var not_exits_ids: ArrayList<Int>? = ArrayList()
         var news: ArrayList<Blog_item>? = ArrayList()
@@ -79,7 +81,7 @@ class Blog_Firebase {
     //Create list of id to consult local database
     fun ReadFirebaseDB_id(): ArrayList<Int> {
         var ids: ArrayList<Int>? = ArrayList()
-        var items_list = FIREBASE()
+        var items_list = FIREBASE(0,items!!)
 
         for (item in items_list) {
             ids!!.add(Integer.parseInt(item.key.toString()))
@@ -98,7 +100,7 @@ class Blog_Firebase {
 
     //Return item by id in firebase
     fun ReadObjectFirebase(id: Int): Blog_item {
-        var items_list = FIREBASE()
+        var items_list = FIREBASE(0,items!! )
         for (item in items_list) {
             if (item.key.toString() != "") {
                 var id_aux = Integer.parseInt(item.key.toString())
@@ -139,8 +141,8 @@ class Blog_Firebase {
     }
 
 
-    fun FIREBASE(): ArrayList<Blog_item> {
-        items!!.add(
+    fun FIREBASE(flag : Int,items_blog : ArrayList<Blog_item>): ArrayList<Blog_item> {
+        /*items!!.add(
             Blog_item(
                 "1",
                 "camilo vargas0",
@@ -199,8 +201,43 @@ class Blog_Firebase {
         items!!.add(Blog_item("12", "camilo vargas11", "DEBATE ANDES segunda", 1, 10, 1, "#fffff"))
         items!!.add(Blog_item("13", "camilo vargas12", "DEBATE ANDES tercera", 1, 1, 1, "#fffff"))
         items!!.add(Blog_item("14", "camilo vargas13", "DEBATE ANDES cuarta", 6, 1, 1, "#fffff"))
-        items!!.add(Blog_item("15", "camilo vargas14", "DEBATE ANDES quinta", 1, 1, 1, "#fffff"))
-
+        items!!.add(Blog_item("15", "camilo vargas14", "DEBATE ANDES quinta", 1, 1, 1, "#fffff"))*/
+        items =  items_blog
+        if(flag ==1){
+            readDB()
+        }
+        for (i in items!!){
+            System.out.println("key----->"+i.key)
+        }
         return items!!
     }
+    private fun readDB(){
+        var items_blog:ArrayList<Blog_item> = ArrayList()
+        mDatabase = FirebaseDatabase.getInstance()
+        mDatabaseReference = mDatabase!!.reference.child("Blog")
+        mDatabaseReference?.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists()) {
+                    for (e in snapshot.children) {
+                        var key = e.child("key").value as String
+                        var avatar_owner = e.child("key").value as String
+                        var color = e.child("color").value
+                        var date = e.child("date").value
+                        var name_owner = e.child("name_owner").value as String
+                        var num_commentari =  e.child("num_commentari").value as String
+                        var title = e.child("tittle").value
+                        var item = Blog_item(key,name_owner,title.toString(),Integer.parseInt(date.toString()),Integer.parseInt(num_commentari),Integer.parseInt(avatar_owner),color.toString())
+                        items_blog!!.add(item)
+                    }
+                    FIREBASE(0,items_blog)
+
+                }
+            }
+            override fun onCancelled(databaseError: DatabaseError) {
+
+            }
+        })
+    }
+
+
 }
