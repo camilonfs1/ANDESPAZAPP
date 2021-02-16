@@ -1,12 +1,18 @@
 package com.andes.andespazapp.Model
 
-import java.lang.Boolean.FALSE
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
-class Person(val roll:String = "",
-             val andes:Boolean = FALSE,
-             val name:String = "",
-             val identification:String = "",
-             val colegio:String = "" ,
-             val edad:String = "" ,
-             val email:String = "",
-             val icon:String = "" )
+@Entity(tableName = "Person")
+data class Person(
+    var roll: String,
+    var andes_asociate: Boolean,
+    var name: String,
+    var identify: Int,
+    var region: String,
+    var age: String,
+    var email: String,
+    var icon: Int,
+    @PrimaryKey(autoGenerate = true)
+    var idPerson: Int = 0
+)

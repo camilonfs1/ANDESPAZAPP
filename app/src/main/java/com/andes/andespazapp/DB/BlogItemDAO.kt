@@ -10,14 +10,16 @@ import com.andes.andespazapp.Model.BlogItem
 @Dao
 interface BlogItemDAO {
     @Query("SELECT * FROM BLog")
-    fun getAll(): LiveData<List<BlogItem>>
+    fun getAll():  LiveData<BlogItem>
 
 
     @Query("SELECT * FROM BLog WHERE idItem = :id")
-    fun get(id:Int): LiveData<BlogItem>
+    fun get(id: Int): LiveData<BlogItem>
+
+
 
     @Insert
-    fun InsertAll(vararg BlogItem : BlogItem)
+    fun InsertAll(vararg BlogItem: BlogItem)
 
     @Update
     fun Update(blogItem: BlogItem)

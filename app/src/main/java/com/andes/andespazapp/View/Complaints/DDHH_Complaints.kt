@@ -6,11 +6,9 @@ import android.os.Bundle
 import android.view.Window
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
-import com.andes.andespazapp.DB.DB_Administrator
-import com.andes.andespazapp.Model.User
+import com.andes.andespazapp.Model.Person
 import com.andes.andespazapp.Model.ddhh
 import com.andes.andespazapp.R
 import kotlinx.android.synthetic.main.activity_d_d_h_h__complaints.*
@@ -24,8 +22,7 @@ class DDHH_Complaints : AppCompatActivity() {
     var btnenviar: Button?=null
 
 
-    var databaseHandler: DB_Administrator?=null
-    var user:User? = null
+    var user: Person? = null
 
 
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
@@ -36,7 +33,6 @@ class DDHH_Complaints : AppCompatActivity() {
         val window: Window = this@DDHH_Complaints.window
         window.statusBarColor = ContextCompat.getColor(this@DDHH_Complaints, R.color.ddhh)
 
-        databaseHandler = DB_Administrator(this)
 
 
         txtprimero = primero
@@ -45,17 +41,17 @@ class DDHH_Complaints : AppCompatActivity() {
 
         btnenviar = enviar
 
-        user = User("1","estudiante",true,"camilo","123456789","bogota","15","camilo12@gmail.com",1)
+        user = Person("estudiante",true,"camilo",123456789,"bogota","15","camilo12@gmail.com",1)
 
         btnenviar!!.setOnClickListener {
             var ddhhh = ddhh(txtprimero!!.text.toString(),txtsegundo!!.text.toString(),txttercero!!.text.toString())
 
-            var lista = databaseHandler!!.getprice()
+          /*
             var i=0
-            for(Item :User in lista){
+            for(Item :Person in lista){
                 i++
                 System.out.println(Item.name+" - "+ Item.key+" - "+Item.email)
-            }
+            }*/
 
                       //Start()
 

@@ -1,18 +1,18 @@
 package com.andes.andespazapp.Model.Firebase
 
 import android.content.Context
-import com.andes.andespazapp.Model.User
+import com.andes.andespazapp.Model.Person
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
 class User_Firebase {
-    var user = User()
+    lateinit var user : Person
     private var mDatabaseReference: DatabaseReference? = null
     private var mDatabase: FirebaseDatabase? = null
     private var mUserReference: DatabaseReference? = null
     private var mAuth: FirebaseAuth? = null
 
-    fun readDB(id : String): User    {
+    fun readDB(id : String): Person    {
         mDatabase = FirebaseDatabase.getInstance()
         mDatabaseReference = mDatabase!!.reference
         mAuth = FirebaseAuth.getInstance()
@@ -34,7 +34,7 @@ class User_Firebase {
         return user
     }
 
-    fun UpdateDB(user:User, context: Context){
+    fun UpdateDB(user:Person, context: Context){
 
     }
 

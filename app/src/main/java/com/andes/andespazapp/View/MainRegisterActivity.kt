@@ -4,7 +4,7 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
-import com.andes.andespazapp.Model.User
+import com.andes.andespazapp.Model.Person
 import com.andes.andespazapp.R
 import com.andes.andespazapp.ViewModel.RegisterViewModel
 import kotlinx.android.synthetic.main.activity_main_register.*
@@ -159,17 +159,17 @@ class MainRegisterActivity : AppCompatActivity() {
             } else if (txt_confirm_pass!!.text.toString() != (txt_pass!!.text.toString()))               {Toast.makeText(this, "Ingresa contraseña valida e igual", Toast.LENGTH_SHORT).show()
             } else if (icon == 0)                                                                        {Toast.makeText(this, "Selecciona un icono", Toast.LENGTH_SHORT).show()
             } else {
-                var user = User(
-                    "1",roll!!,andes!!,
+                var person = Person (
+                    roll!!,
+                    andes!!,
                     nameTxt!!.text.toString(),
-                    txt_id!!.text.toString(),
+                    Integer.parseInt(txt_id!!.text.toString()),
                     txtRegion!!.text.toString(),
                     spinAge!!.getSelectedItem().toString(),
                     txt_Email!!.text.toString(),
-                    icon
-                )
-                registerView.writebd(user, txt_pass!!.text.toString(), this)
-                registerView.writelocal(user,this)
+                    icon)
+                registerView.writebd(person, txt_pass!!.text.toString(), this)
+                registerView.writelocal(person,this)
             }
         }
     }

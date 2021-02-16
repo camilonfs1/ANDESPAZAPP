@@ -8,7 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.Toast
-import com.andes.andespazapp.Model.User
+import com.andes.andespazapp.Model.Person
 import com.andes.andespazapp.R
 import com.andes.andespazapp.ViewModel.CRUD.CRUD_StudentViewModel
 import kotlinx.android.synthetic.main.activity_crud_user.*
@@ -94,12 +94,12 @@ class CRUD_Individual_User : AppCompatActivity() {
         card.add(icon_34!!)
 
         var id = intent.getStringExtra("id")
-        var user1 = db.readData(id)
+        var person = db.readData(id)
 
-        txtname!!.text = Editable.Factory.getInstance().newEditable(user1.name)
-        txtid!!.text = Editable.Factory.getInstance().newEditable(user1.key)
-        txtemail!!.text = Editable.Factory.getInstance().newEditable(user1.email)
-        icon(user1.icon!!.toInt())
+        txtname!!.text = Editable.Factory.getInstance().newEditable(person.name)
+        txtid!!.text = Editable.Factory.getInstance().newEditable(person.identify.toString())
+        txtemail!!.text = Editable.Factory.getInstance().newEditable(person.email)
+        icon(person.icon!!.toInt())
 
         icon_11!!.setOnClickListener {
             icon = 1
@@ -150,23 +150,24 @@ class CRUD_Individual_User : AppCompatActivity() {
             icon_selected(icon_34!!)
         }
 
+
+
         btnupdate!!.setOnClickListener {
-            var user2 = User()
-            if (user1.name != txtname!!.text.toString() || user1.name != txtid!!.text.toString() || user1.email != txtemail!!.text.toString() || user1.icon != icon) {
-                user2 = User(
-                    id,
-                    user1.roll.toString(),
-                    user1.andes_asociate!!,
+            var user2: Person
+            if (person.name != txtname!!.text.toString() || person.name != txtid!!.text.toString() || person.email != txtemail!!.text.toString() || person.icon != icon) {
+                user2 = Person(
+                    person.roll,
+                    person.andes_asociate!!,
                     txtname!!.text.toString(),
-                    user1.region.toString(),
-                    user1.age.toString(),
-                    user1.identify.toString(),
+                    person.identify,
+                    person.region.toString(),
+                    person.age.toString(),
                     txtemail!!.text.toString(),
                     icon!!
                 )
                 db.update(user2, this)
             }
-            if(user1.email != txtemail!!.text.toString() || txtpass!!.text.toString() != "" ){
+            if(person.email != txtemail!!.text.toString() || txtpass!!.text.toString() != "" ){
                 if (txtpass!!.text.toString() != ""){
                     if(txtpass!!.text.toString() != txtconfirmpass!!.text.toString()){
                         Toast.makeText(this, "Verifica el password ingresado",Toast.LENGTH_SHORT).show()
@@ -181,7 +182,7 @@ class CRUD_Individual_User : AppCompatActivity() {
         }
     }
 
-    fun verificate(pass: User): Int {
+    fun verificate(pass: Person): Int {
         return 0
     }
 

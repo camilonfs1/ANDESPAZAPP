@@ -1,14 +1,14 @@
 package com.andes.andespazapp.ViewModel
 
 import android.content.Context
-import com.andes.andespazapp.Model.Blog_item
+import com.andes.andespazapp.Model.BlogItem
 import com.andes.andespazapp.Model.Commentary
 import com.andes.andespazapp.Model.Firebase.Blog_Firebase
 
 class BlogViewModel {
-    var items: ArrayList<Blog_item>? = null
-    var items_H: ArrayList<Blog_item>? = null
-    var items_V: ArrayList<Blog_item>? = null
+    var items: ArrayList<BlogItem>? = null
+    var items_H: ArrayList<BlogItem>? = null
+    var items_V: ArrayList<BlogItem>? = null
     private var Blog_Db : Blog_Firebase =  Blog_Firebase()
     private var colors: ArrayList<String>? = null
 
@@ -17,7 +17,7 @@ class BlogViewModel {
 
 
     //Return blog item horizontal list
-   fun horizontalAd(context:Context): ArrayList<Blog_item>{
+   fun horizontalAd(items_blog:ArrayList<BlogItem>): ArrayList<BlogItem>{
 
        colors = ArrayList()
         //Change color for first nine blot items
@@ -35,7 +35,7 @@ class BlogViewModel {
        items_H =ArrayList()
 
         //Read database local
-       items = Blog_Db.get_blogItems(context,0)
+       items = items_blog
        for (i in 0 until items!!.size){
            if(i<=8){
                items_H!!.add(items!!.get(i))
@@ -46,10 +46,10 @@ class BlogViewModel {
    }
 
     //Return blog itme vertical list
-    fun verticalAd(context:Context): ArrayList<Blog_item>{
+    fun verticalAd(items_blog:ArrayList<BlogItem>): ArrayList<BlogItem>{
         items_V =ArrayList()
         items =ArrayList()
-        items = Blog_Db.get_blogItems(context,1)
+        items = items_blog
         for (i in 0 until items!!.size){
             if(i>=8){
                 items_V!!.add(items!!.get(i))

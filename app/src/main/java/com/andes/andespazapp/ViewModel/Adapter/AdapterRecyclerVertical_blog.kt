@@ -7,17 +7,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.andes.andespazapp.Model.Blog_item
+import com.andes.andespazapp.Model.BlogItem
 import com.andes.andespazapp.R
 import com.andes.andespazapp.View.Module_Blog.Detail_Blog
 import kotlinx.android.synthetic.main.blog_vertical_item.view.*
 
-class AdapterRecyclerVertical_blog(context: Context):  RecyclerView.Adapter<AdapterRecyclerVertical_blog.ViewHolder>()  {
-    var items: ArrayList<Blog_item>? = null
+class AdapterRecyclerVertical_blog(items_blog: ArrayList<BlogItem>):  RecyclerView.Adapter<AdapterRecyclerVertical_blog.ViewHolder>()  {
+    var items: ArrayList<BlogItem>? = null
     private var BlogViewModel = com.andes.andespazapp.ViewModel.BlogViewModel()
 
     init {
-        this.items = BlogViewModel.verticalAd(context)
+        this.items = BlogViewModel.verticalAd(items_blog)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

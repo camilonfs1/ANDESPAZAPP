@@ -2,19 +2,18 @@ package com.andes.andespazapp.ViewModel.CRUD
 
 import android.content.Context
 import com.andes.andespazapp.Model.Firebase.User_Firebase
-import com.andes.andespazapp.Model.User
+import com.andes.andespazapp.Model.Person
 
 class CRUD_StudentViewModel {
     private var UserDB = User_Firebase()
-    private var user = User()
+    lateinit var user : Person
 
-    fun readData(id: String): User {
+    fun readData(id: String): Person {
         user = UserDB.readDB(id)
-
         return user
     }
 
-    fun update(user: User,context: Context){
+    fun update(user: Person,context: Context){
         UserDB.UpdateDB(user,context)
     }
 

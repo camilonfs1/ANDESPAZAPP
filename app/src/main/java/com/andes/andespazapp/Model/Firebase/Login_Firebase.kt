@@ -3,13 +3,9 @@ package com.andes.andespazapp.Model.Firebase
 import android.content.Context
 import android.content.Intent
 import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
-import com.andes.andespazapp.DB.DB_Administrator
-import com.andes.andespazapp.Model.User
-import com.andes.andespazapp.View.CRUD.CRUD_Individual_User
+import com.andes.andespazapp.Model.Person
 import com.andes.andespazapp.View.Login_progress
 import com.andes.andespazapp.View.MainActivity
-import com.andes.andespazapp.View.Student.MainStudentMenu
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 

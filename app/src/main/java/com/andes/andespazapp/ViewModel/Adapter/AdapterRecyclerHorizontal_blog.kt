@@ -6,23 +6,24 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.andes.andespazapp.Model.Blog_item
+import com.andes.andespazapp.Model.BlogItem
 import com.andes.andespazapp.R
 import com.andes.andespazapp.View.Module_Blog.Detail_Blog
 import com.andes.andespazapp.ViewModel.BlogViewModel
 import kotlinx.android.synthetic.main.blog_horizontal_item.view.*
 
-class AdapterRecyclerHorizontal_blog(context: Context):RecyclerView.Adapter<AdapterRecyclerHorizontal_blog.ViewHolder>()  {
+class AdapterRecyclerHorizontal_blog(items_blog: ArrayList<BlogItem>):RecyclerView.Adapter<AdapterRecyclerHorizontal_blog.ViewHolder>()  {
 
-    var items: ArrayList<Blog_item>? = null
+    var items: ArrayList<BlogItem>? = null
 
     private var BlogViewModel = BlogViewModel()
 
     init {
-        this.items = BlogViewModel.horizontalAd(context)
+        this.items = BlogViewModel.horizontalAd(items_blog)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -45,10 +46,11 @@ class AdapterRecyclerHorizontal_blog(context: Context):RecyclerView.Adapter<Adap
 
         //View data on blog main
         holder.activity?.text = item!!.title
-        holder.key?.text = item!!.key
+        holder.key?.text = item!!.key.toString()
         holder.name?.text = item!!.name_owner
         holder.linear_botton?.setBackgroundColor(Color.parseColor(item!!.color))
         holder.linerr_top?.setBackgroundColor(Color.parseColor(item!!.color))
+
 
         holder.vista.setOnClickListener(object : View.OnClickListener  {
             override fun onClick(v: View?) {
@@ -77,11 +79,13 @@ class AdapterRecyclerHorizontal_blog(context: Context):RecyclerView.Adapter<Adap
         var linerr_top: LinearLayout? = null
         var key:TextView? = null
         var name:TextView? = null
+        var image:ImageView? = null
 
 
          init {
              linerr_top = vista.linear_top
              key = vista.key
+             image = vista.image_student
              name = vista.txt_name_student
             linear_botton = vista.linear_botton
             activity = vista.txt_card_blog_horizontal_item
