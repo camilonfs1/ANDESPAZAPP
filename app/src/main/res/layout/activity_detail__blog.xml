@@ -118,7 +118,7 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/txt_chat_log"
+            android:id="@+id/txt_commentary"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:ems="10"
@@ -130,7 +130,7 @@
             tools:ignore="MissingConstraints" />
 
         <Button
-            android:id="@+id/btnSentChatlog"
+            android:id="@+id/btn_commentary"
             android:layout_width="190dp"
             android:layout_height="40dp"
             android:layout_gravity="center"

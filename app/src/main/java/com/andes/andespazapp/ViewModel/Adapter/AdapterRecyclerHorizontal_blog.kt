@@ -16,13 +16,15 @@ import com.andes.andespazapp.View.Module_Blog.Detail_Blog
 import com.andes.andespazapp.ViewModel.BlogViewModel
 import kotlinx.android.synthetic.main.blog_horizontal_item.view.*
 
-class AdapterRecyclerHorizontal_blog(items_blog: ArrayList<BlogItem>):RecyclerView.Adapter<AdapterRecyclerHorizontal_blog.ViewHolder>()  {
+class AdapterRecyclerHorizontal_blog(items_blog: ArrayList<BlogItem>,id:String):RecyclerView.Adapter<AdapterRecyclerHorizontal_blog.ViewHolder>()  {
 
     var items: ArrayList<BlogItem>? = null
+    var id:String? = null
 
     private var BlogViewModel = BlogViewModel()
 
     init {
+        this.id = id
         this.items = BlogViewModel.horizontalAd(items_blog)
     }
 
@@ -46,8 +48,8 @@ class AdapterRecyclerHorizontal_blog(items_blog: ArrayList<BlogItem>):RecyclerVi
 
         //View data on blog main
         holder.activity?.text = item!!.title
-        holder.key?.text = item!!.key.toString()
-        holder.name?.text = item!!.name_owner
+        holder.key?.text = item.key.toString()
+        holder.name?.text = item.name_owner
         holder.linear_botton?.setBackgroundColor(Color.parseColor(item!!.color))
         holder.linerr_top?.setBackgroundColor(Color.parseColor(item!!.color))
 
@@ -59,6 +61,7 @@ class AdapterRecyclerHorizontal_blog(items_blog: ArrayList<BlogItem>):RecyclerVi
                 var intent = Intent(v!!.context,Detail_Blog::class.java)
 
                 //Detail object blog
+                intent.putExtra("id",  id.toString())
                 intent.putExtra("key",  holder.key?.text )
                 intent.putExtra("owner",  items?.get(position)!!.name_owner )
                 intent.putExtra("date",  items?.get(position)!!.date )

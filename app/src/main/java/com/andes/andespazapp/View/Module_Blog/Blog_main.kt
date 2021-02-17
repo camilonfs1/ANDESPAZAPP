@@ -49,11 +49,14 @@ class Blog_main : AppCompatActivity() {
 
         home = btn_home
         post = btn_postBlog
-
-        readDB()
-
         var id = intent.getStringExtra("id")
         var username = intent.getStringExtra("username")
+
+
+
+        readDB(id)
+
+
 
         //Button home
         home!!.setOnClickListener {
@@ -71,7 +74,7 @@ class Blog_main : AppCompatActivity() {
             startActivity(intent)
         }
     }
-    private fun readDB() {
+    private fun readDB(id:String) {
         var items_blog: ArrayList<BlogItem> = ArrayList()
         mDatabase = FirebaseDatabase.getInstance()
         mDatabaseReference = mDatabase!!.reference.child("Blog")
@@ -106,9 +109,8 @@ class Blog_main : AppCompatActivity() {
                         items_blog!!.add(item)
 
                     }
-                    h(items_blog)
+                    h(items_blog,id)
                     v(items_blog)
-                    System.out.println("paso----->")
                 }
             }
 
@@ -118,9 +120,9 @@ class Blog_main : AppCompatActivity() {
         })
     }
 
-    fun h(items_blog: ArrayList<BlogItem>){
+    fun h(items_blog: ArrayList<BlogItem>,id:String){
         //Horizontal recycler
-        adaptador_H = AdapterRecyclerHorizontal_blog(items_blog)
+        adaptador_H = AdapterRecyclerHorizontal_blog(items_blog,id)
         layoutmanager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         main_blog_item_H?.layoutManager = layoutmanager
         main_blog_item_H?.adapter = adaptador_H

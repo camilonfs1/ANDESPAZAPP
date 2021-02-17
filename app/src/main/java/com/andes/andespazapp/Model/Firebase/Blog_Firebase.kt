@@ -22,9 +22,7 @@ class Blog_Firebase {
     var commen = ArrayList<Commentary>()
 
     fun new_blogItem(blogItem: BlogItem) {
-
         mDatabase = FirebaseDatabase.getInstance()
-
         mDatabaseReference = mDatabase!!.reference!!.child("Blog").child(blogItem.key.toString())
         mDatabaseReference!!.child("key").setValue(blogItem.key.toString())
         mDatabaseReference!!.child("name_owner").setValue(blogItem.name_owner.toString())
@@ -35,18 +33,28 @@ class Blog_Firebase {
         mDatabaseReference!!.child("color").setValue(blogItem.color.toString())
 
     }
+    fun new_commentary(commentary: Commentary) {
+        mDatabase = FirebaseDatabase.getInstance()
+        mDatabaseReference = mDatabase!!.reference!!.child("Blog").child(commentary.mother_key.toString()).child("Commentary")
+        mDatabaseReference!!.child("key").setValue(commentary.key.toString())
+        mDatabaseReference!!.child("mother_key").setValue(commentary.mother_key.toString())
+        mDatabaseReference!!.child("commentary").setValue(commentary.commentary)
+        mDatabaseReference!!.child("date").setValue(commentary.date.toString())
+        mDatabaseReference!!.child("owner").setValue(commentary.owner)
+
+    }
 
 
     fun getBlogDetail(): ArrayList<Commentary> {
 
         commen = ArrayList()
-        commen!!.add(Commentary("1", "camilo", "comentario 1", "2", "1"))
+       /* commen!!.add(Commentary("1", "camilo", "comentario 1", "2", "1"))
         commen!!.add(Commentary("1", "sergio", "comentario 1", "3", "1"))
         commen!!.add(Commentary("1", "loany", "comentario 1", "1", "1"))
         commen!!.add(Commentary("1", "mario", "comentario 1", "1", "1"))
         commen!!.add(Commentary("1", "junito", "comentario 1", "1", "1"))
         commen!!.add(Commentary("1", "maria", "comentario 1", "1", "1"))
-        commen!!.add(Commentary("1", "marianita", "comentario que no debe salir", "1", "2"))
+        commen!!.add(Commentary("1", "marianita", "comentario que no debe salir", "1", "2"))*/
 
         return commen!!
     }

@@ -40,13 +40,8 @@ class NewBlogItem : AppCompatActivity() {
         //Get data for user by id in local DB
         database = LocalDB.getDatabase(this)
 
-
-
         //Optain commentary num
         var key = 0
-
-
-
 
         post_button!!.setOnClickListener {
             maxkey(Integer.parseInt(id),username)
