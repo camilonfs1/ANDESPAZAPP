@@ -1,6 +1,5 @@
 package com.andes.andespazapp.ViewModel.Adapter
 
-import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.view.LayoutInflater
@@ -16,15 +15,21 @@ import com.andes.andespazapp.View.Module_Blog.Detail_Blog
 import com.andes.andespazapp.ViewModel.BlogViewModel
 import kotlinx.android.synthetic.main.blog_horizontal_item.view.*
 
-class AdapterRecyclerHorizontal_blog(items_blog: ArrayList<BlogItem>,id:String):RecyclerView.Adapter<AdapterRecyclerHorizontal_blog.ViewHolder>()  {
+class AdapterRecyclerHorizontal_blog(
+    items_blog: ArrayList<BlogItem>,
+    id: String,
+    username: String
+) : RecyclerView.Adapter<AdapterRecyclerHorizontal_blog.ViewHolder>() {
 
     var items: ArrayList<BlogItem>? = null
-    var id:String? = null
+    var id: String? = null
+    var username: String? = null
 
     private var BlogViewModel = BlogViewModel()
 
     init {
         this.id = id
+        this.username = username
         this.items = BlogViewModel.horizontalAd(items_blog)
     }
 
@@ -54,19 +59,20 @@ class AdapterRecyclerHorizontal_blog(items_blog: ArrayList<BlogItem>,id:String):
         holder.linerr_top?.setBackgroundColor(Color.parseColor(item!!.color))
 
 
-        holder.vista.setOnClickListener(object : View.OnClickListener  {
+        holder.vista.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
 
                 //Sent object to detail blog
-                var intent = Intent(v!!.context,Detail_Blog::class.java)
+                var intent = Intent(v!!.context, Detail_Blog::class.java)
 
                 //Detail object blog
-                intent.putExtra("id",  id.toString())
-                intent.putExtra("key",  holder.key?.text )
-                intent.putExtra("owner",  items?.get(position)!!.name_owner )
-                intent.putExtra("date",  items?.get(position)!!.date )
-                intent.putExtra("color",  items?.get(position)!!.color )
-                intent.putExtra("title",  items?.get(position)!!.title )
+                intent.putExtra("id", id.toString())
+                intent.putExtra("username", username)
+                intent.putExtra("key", holder.key?.text)
+                intent.putExtra("owner", items?.get(position)!!.name_owner)
+                intent.putExtra("date", items?.get(position)!!.date)
+                intent.putExtra("color", items?.get(position)!!.color)
+                intent.putExtra("title", items?.get(position)!!.title)
 
                 v.context.startActivity(intent)
             }
@@ -80,16 +86,16 @@ class AdapterRecyclerHorizontal_blog(items_blog: ArrayList<BlogItem>,id:String):
         var activity: TextView? = null
         var linear_botton: LinearLayout? = null
         var linerr_top: LinearLayout? = null
-        var key:TextView? = null
-        var name:TextView? = null
-        var image:ImageView? = null
+        var key: TextView? = null
+        var name: TextView? = null
+        var image: ImageView? = null
 
 
-         init {
-             linerr_top = vista.linear_top
-             key = vista.key
-             image = vista.image_student
-             name = vista.txt_name_student
+        init {
+            linerr_top = vista.linear_top
+            key = vista.key
+            image = vista.image_student
+            name = vista.txt_name_student
             linear_botton = vista.linear_botton
             activity = vista.txt_card_blog_horizontal_item
         }

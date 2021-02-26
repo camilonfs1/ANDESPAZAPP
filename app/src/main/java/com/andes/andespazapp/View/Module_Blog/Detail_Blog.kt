@@ -7,6 +7,8 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.andes.andespazapp.Model.Commentary
+import com.andes.andespazapp.Model.Firebase.Blog_Firebase
 import com.andes.andespazapp.R
 import com.andes.andespazapp.ViewModel.Adapter.Adapter_commentary
 import com.google.firebase.database.*
@@ -49,45 +51,87 @@ class Detail_Blog : AppCompatActivity() {
         var color = intent.getStringExtra("color")
         var title = intent.getStringExtra("title")
         var id = intent.getStringExtra("id")
-
-
-
-
+        var username = intent.getStringExtra("username")
 
         owner_mother!!.text = owner
         blog_text!!.text = title
-        linear_top!!.setBackgroundColor(Color.parseColor(color))
-        linear_bottom!!.setBackgroundColor(Color.parseColor(color))
 
-        adaptador_C = Adapter_commentary(key)
-        layoutmanager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        commentaryRecicler?.layoutManager = layoutmanager
-        commentaryRecicler?.adapter = adaptador_C
+        if (color.equals("#fffff")) {
+            //linear_top!!.setBackgroundColor(Color.parseColor(color))
+        }
+//        linear_bottom!!.setBackgroundColor(Color.parseColor(color))
+
+        list_commentary(key)
+        //adaptador_C = Adapter_commentary(key)
+
 
         image_back!!.setOnClickListener {
             val intent = Intent(this, Blog_main::class.java)
+            intent.putExtra("id", id)
+            intent.putExtra("username", username)
             startActivity(intent)
         }
 
         commentary!!.setOnClickListener {
-            new_commentary(id!! ,key!!)
+            new_commentary(key!!, username!!, color!!, title!!, id!!, username!!)
         }
     }
 
-    fun new_commentary(id: String,key: String) {
+    fun recharge(
+        key: String,
+        owner: String,
+        color: String,
+        title: String,
+        id: String,
+        username: String
+    ) {
+        var intent = Intent(this, Detail_Blog::class.java)
+
+        //Detail object blog
+        intent.putExtra("id", id)
+        intent.putExtra("key", key)
+        intent.putExtra("owner", owner)
+        intent.putExtra("color", color)
+        intent.putExtra("title", title)
+        intent.putExtra("username", username)
+
+        this.startActivity(intent)
+    }
+
+    fun new_commentary(
+        key: String,
+        owner: String,
+        color: String,
+        title: String,
+        id: String,
+        username: String
+    ) {
         var text = new_commentary!!.text.toString()
-        var nums: ArrayList<String> = ArrayList()
         mDatabase = FirebaseDatabase.getInstance()
-        mDatabaseReference = mDatabase!!.reference.child("Blog")
+        var firebase = Blog_Firebase()
+        var commentary = Commentary("1", username, text, "1", username)
+        firebase.new_commentary(commentary, key)
+        recharge(key!!, owner!!, color!!, title!!, id!!, username!!)
+        this.finish()
+    }
+
+    fun list_commentary(key: String) {
+        var commentarys: ArrayList<Commentary> = ArrayList()
+        mDatabase = FirebaseDatabase.getInstance()
+        mDatabaseReference = mDatabase!!.reference.child("Commentary").child(key)
         mDatabaseReference?.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
                     for (e in snapshot.children) {
-                        var key1 = e.child("key")
-                        //nums!!.add(key)
-                        System.out.println("---->" + key1+ "---" +key)
+                        var date = e.child("date").value.toString()
+                        var owner = e.child("owner").value.toString()
+                        var mother_key = e.child("mother_key").value.toString()
+                        var commentar = e.child("commentary").value.toString()
+                        var key = e.child("key").value.toString()
+                        var commentary = Commentary(key, owner, commentar, date, mother_key)
+                        commentarys.add(commentary)
                     }
-                    create(nums, id, text)
+                    adapter_v(commentarys, key)
                 }
             }
 
@@ -95,12 +139,15 @@ class Detail_Blog : AppCompatActivity() {
 
             }
         })
+
     }
 
-    fun create(nums: ArrayList<String>, id: String, text: String) {
-
-        for (i in nums) {
-            System.out.println("---->" + i)
-        }
+    fun adapter_v(commentarys: ArrayList<Commentary>, key: String) {
+        adaptador_C = Adapter_commentary(commentarys, key)
+        layoutmanager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        commentaryRecicler?.layoutManager = layoutmanager
+        commentaryRecicler?.adapter = adaptador_C
     }
+
+
 }

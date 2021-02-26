@@ -52,11 +52,7 @@ class Blog_main : AppCompatActivity() {
         var id = intent.getStringExtra("id")
         var username = intent.getStringExtra("username")
 
-
-
-        readDB(id)
-
-
+        readDB(id,username)
 
         //Button home
         home!!.setOnClickListener {
@@ -64,17 +60,50 @@ class Blog_main : AppCompatActivity() {
             intent.putExtra("id", id)
             intent.putExtra("username", username)
             startActivity(intent)
+            this.finish()
         }
 
         //Button new blog
         post!!.setOnClickListener {
-            val intent = Intent(this, NewBlogItem::class.java)
-            intent.putExtra("id", id)
-            intent.putExtra("username", username)
-            startActivity(intent)
+            maxkey(id, username)
         }
     }
-    private fun readDB(id:String) {
+    fun maxkey(id : String, username: String){
+        var nums: ArrayList<Int> = ArrayList()
+        mDatabase = FirebaseDatabase.getInstance()
+        mDatabaseReference = mDatabase!!.getReference().child("Blog")
+        mDatabaseReference?.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists()) {
+                    for (e in snapshot.children) {
+                        var key = e.child("key").value.toString()
+                        nums!!.add(Integer.parseInt(key))
+                    }
+                }
+                var aux = 0
+                for(i in nums){
+                    if(i > aux){
+                        aux=i
+                    }
+                }
+                aux = aux+1
+                post(id, username, aux.toString())
+            }
+            override fun onCancelled(databaseError: DatabaseError) {
+
+            }
+        })
+
+    }
+    fun post(id : String, username: String, key:String){
+        val intent = Intent(this, NewBlogItem::class.java)
+        intent.putExtra("id", id)
+        intent.putExtra("username", username)
+        intent.putExtra("key", key)
+        startActivity(intent)
+        this.finish()
+    }
+    private fun readDB(id:String,username: String) {
         var items_blog: ArrayList<BlogItem> = ArrayList()
         mDatabase = FirebaseDatabase.getInstance()
         mDatabaseReference = mDatabase!!.reference.child("Blog")
@@ -90,7 +119,6 @@ class Blog_main : AppCompatActivity() {
                         var num_commentari = e.child("num_commentari").value
                         var title = e.child("tittle").value.toString()
                         var dates = 0
-                        System.out.println("aca esta el error "+date)
                         if(date=="null"){
                             dates = 0
                         }else{
@@ -102,15 +130,15 @@ class Blog_main : AppCompatActivity() {
                             name_owner,
                             title,
                             dates,
-                            Integer.parseInt(num_commentari.toString()),
+                            Integer.parseInt("1"),
                             Integer.parseInt(avatar_owner),
                             color
                         )
                         items_blog!!.add(item)
 
                     }
-                    h(items_blog,id)
-                    v(items_blog)
+                    h(items_blog,id,username)
+                    v(items_blog,id,username)
                 }
             }
 
@@ -120,16 +148,17 @@ class Blog_main : AppCompatActivity() {
         })
     }
 
-    fun h(items_blog: ArrayList<BlogItem>,id:String){
+    fun h(items_blog: ArrayList<BlogItem>,id:String, username:String){
         //Horizontal recycler
-        adaptador_H = AdapterRecyclerHorizontal_blog(items_blog,id)
+        adaptador_H = AdapterRecyclerHorizontal_blog(items_blog,id,username)
         layoutmanager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         main_blog_item_H?.layoutManager = layoutmanager
         main_blog_item_H?.adapter = adaptador_H
     }
-    fun v(items_blog: ArrayList<BlogItem>){
+
+    fun v(items_blog: ArrayList<BlogItem>,id:String, username:String){
         //Vertical recycler
-        adaptador_V = AdapterRecyclerVertical_blog(items_blog)
+        adaptador_V = AdapterRecyclerVertical_blog(items_blog,id,username)
         layoutmanager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         main_blog_item_V?.layoutManager = layoutmanager
         main_blog_item_V?.adapter = adaptador_V

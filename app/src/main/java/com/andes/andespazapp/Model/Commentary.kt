@@ -7,11 +7,11 @@ import java.io.Serializable
 
 @Entity(tableName = "Commentary")
 data class Commentary(
-    var key: Int,
+    var key: String,
     var owner: String,
     var commentary: String,
-    var date: Int,
-    var mother_key: Int,
+    var date: String,
+    var mother_key: String,
     @PrimaryKey(autoGenerate = true)
     var idItem: Int = 0
 ) : Serializable

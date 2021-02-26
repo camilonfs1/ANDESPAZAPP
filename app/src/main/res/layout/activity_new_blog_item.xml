@@ -31,15 +31,32 @@
             android:hint="Post:"
             android:textStyle="bold"
             android:gravity="top"/>
-
-        <Button
-            android:id="@+id/btn_newBlog"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Postear"
-            android:layout_gravity="bottom"
-            android:textColor="@android:color/white"
-            android:background="@drawable/btn_back"/>
+            android:orientation="horizontal">
+            <Button
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Postear"
+                android:id="@+id/btn_newBlog"
+                android:layout_gravity="bottom"
+                android:textColor="@android:color/white"
+                android:background="@drawable/btn_back"/>
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/btn_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Volver"
+                android:layout_gravity="bottom"
+                android:textColor="@android:color/white"
+                android:background="@drawable/btn_back"/>
+
+        </LinearLayout>
+
+
 
     </LinearLayout>
 

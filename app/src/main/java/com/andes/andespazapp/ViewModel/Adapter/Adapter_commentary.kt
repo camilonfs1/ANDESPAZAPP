@@ -10,14 +10,13 @@ import com.andes.andespazapp.R
 import com.andes.andespazapp.ViewModel.BlogViewModel
 import kotlinx.android.synthetic.main.commentary_item.view.*
 
-class Adapter_commentary(owner:String): RecyclerView.Adapter<Adapter_commentary.ViewHolder>()  {
+class Adapter_commentary(items: ArrayList<Commentary>,owner:String ): RecyclerView.Adapter<Adapter_commentary.ViewHolder>()  {
     var items: ArrayList<Commentary>? = null
-    private var BlogViewModel = BlogViewModel()
     private var owner:String ? = null
 
     init {
         this.owner = owner
-        this.items = BlogViewModel.commentary(owner)
+        this.items = items
 
     }
 
