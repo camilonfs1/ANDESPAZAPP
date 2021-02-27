@@ -18,17 +18,17 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Denuncia DDHH"
+            android:text="DDHH"
             android:gravity="center"
             android:textStyle="italic|bold"
             android:textSize="25dp"
             android:textColor="#673AB7"/>
 
-        <EditText
+        <TextView
             android:id="@+id/primero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Primero:"
+            android:text="En esta seccion podremos registrar las violaciones a derechos humanos para hacer una sistematizacion mas adecuada, si consideras importante ingresa tus datos de contacto:"
             android:textStyle="bold"/>
         <Spinner
             android:id="@+id/txt_complaint_tipe"
@@ -36,21 +36,20 @@
             android:layout_height="wrap_content"/>
         <EditText
 
-            android:id="@+id/segundo"
+            android:id="@+id/compalint_txt"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:hint="Segundo:"
+            android:hint="Ingresa una breve descripcion del suceso, \nhora, fecha y lugar."
             android:inputType="textEmailSubject"
             android:textStyle="bold"
             android:gravity="top"/>
-
-        <EditText
-            android:id="@+id/tercero"
+        <Spinner
+            android:id="@+id/ddhh_type"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Tercero:"
-            android:textStyle="bold"
-            android:inputType="textPassword"/>
+            android:layout_weight="1"
+            android:entries="@array/ddhh"
+            android:textColor="#4dac9d"/>
 
         <Button
             android:id="@+id/enviar"

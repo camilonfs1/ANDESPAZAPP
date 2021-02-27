@@ -1,15 +1,13 @@
 package com.andes.andespazapp.Model
 
-class ddhh {
-    var primero: String? = null
-    var segundo: String? = null
-    var tercer: String? = null
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import java.io.Serializable
 
-    constructor(primero: String?, segundo: String?, tercer: String?) {
-        this.primero = primero
-        this.segundo = segundo
-        this.tercer = tercer
-    }
-
-    constructor(){}
-}
+@Entity(tableName = "DDHH")
+data class ddhh(
+    val complaint:String,
+    val type:String,
+    @PrimaryKey(autoGenerate = true)
+    var idItem: Int = 0
+) : Serializable

@@ -39,6 +39,12 @@
         <item>41</item>
         <item>42</item>
     </string-array>
+    <string-array name="ddhh">
+        <item>Tipo de violación:</item>
+        <item>Violencia policial</item>
+        <item>Detención arbitraia</item>
+        <item>Limitación derechos</item>
+    </string-array>
 </resources>
 
 
