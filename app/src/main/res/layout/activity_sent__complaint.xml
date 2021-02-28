@@ -25,20 +25,20 @@
             android:textSize="25dp"
             android:textColor="#673AB7"/>
 
-        <EditText
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nombre:"
+            android:text="En este espacio nos podras compartir informacion de los sucesos ocurridos, ANDES te garantiza total confirencialidad ya que este modulo no guarda la informacion de la persona que registra las denuncias. "
             android:textStyle="bold"/>
         <Spinner
             android:id="@+id/txt_complaint_tipe"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <EditText
-            android:id="@+id/txtEmail"
+            android:id="@+id/text_complaint"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:hint="Envia un mensaje:"
+            android:hint="Escribe tu denuncia en esta seccion:"
             android:inputType="textEmailSubject"
             android:textStyle="bold"
             android:gravity="top"/>
@@ -47,7 +47,7 @@
             android:id="@+id/txtPassConfirm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Telefono de contacto"
+            android:hint="Ingresa una forma de contacto,\n si asi lo quieres : "
             android:textStyle="bold"
             android:inputType="textPassword"/>
 

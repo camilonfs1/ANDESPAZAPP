@@ -7,7 +7,7 @@
     android:padding="15dp"
     android:gravity="center"
     tools:context=".View.Complaints.DDHH_Complaints"
-    android:background="#673AB7">
+    android:background="#03A9F4">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,7 +22,7 @@
             android:gravity="center"
             android:textStyle="italic|bold"
             android:textSize="25dp"
-            android:textColor="#673AB7"/>
+            android:textColor="#03A9F4"/>
 
         <TextView
             android:id="@+id/primero"

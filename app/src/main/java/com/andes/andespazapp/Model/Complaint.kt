@@ -1,18 +1,13 @@
 package com.andes.andespazapp.Model
 
-class Complaint(name_sent: String, key_sent:String, complaint:String, date:Int) {
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import java.io.Serializable
 
-    var name_sent: String? = null
-    var key_sent: String? = null
-    var complaint: String? = null
-    var date: Int? = null
-
-    init {
-        this.name_sent = name_sent
-        this.key_sent = key_sent
-        this.complaint = complaint
-        this.date = date
-    }
-
-
-}
+@Entity(tableName = "Complaint")
+data class Complaint(
+    val complaint:String,
+    val contact:String,
+    @PrimaryKey(autoGenerate = true)
+    var idItem: Int = 0
+) : Serializable
