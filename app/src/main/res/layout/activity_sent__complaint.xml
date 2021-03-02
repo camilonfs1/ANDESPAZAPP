@@ -44,15 +44,14 @@
             android:gravity="top"/>
 
         <EditText
-            android:id="@+id/txtPassConfirm"
+            android:id="@+id/txt_contact"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ingresa una forma de contacto,\n si asi lo quieres : "
-            android:textStyle="bold"
-            android:inputType="textPassword"/>
+            android:textStyle="bold"/>
 
         <Button
-            android:id="@+id/btnRegister"
+            android:id="@+id/btn_complaint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Enviar"
