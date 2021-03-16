@@ -9,10 +9,8 @@ import android.widget.*
 import androidx.viewpager.widget.PagerAdapter
 import com.andes.andespazapp.Model.Learn_Item
 import com.andes.andespazapp.R
-import com.andes.andespazapp.View.Learn.Activity
-import com.andes.andespazapp.View.Learn.Learn1
+import com.andes.andespazapp.View.Learn.Memory.Learn1
 import com.andes.andespazapp.ViewModel.LearnViewModel
-import org.w3c.dom.Text
 import java.util.logging.Handler
 
 

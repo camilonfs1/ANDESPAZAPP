@@ -15,14 +15,12 @@
         <activity android:name=".View.Vinculate.Vinculate_Receibe" />
         <activity android:name=".View.Vinculate.Vinculate_Sent" />
         <activity android:name=".View.Complaints.DDHH_Complaints" />
-        <activity android:name=".View.Learn.qz" />
+        <activity android:name=".View.Learn.Memory.qz" />
         <activity android:name=".View.Learn.Receibe_activity" />
-        <activity android:name=".View.Learn.MainMemory" />
         <activity android:name=".View.Learn.Activity" />
-        <activity android:name=".View.Learn.Learn1" />
+        <activity android:name=".View.Learn.Memory.Learn1" />
         <activity android:name=".View.Learn.Main_Learn" />
         <activity android:name=".View.CRUD.CRUD_Individual_User" />
-        <activity android:name=".View.Complaints.Receive_Complaints" />
         <activity android:name=".View.Complaints.Sent_Complaint" />
         <activity android:name=".View.CRUD.ProfileManager" />
         <activity android:name=".View.CRUD.SchoolManager" />

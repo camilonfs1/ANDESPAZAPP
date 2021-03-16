@@ -1,4 +1,4 @@
-package com.andes.andespazapp.View.Learn
+package com.andes.andespazapp.View.Learn.Memory
 
 import android.os.Bundle
 import android.widget.Button
