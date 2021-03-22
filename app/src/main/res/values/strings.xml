@@ -45,6 +45,33 @@
         <item>Detención arbitraia</item>
         <item>Limitación derechos</item>
     </string-array>
+
+
+    <!--Time Line-->
+    <string name="MasacreBananeras">  La masacre de las Bananeras ocurrió en la población de Ciénaga cuando un regimiento de las Fuerzas Armadas de Colombia abrieron fuego contra un número indeterminado de manifestantes que protestaban por las pésimas condiciones de trabajo en la United Fruit Company.”</string>
+    <string name="AsesinatoJorgeEliecerGaitán"> Un hombre le disparó en la entrada del edificio con un revólver a Jorge Eliecer causándole heridas de gravedad, esto provocó una violenta reacción popular y represión gubernamental conocida como el Bogotazo que destruyó edificaciones del centro de Bogotá.”</string>
+    <string name="ElBogotazo">Se conoce como Bogotazo al período de protestas, desórdenes y represión tras el asesinato de Jorge Eliécer Gaitán en el centro de Bogotá. Se considera este uno de los primeros actos urbanos de la época conocida como La Violencia.”</string>
+    <string name="TomaPalacioJusticia">Fue un asalto por un comando de guerrilleros del M-19. Dicha incursión fue seguida de la reacción de la Policía Nacional y el Ejército Colombiano, rodeando el edificio e iniciando una operación de retoma del mismo que se extendió hasta el jueves 7 de noviembre de 1985. El M-19 mantuvo a cerca de 350 rehenes.”</string>
+    <string name="AsesinatoJaimePardoLeal">Presidente de la UP, y uno de los dos candidatos a la Presidencia de la República de este movimiento que han sido asesinados. Hirió la sensibilidad del alma de sectores democráticos y de base, sus palabras, sus convicciones frente a la solución política al conflicto armado, frente a la impunidad y el cuestionamiento al desarrollo de la estrategia paramilitar como estrategia de Estado continúan siendo parte de la memoria, de la historia no oficial, de la historia popular, acallada.”</string>
+    <string name="AsesinatoLuisCarlosGalán">Candidato a la presidencia de Colombia en dos ocasiones por el Partido Liberal Colombiano y en una ocasión por el movimiento Nuevo Liberalismo, destacado por su apoyo popular ; y por su contribución en la democratización interna de los partidos colombianos. Asesinado durante su última campaña electoral por personas dirigidas por Pablo Escobar.” culpable de ser el autor intelectual de su asesinato.”</string>
+    <string name="AsesinatoBernardoJaramillo">Fue Candidato Presidencial de la UP. Jaramillo se encaminaba junto a su compañera Mariela Barragán y varios escoltas del DAS al Terminal Puente Aéreo de la ciudad de Bogotá, a pesar de haber recibido amenazas de muerte y tras no ponerse su chaleco antibalas, una vez en el terminal aéreo esperarían su vuelo con destino a Santa Marta donde tomaría vacaciones. Un joven sicario paramilitar llamado Andrés Arturo Gutiérrez Maya lo esperaba y mientras estaba él al frente de una farmacia.”</string>
+    <string name="RompimientoDiálogosPaz">Luego de tres años de infructuosas negociaciones, el gobierno colombiano anuncia la suspensión del diálogo de paz con la guerrilla de las Fuerzas Armadas Revolucionarias de Colombia (FARC) por falta de acuerdos, y les dio un ultimátum de 48 horas a los jefes del grupo rebelde para que abandonen la zona de distensión, establecida en 1998 en el sur del país.”</string>
+    <string name="OperaciónJaque">Fue una misión de inteligencia militar de rescate en el marco de la política de Seguridad Democrática del gobierno del presidente Álvaro Uribe Vélez, llevada a cabo por las Fuerzas Militares de Colombia para liberar a secuestrados en poder del grupo guerrillero FARC.” </string>
+
+    <string name="line1">El gobierno del expresidente Julio Cesar Turbay creo una comisión de paz para iniciar conversaciones con la guerrilla. El expresidente Carlos Lleras Restrepo quien tenía la misión de liderar el proceso renuncio con el argumento de que no lo dejaron establecer contactos con la insurgencia</string>
+    <string name="line2"> El entonces presidente conservador Belisario Betancur inicio una negociación de Paz con las Farc. </string>
+    <string name="line3">El gobierno de Betancur y las Farc-Ep firmaron el acuerdo de La Uribe, que incluye el cese al fuego bilateral, la suspensión del secuestro y la apertura de espacios políticos para la guerrilla. El proceso fracaso y se rompió en 1987.</string>
+    <string name="line4">El presidente liberal, Virgilio Barco comienza acercamientos de paz con las Farc, pero el exterminio a manos de paramilitares de ultraderecha de miles de militantes del partido Unión Patriótica impide avanzar </string>
+    <string name="line5">Barco inicia diálogos con el M-19 y expide la ley de amnistía</string>
+    <string name="line6">El gobierno de Barco firma un acuerdo de paz con el M-19 que entrega las armas, se reintegra a la vida civil y se convierte en fuerza política. </string>
+    <string name="line7">El entonces presidente, Cesar Gaviria inicia conversaciones con las Farc-Ep y el ELN en Venezuela y luego se traslada a Tlaxcala en México. En 1992 se rompe el proceso por el asesinato de un exministro secuestrado por la guerrilla. </string>
+    <string name="line8">Durante el gobierno de Gaviria se reintegran a la vida civil y entregan las armas los integrantes de la Corriente de Renovación Socialista, una disidencia del ELN. </string>
+    <string name="line9">El gobierno de Ernesto Samper concede el estatus político al ELN en un esfuerzo por lograr un acuerdo de paz. También hubo un encuentro con el ELN en España y Alemania que no prosperaron </string>
+    <string name="line10">Se inicia el proceso con las Farc-Ep. Los diálogos se realizan en medio de la confrontación y se rompieron en febrero de 2002 </string>
+    <string name="line11">Durante el gobierno de Álvaro Uribe, se iniciaron diálogos con el ELN en Cuba, pero estas aproximaciones fracasaron </string>
+    <string name="line12">El expresidente Juan Manuel Santos anuncia a comienzos de septiembre que su gobierno y las Farc-ep firmaron un acuerdo que establece un procedimiento, una hoja de ruta, para avanzar en la negociación de Paz</string>
+    <string name="title_activity_drugs_peace">Settings</string>
+
 </resources>
 
 

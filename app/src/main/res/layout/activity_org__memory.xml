@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.Learn.Memory.Org_Memory">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#8AADEFF8"
+                android:orientation="vertical">
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_weight="1"
+
+                        android:padding="10dp"
+                        android:background="@drawable/linear_layuout_back"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:gravity="center"
+                                android:text="Ley de Justicia y Paz" />
+
+                            <me.biubiubiu.justifytext.library.JustifyTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="“La presente ley tiene por objeto facilitar los procesos de paz y la reincorporación individual o colectiva a la vida civil de miembros de grupos armados al margen de la ley, garantizando los derechos de las víctimas a la verdad, la justicia y la reparación.” Art.1, Ley 975 de 2005.\n\n
+Luego de esta Ley el gobierno nacional de Colombia crea la Comisión Nacional de Reparación y Reconciliación (CNRR).
+\n" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/chat" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#8AADEFF8"
+                android:orientation="vertical">
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_weight="1"
+
+                        android:padding="10dp"
+                        android:background="@drawable/linear_layuout_back"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:gravity="center"
+                                android:text="Comisión Nacional de Reparación y Reconciliación (CNRR)." />
+
+                            <me.biubiubiu.justifytext.library.JustifyTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="“En el marco de sus objetivos estratégicos, la Comisión busca adelantar tres funciones principales: Garantizar los derechos de las víctimas frente al país y la sociedad; Proponer estrategias que lleven a la reconciliación y reconstrucción del tejido social del país; y, proponer y diseñar reformas y estrategias políticas útiles, para fortalecer la convivencia en paz. Esto se hace a través de diálogos, cabildeo y la vigencia de proyectos pilotos en los temas de interés de la Comisión (CNRR, 2009). En resumidas cuentas, estas funciones buscan recomendar al gobierno sobre la implementación de programas que logren la reconciliación colectiva y que permitan recuperar la institucionalidad del estado de derecho. Buscan  promover y recuperar los derechos de los ciudadanos afectados por hechos violentos y ayudar a dignificar a las víctimas.
+\n\n Para llevar a cabo estas funciones, la CNRR ha creado 5 programas que son: Reparación y atención a las víctimas, Desmovilización desarme y reintegración, Grupo de memoria histórica, Género y poblaciones específicas, y  el programa Reconciliación. Con cada uno se busca dar atención focalizada y responder a necesidades específicas. El Área de reparación y atención a víctimas, monitorea y evalúa la participación de éstas en los procesos de recuperación psicosocial, investigación de la verdad y reparación colectiva a comunidades afectadas por hechos violentos. Asimismo, el programa de Memoria Histórica, busca apelar al componente histórico y a su importancia, para entender y así superar  los flagelos de la guerra. Este programa es de suma importancia ya que enfatiza en los elementos del pasado para construir un mejor futuro. Por su parte, el Programa de reconciliación, tiene como objetivo unificar esfuerzos para concientizar sobre esta tarea a la sociedad desde diversos sectores, entre estos la academia, el sector privado, el sector público y demás áreas que permean la gran mayoría del territorio nacional influenciando la conciencia social. Por otro lado, los Programas de desmovilización, desarme y reintegración, se enfocan en los desmovilizados (aunque el aporte de la comisión es más conceptual y de apoyo porque esta labor ha sido transferida a la Alta Consejería para la Reconciliación, ACR).  Finalmente,  el Programa enfocado en la población especial,  busca priorizar la atención a las víctimas en mayor situación de riesgo como son niños, mujeres, personas de la tercera edad y personas discapacitadas (CNRR, 2009).”\n\n Llano, Cardona, Gomez   y Toro. Comisión Nacional de Reparación y Reconciliación (CNRR). Wordpress La gestión de lo público.\n" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/chat" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#8AADEFF8"
+                android:orientation="vertical">
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_weight="1"
+
+                        android:padding="10dp"
+                        android:background="@drawable/linear_layuout_back"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:gravity="center"
+                                android:text="Centro Nacional de Memoria Histórica (CNMH). " />
+
+                            <me.biubiubiu.justifytext.library.JustifyTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="““El Centro Nacional de Memoria Histórica es un establecimiento público del orden nacional, adscrito al Departamento para la Prosperidad Social (DPS), que tiene como objeto la recepción, recuperación, conservación, compilación y análisis de todo el material documental, testimonios orales y los que se obtengan por cualquier otro medio, relativo a las violaciones ocurridas con ocasión del conflicto armado interno colombiano, a través de la realización de investigaciones, actividades museísticas, pedagógicas, entre otras que contribuyan a establecer y esclarecer las causas de tales fenómenos, conocer la verdad y contribuir a evitar su repetición en el futuro.”\n\n Centro de Memoria Histórica, contexto.\n" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/chat" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

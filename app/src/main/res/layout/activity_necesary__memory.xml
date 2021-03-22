@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.Learn.Memory.Necesary_Memory">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@drawable/linear_layout_back_2"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/progress"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="Memoria"
+                android:textColor="#ffffff"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="¿Por qué es importante la memoria \nhistórica en Colombia?"
+                android:textColor="#ffff"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.4">
+
+            <ScrollView
+                android:id="@+id/conten_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="-50dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    >
+                    <me.biubiubiu.justifytext.library.JustifyTextView
+                        android:layout_marginTop="50dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="“Durante el proceso de esclarecimiento de la verdad acerca de los hechos ocurridos en situaciones de guerra como masacres, desplazamientos, asesinatos, secuestros, o delitos de lesa humanidad en general, se está llevando a cabo un proceso de reconstrucción del pasado vivido y experimentado por los actores del conflicto, pero que no debe ser ajeno al resto de la sociedad colombiana, como hasta ahora lo ha sido.\n\n
+Esta reconstrucción del pasado es considerada como la base para la construcción de la memoria colectiva de un país, una sociedad, o un grupo social, que a diferencia de la historia pretende, al ser recordada, reavivar los sentimientos y experiencias de una fecha conmemorativa del conflicto armado, de un grupo social determinado o de una persona.\n\n
+La creación y permanencia en el tiempo de esta memoria permite a una sociedad o grupo tener conocimiento de sí mismos, de su historia y sus representaciones; en un intento por mostrar que el pasado permanece, a pesar de que la historia sigue su rumbo.\n\n
+Aunque víctimas y victimarios sean protagonistas de su propia historia o memoria personal, son de gran importancia para la construcción de la memoria histórica debido a que son ellos también sus protagonistas y autores.\n\n
+La memoria colectiva o histórica es producto de un proceso colectivo, de la creación de un lenguaje y significación común a los miembros de una sociedad de forma tal que, cuando vuelvan al pasado, lo hagan de forma combinada, dotándose a sí mismos de un sentido compartido de ciertos eventos que, poco a poco, se van constituyendo como parte fundamental de su identidad.\n\n
+Uno de los elementos que, quizá, han contribuido a la indiferencia con respecto al conflicto armado interno colombiano, hace referencia a la falta de memoria, y de memoria histórica.”\n\n
+Ángela P, Aguirre J. (2015) ¿Por qué es importante la memoria histórica en Colombia?. Revista Nova et Vetera, 1 (3).
+\n"/>
+
+
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

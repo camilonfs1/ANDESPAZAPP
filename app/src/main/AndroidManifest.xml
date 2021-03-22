@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".View.Module_Blog.NewBlogItem"></activity>
+        <activity android:name=".View.Learn.Memory.Org_Memory"></activity>
+        <activity android:name=".View.Learn.Memory.Why_Memory" />
+        <activity android:name=".View.Learn.Memory.TimeLine_MakeMemory" />
+        <activity android:name=".View.Learn.Memory.Necesary_Memory" />
+        <activity android:name=".View.Learn.Memory.Memory_Colombia" />
+        <activity android:name=".View.Learn.Memory.MakeMemory" />
+        <activity android:name=".View.Module_Blog.NewBlogItem" />
         <activity android:name=".View.Module_Blog.Detail_Blog" />
         <activity android:name=".View.Login_progress" />
         <activity android:name=".View.Vinculate.Vinculate_Receibe" />
