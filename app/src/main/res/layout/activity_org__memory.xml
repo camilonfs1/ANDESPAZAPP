@@ -65,7 +65,7 @@ Luego de esta Ley el gobierno nacional de Colombia crea la Comisión Nacional de
                             android:layout_width="200dp"
                             android:layout_height="200dp"
                             android:layout_weight="1"
-                            android:src="@drawable/chat" />
+                            android:src="@drawable/leydejusticiaypaz" />
 
                     </LinearLayout>
                 </RelativeLayout>
@@ -120,7 +120,7 @@ Luego de esta Ley el gobierno nacional de Colombia crea la Comisión Nacional de
                             android:layout_width="200dp"
                             android:layout_height="200dp"
                             android:layout_weight="1"
-                            android:src="@drawable/chat" />
+                            android:src="@drawable/cnrr" />
 
                     </LinearLayout>
                 </RelativeLayout>
@@ -175,7 +175,7 @@ Luego de esta Ley el gobierno nacional de Colombia crea la Comisión Nacional de
                             android:layout_width="200dp"
                             android:layout_height="200dp"
                             android:layout_weight="1"
-                            android:src="@drawable/chat" />
+                            android:src="@drawable/cnmh" />
 
                     </LinearLayout>
                 </RelativeLayout>

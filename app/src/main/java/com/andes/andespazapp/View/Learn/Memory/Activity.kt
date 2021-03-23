@@ -1,9 +1,8 @@
-package com.andes.andespazapp.View.Learn
+package com.andes.andespazapp.View.Learn.Memory
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.cardview.widget.CardView
 import com.andes.andespazapp.R
 import kotlinx.android.synthetic.main.activity_.*

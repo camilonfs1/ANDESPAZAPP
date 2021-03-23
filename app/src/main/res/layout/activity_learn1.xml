@@ -5,17 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".View.Learn.Memory.Learn1">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#ffffff"
         android:orientation="vertical">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="3"
             android:background="@drawable/linear_layout_back_2"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -26,6 +29,7 @@
                 android:textColor="#ffffff"
                 android:textSize="30dp"
                 android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/progress"
                 android:layout_width="match_parent"
@@ -43,64 +47,69 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_weight="0.4">
+            android:layout_weight="0.4"
+            android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#4dac9d"
-                android:layout_marginTop="50dp"
                 android:layout_marginHorizontal="15dp"
-                android:textStyle="bold"
+                android:layout_marginTop="50dp"
                 android:gravity="center"
-                android:text="¿SABES QUE ES MEMORIA HISTORICA?"/>
+                android:text="¿SABES QUE ES MEMORIA HISTORICA?"
+                android:textColor="#4dac9d"
+                android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
                 android:layout_marginTop="50dp"
-                android:orientation="horizontal"
-                android:layout_marginHorizontal="30dp">
+                android:orientation="horizontal">
+
                 <Button
                     android:id="@+id/btn_yes"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
+                    android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/boton_main"
                     android:text="Si"
-                    android:layout_marginRight="10dp"
                     android:textColor="#ffff"
                     tools:layout_editor_absoluteX="159dp"
                     tools:layout_editor_absoluteY="629dp" />
+
                 <Button
                     android:id="@+id/btn_no"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
-                    android:layout_weight="1"
                     android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
                     android:background="@drawable/boton_main"
                     android:text="No"
                     android:textColor="#ffff"
                     tools:layout_editor_absoluteX="159dp"
                     tools:layout_editor_absoluteY="629dp" />
             </LinearLayout>
+
             <ScrollView
                 android:id="@+id/conten_scroll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
+                android:visibility="invisible"
                 android:layout_marginTop="-50dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="#4dac9d"
                         android:layout_marginHorizontal="15dp"
-                        android:textStyle="bold"
+                        android:layout_marginBottom="30dp"
                         android:gravity="center"
-                        android:textAlignment="center"
                         android:text="La memoria histórica es una parte
 importante en las sociedades que han sido atravesadas por la violencia, ya que
 esta aporta a la verdad, a la reconstrucción del tejido social y también ayuda a la
@@ -111,7 +120,9 @@ Gracias al ejercicio de la memoria las víctimas pueden ser reparadas y de esta
 manera poder caminar como sociedad hacia un futuro en paz.;La memoria
 histórica es fundamental para la construcción de relaciones rotas y una paz
 sostenible en las sociedades divididas;. (Lederach y Fisas,1998)"
-                        android:layout_marginBottom="30dp"/>
+                        android:textAlignment="center"
+                        android:textColor="#4dac9d"
+                        android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -188,10 +199,10 @@ sostenible en las sociedades divididas;. (Lederach y Fisas,1998)"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:textStyle="bold"
-                            android:textSize="23dp"
+                            android:text="¿Porque es importante la memoria en Colombia?"
                             android:textColor="#4dac9d"
-                            android:text="¿Porque es importante la memoria en Colombia?" />
+                            android:textSize="23dp"
+                            android:textStyle="bold" />
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
@@ -212,10 +223,10 @@ sostenible en las sociedades divididas;. (Lederach y Fisas,1998)"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:textStyle="bold"
-                            android:textSize="23dp"
+                            android:text="Hagamos memoria"
                             android:textColor="#4dac9d"
-                            android:text="Hagamos memoria" />
+                            android:textSize="23dp"
+                            android:textStyle="bold" />
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
@@ -236,10 +247,10 @@ sostenible en las sociedades divididas;. (Lederach y Fisas,1998)"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:textStyle="bold"
+                            android:text="¿Por que es importante?"
                             android:textColor="#4dac9d"
                             android:textSize="23dp"
-                            android:text="¿Por que es importante?" />
+                            android:textStyle="bold" />
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
@@ -260,53 +271,108 @@ sostenible en las sociedades divididas;. (Lederach y Fisas,1998)"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:textStyle="bold"
+                            android:text="Algunas organizaciones"
                             android:textColor="#4dac9d"
-                            android:textSize="23dp"
-                            android:text="Algunas organizaciones" />
-                    </androidx.cardview.widget.CardView>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/activity_memory"
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:layout_rowWeight="1"
-                        android:layout_columnWeight="1"
-                        android:layout_marginLeft="10dp"
-                        android:layout_weight="1"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:elevation="6dp"
-                        android:foreground="?selectableItemBackground"
-                        app:cardCornerRadius="32dp"
-                        android:backgroundTint="#4dac9d">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="#00293C51"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-
-                            android:text="Actividades"
-                            android:textColor="#FFFFFF"
                             android:textSize="23dp"
                             android:textStyle="bold" />
                     </androidx.cardview.widget.CardView>
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/CardExtras"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:elevation="6dp"
+                            android:foreground="?selectableItemBackground"
+                            app:cardCornerRadius="8dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Extras"
+                                android:textColor="#4dac9d"
+                                android:textSize="23dp"
+                                android:textStyle="bold" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_reflection"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:elevation="6dp"
+                            android:foreground="?selectableItemBackground"
+                            app:cardCornerRadius="8dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Reflexion"
+                                android:textColor="#4dac9d"
+                                android:textSize="23dp"
+                                android:textStyle="bold" />
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/activity_memory"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#4dac9d"
+                            android:elevation="6dp"
+                            android:foreground="?selectableItemBackground"
+                            app:cardCornerRadius="32dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00293C51"
+                                android:gravity="center"
+
+                                android:text="Actividades"
+                                android:textColor="#FFFFFF"
+                                android:textSize="23dp"
+                                android:textStyle="bold" />
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
 
                 </LinearLayout>
-
-
-
-
-                </LinearLayout>
-
 
 
             </ScrollView>

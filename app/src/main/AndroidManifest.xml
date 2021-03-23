@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".View.Learn.Memory.Org_Memory"></activity>
+        <activity android:name=".View.Learn.Peace.ActivityPeace"></activity>
+        <activity android:name=".View.Learn.Peace.AcuerdoDePazEnColombia" />
+        <activity android:name=".View.Learn.Peace.ViolenciaEnColombia" />
+        <activity android:name=".View.Learn.Peace.TiposDeViolencia" />
+        <activity android:name=".View.Learn.Peace.MainPeace" />
+        <activity android:name=".View.Learn.Memory.Extra" />
+        <activity android:name=".View.Learn.Memory.Org_Memory" />
         <activity android:name=".View.Learn.Memory.Why_Memory" />
         <activity android:name=".View.Learn.Memory.TimeLine_MakeMemory" />
         <activity android:name=".View.Learn.Memory.Necesary_Memory" />
@@ -22,8 +28,8 @@
         <activity android:name=".View.Vinculate.Vinculate_Sent" />
         <activity android:name=".View.Complaints.DDHH_Complaints" />
         <activity android:name=".View.Learn.Memory.qz" />
-        <activity android:name=".View.Learn.Receibe_activity" />
-        <activity android:name=".View.Learn.Activity" />
+        <activity android:name=".View.Learn.Memory.Receibe_activity" />
+        <activity android:name=".View.Learn.Memory.Activity" />
         <activity android:name=".View.Learn.Memory.Learn1" />
         <activity android:name=".View.Learn.Main_Learn" />
         <activity android:name=".View.CRUD.CRUD_Individual_User" />

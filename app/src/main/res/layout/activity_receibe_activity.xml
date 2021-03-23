@@ -8,7 +8,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".View.Learn.Receibe_activity">
+    tools:context=".View.Learn.Memory.Receibe_activity">
 
 
 
@@ -49,14 +49,6 @@
                     android:textSize="16dp"
                     android:textColor="#000000" />
 
-                <EditText
-                    android:id="@+id/txtReflection"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Ingresa tu Refleccion"
-                    android:textColor="#020202"
-
-                    android:textStyle="bold"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

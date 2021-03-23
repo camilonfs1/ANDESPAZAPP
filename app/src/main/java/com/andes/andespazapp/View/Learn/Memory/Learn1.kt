@@ -12,7 +12,6 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.andes.andespazapp.R
-import com.andes.andespazapp.View.Learn.Activity
 import kotlinx.android.synthetic.main.activity_learn1.*
 
 class Learn1 : AppCompatActivity() {
@@ -28,6 +27,8 @@ class Learn1 : AppCompatActivity() {
     private var make_card: CardView? = null
     private var why_card: CardView? = null
     private var org_card: CardView? = null
+    private var extr_card: CardView? = null
+    private var ref_card: CardView? = null
 
     private var myDialog0: Dialog?=null
 
@@ -49,7 +50,18 @@ class Learn1 : AppCompatActivity() {
         org_card = many_organizations
         justify = CardJustificationM
         btn_acti = activity_memory
+        extr_card = CardExtras
+        ref_card = card_reflection
 
+        extr_card!!.setOnClickListener {
+            var intent = Intent(this, Extra::class.java)
+            this.startActivity(intent)
+        }
+        ref_card!!.setOnClickListener {
+            showPopUp(" showPopUp(\" En un país como Colombia la memoria histórica es un elemento importante, porque su sociedad es una sociedad que ha sido atravesada por la violencia, de esta manera la memoria aporta a la verdad, a la reconstrucción del tejido social y también ayuda a la comprensión colectiva de la violencia y sus impactos en las comunidades. La memoria es una herramienta para el reconocimiento del pasado, un relato que hace un llamado a la justicia, a la reparación y a las garantías de no repetición. Gracias al ejercicio de la memoria las víctimas pueden ser reparadas y de esta manera poder caminar como sociedad hacia un futuro en paz.\n" +
+                    " La memoria histórica es fundamental para la construcción de relaciones rotas y una paz sostenible en las sociedades divididas. (Lederach y Fisas, 1998)\n" )
+
+        }
 
         btn_n!!.setOnClickListener {
             btn_y!!.visibility = View.INVISIBLE
