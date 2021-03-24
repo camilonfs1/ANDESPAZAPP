@@ -9,7 +9,11 @@ import android.widget.*
 import androidx.viewpager.widget.PagerAdapter
 import com.andes.andespazapp.Model.Learn_Item
 import com.andes.andespazapp.R
+import com.andes.andespazapp.View.Learn.Diversity.MainDiversity
+import com.andes.andespazapp.View.Learn.Gender.MainGender
 import com.andes.andespazapp.View.Learn.Memory.Learn1
+import com.andes.andespazapp.View.Learn.Peace.MainPeace
+import com.andes.andespazapp.View.Learn.Reconciliation.MainReconciliation
 import com.andes.andespazapp.ViewModel.LearnViewModel
 import java.util.logging.Handler
 
@@ -55,6 +59,22 @@ class AdapterViewPager_Learn (context: Context): PagerAdapter()   {
             when (position) {
                 0 ->{
                     var intent = Intent(context, Learn1::class.java)
+                    view.context!!.startActivity(intent)
+                }
+                1 ->{
+                    var intent = Intent(context, MainPeace::class.java)
+                    view.context!!.startActivity(intent)
+                }
+                2 ->{
+                    var intent = Intent(context, MainReconciliation::class.java)
+                    view.context!!.startActivity(intent)
+                }
+                3 ->{
+                    var intent = Intent(context, MainGender::class.java)
+                    view.context!!.startActivity(intent)
+                }
+                4 ->{
+                    var intent = Intent(context, MainDiversity::class.java)
                     view.context!!.startActivity(intent)
                 }
                 else ->{
