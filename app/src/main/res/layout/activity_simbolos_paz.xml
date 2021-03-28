@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8AADEFF8"
+    tools:context=".View.Learn.Peace.SimbolosPaz">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8AADEFF8">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8AADEFF8"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="SÍMBOLOS DE LA PAZ"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Paloma blanca:\n\n
+Esta comienza a popularizarse tras la segunda guerra mundial (1939-1945) surge de la tradición judío cristiana, según la leyenda Noé soltó una paloma blanca para comprobar si el diluvio había terminado, la paloma regresa con una rama de olivo, “Diluvio — Noé envía una paloma, la cual regresa con una hoja de olivo — Noé hace salir del arca a todo ser viviente — Ofrece sacrificios — Se aseguran la siembra, la siega y las estaciones” Desde entonces y más adelante esta paloma se convierte en el espíritu santo y el símbolo de Dios en la tierra; A partir de 1949 y gracias a Pablo  Picasso  famoso pintor y completo opositor de la segunda guerra mundial  plasma la paloma y el olivo en sus pinturas y firmas comenzándose a popularizar de ahí en adelante.
+"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/spaz1" />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Símbolo de la rama de olivo:\n\n
+Los griegos desde un principio asocian la paz con la rama de olivo, razón por la que se creía que esta tenía la propiedad de ahuyentar fantasmas, y malos espíritus, allí encontramos la diosa griega de la paz Irene quien representaba la paz en la antigua Roma y Grecia. Sin embargo esta se asociaba también con el dios de la guerra Ares cuando se finaliza una batalla imponía la paz mostrando así una rama de olivo y dando por finalizada una batalla, es por eso que   hacia  la época del siglo XVIII era común ver en diversas pinturas con militares victoriosos de guerras acompañados con el símbolo de la rama de olivo como representación de la paz.
+"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/spaz2" />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Símbolo mundial de la paz:\n\n
+Hacia el siglo XX es creado un símbolo mucho más abstracto por Gerald Holton quien era un diseñador profesional y artista británico también opositor de la segunda guerra mundial y de los diversos conflicto estando también  en contra del incremento de creación de arma nucleares, formando parte del Committee for Nuclear Disarmament- Comité para el Desarme Nuclear (C.N.D), para este comité Holton crea un logo  por medio del lenguaje semáforo utilizando los signos N y D (Nuclear, desarme) tal y como se muestra en las siguientes imágenes. Símbolo que comienza a ser usado hasta en las marchas y se populariza hasta la década de los 60 generando gran relevancia en USA dentro de la comunidad Hippie Extendiéndose finalmente a nivel mundial.
+"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/spaz3" />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="La V con los dedos:\n\n
+Su origen viene desde la edad media utilizado por los arqueros Ingleses como señal de triunfo con ello se manifestaba que los dedos índice y medio de la mano derecha eran los que habían generado la tranza del arco final, cuando a los soldados se les detenía eran esos los dedos que se les amputaba, más a adelante Víctor Auguste de Laveleye quien participó en juegos olímpicos de Amberes adopta el símbolo de la V como Victoria, años después este símbolo se reconoce dentro del movimiento Hippie con (amor y paz)
+"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/spaz4" />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="La bandera blanca:\n\n
+El símbolo de la bandera blanca en un inicio el color blanco que se asocia la pureza y la inocencia simbolizando entre ellas también la paz,  tiene inicialmente cuatro significados que son su origen, rendición, cese al fuego, cese de hostilidades y diálogo, se manifiesta que su significado tiene que ver con la rendición y no es declarado un símbolo de paz, signo utilizado en periodo Bélico o conflicto la bandera blanca no significa paz, como definición dentro de la rendición encontramos que es aceptar que su oponente a ganando la batalla y se da en derrota completamente dejando lugar a llegar a un acuerdo de paz,
+"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/spaz5" />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Importancia de la paz en Colombia:\n\n
+Es necesario que el ser humano  recuerde la vida que le  fue proporcionada así  lograra entender su propósito, de esta manera  aprenderá  a vivir como si fuese el ultimo dia,  generando un marco de perdón, de respeto,  y de   apoyo mutuo,  dejando atrás las críticas, burlas y desprecios, hay que trabajar en sí mismos para demostrar la diferencia frente a un nuevo país, actualmente vivimos en una sociedad totalmente frívola llena de guerras y violencia, el cambio que existe a lo largo de los años  está tomado de la mano con  el tiempo, así es el tiempo el peor enemigo del ser humano sus horas y minutos pasan y este sigue su camino no perdona ni da vuelta atrás, es por eso que como personas debemos proponernos al cambio a no vivir en rencores y a practicar el diálogo sólo así este país con tu granito de arena lograra la paz, recuerda que el  perdón no cambia el pasado pero si el futuro.
+"/>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

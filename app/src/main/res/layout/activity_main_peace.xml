@@ -68,10 +68,10 @@
                     android:text="Es la situación en igualdad, justicia, tolerancia, seguridad, consigo mismo, dentro de un hogar, lugar donde se habita (barrio, pueblo, vereda), ciudad o país."
                     android:gravity="center"/>
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:src="@drawable/icon_1"/>
+                    android:src="@drawable/paz1"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -113,6 +113,7 @@
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/card_tipos"
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:layout_rowWeight="1"
@@ -135,6 +136,7 @@
                             android:textStyle="bold" />
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/card_violenciacolombia"
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:layout_rowWeight="1"
@@ -157,6 +159,7 @@
                             android:textStyle="bold" />
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/card_acuerdosdepaz"
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:layout_rowWeight="1"
@@ -179,6 +182,7 @@
                             android:textStyle="bold" />
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/card_acuerdoshistoria"
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:layout_rowWeight="1"
@@ -201,6 +205,7 @@
                             android:textStyle="bold" />
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/card_simbolos"
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:layout_rowWeight="1"
@@ -223,6 +228,7 @@
                             android:textStyle="bold" />
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/card_importancia"
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:layout_rowWeight="1"
@@ -245,6 +251,7 @@
                             android:textStyle="bold" />
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/card_activity"
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:layout_rowWeight="1"

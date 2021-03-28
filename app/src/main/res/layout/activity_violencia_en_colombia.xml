@@ -4,6 +4,519 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#8AADEFF8"
     tools:context=".View.Learn.Peace.ViolenciaEnColombia">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8AADEFF8">
+    <LinearLayout
+        android:background="#8AADEFF8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_weight="3"
+            android:gravity="center"
+
+            android:text="La violencia en Colombia"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="La violencia en Colombia a lo largo de los años ha dejado más de 8 millones de víctimas y más de 6 millones de personas desplazadas; ha sido un gran ejemplo del conflicto en el que hemos vivido todo este tiempo, como se manifestaba anteriormente la paz comienza desde uno mismo extendiéndose hasta el marco familiar y siguiendo su ciclo hasta el lugar donde se habita sea un (barrio, pueblo o vereda), encaminado hasta una ciudad o país, algunos puntos y fechas importantes donde se plasma la violencia en Colombia son:"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="-(1928) masacre de las bananeras:
+Todo comienza a eso de los años 20 cuando comienza la exportación de banano por primera vez a nivel internacional generando casi el 6 % de la exportación en Colombia, teniendo un crecimiento exuberante, llegando a ser monopolizado por una sola empresa llamada UNITED FRUIT COMPANY, la cual era una compañía USA, y transportándose por medio de ferrocarril.
+"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/hpaz1"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="A raíz de ese tremendo crecimiento que estaba obteniendo la exportación de banano era más que claro que se necesitaban más manos que trabajaran, llegando a contratar a trabajadores campesinos nacionales. "/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/hpaz2"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Los problemas comenzaron cuando los mismos trabajadores de UNITED FRUIT COMPANY  notaron que por ser contratados por un tercero no eran considerados oficialmente empleados vulnerándoseles así por completo sus derechos como trabajadores exigiendo entre algunas el cumplimiento absoluto del contrato (descanso remunerado, pago horas extras, trabajo de 8 horas, aumento salario, un pago contra seguro de riesgos), inicialmente se genera una huelga en la sede de la Ciénaga de Magdalena el día 12 de noviembre del año 1928 con la finalidad de poder hablar y llegar a un acuerdo con sus propios contratistas pero no se consigue nada.
+ "/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/hpaz3"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Cansados los trabajadores de esperar una respuesta que nunca llegaría citan nuevamente a una huelga el 5 de diciembre habiendo transcurrido casi un mes, una noche oscura que quedó para siempre en la historia de Colombia no se sabe aproximadamente cuántas muertes sucedieron, solo se sabe que para ese entonces el gobernador del Magdalena el señor Núñez Roca dio la orden de dispersar las huelgas emitiendo por medio de ello un decreto, dando aproximadamente 5 minutos para que todos los protestantes desaparecieran o de lo contrario darían fuego, este hecho fue el movimiento obrero más importante de la historia llamándose así la masacre de las bananeras. "/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/hpaz4"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="9 de abril de 1948 el Bogotazo:
+
+Es llamado así por el asesinato de uno de los líderes políticos del partido Liberal más importantes de la historia el señor Jorge Eliecer Gaitán, quien también fue abogado, economista y periodista nacido en el año 1903 hasta el año 1948 en Bogotá, la historia a punto de contar fue considerada como uno de los episodios mas sangriento de la historia entre el partido Liberal y el partido Conservador.
+"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/hpaz5"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Todo comienza con el retiro de la presidencia del señor Alfonso López pese a su mal manejo a la hora de gobernar, convocando así a nuevas elecciones a la presidencia, dentro del  partido político liberal están de candidatos el señor Gabriel Turbay y el señor Jorge Eliecer  Gaitán, dentro del partido Conservador se encontraba como candidato el señor Mariano Ospina Pérez quien gana la presidencia."/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/hpaz6"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Jorge Eliecer Gaitán es elegido el único líder del partido liberal y candidato para las elecciones de 1950, años posteriores el candidato Jorge Eliecer sigue en camino de construir su propia candidatura, siendo muy querido por el pueblo colombiano gracias a sus discursos y pensamiento inspirado en el socialismo y em Mussolini generando así diversas protestas del presidente actual de ese tiempo Mariano Ospina.
+"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/hpaz7"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text=" Pese a estos acontecimiento empiezan los asesinatos de líderes y seguidores del partido Liberal sin encontrar quien daba la orden, Gaitán comienza a tener enemigos en los regímenes de la alta sociedad que siempre buscaban una alternativa de poder excluirlo y eliminarlo."/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/hpaz8"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Entrando en contexto de dicho acontecimiento tan desafortunado el día 9 de abril se realizaba un evento celebrándose en Bogotá la novena Conferencia Panamericana en la cual asistirían muchas personas importantes siendo Galán excluido completamente de aquella conferencia, el principal interesado era USA, siendo representado por el general Marshall viniendo a convencer a los países participantes de realizar un acuerdo para declarar un comunismo como actividad ilegal."/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/hpaz9"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text=" Como respuesta a este evento el estudiante Cubano Fidel Castro convoca ese día  al congreso Latinoamericano de estudiantes en Bogotá, Fidel y Gaitán se encontrarían a eso de las 2 de la tarde pero dicha reunión jamás pudo ser concretada. "/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/hpaz10"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Era la 1 de la tarde y Gaitan saliendo con alguno de sus compañeros a almorzar es abordado por el señor Juan Roa Sierra (albañil, con antecedentes de delitos de saqueos e incendios y asesinatos) quien le dispara causándole la muerte, no corre con mucha suerte el señor Roa poco después es capturado por la muchedumbre de personas quienes lo linchan causándole la muerte arrastrándolo por todas las calles."/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/hpaz11"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text=" Dicho acontecimiento es considerado como el Bogotazo causando protestas y generando la muerte de 500 personas en Bogotá desconociéndose la cifra exacta de las demás ciudades de Colombia en donde también hubo protestas, actualmente no se sabe quién dio la orden."/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/hpaz12"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="1964 la Marquetalia (surgimiento de las FARC): Llamado así por el lugar de surgimiento de las FARC, hacia el sur del Tolima habitando allí una pequeña comunidad de campesinos donde más tarde surgiría un movimiento mucho más grande, quienes estaban a favor de los campesinos y de defender sus derechos, en contra de un estado opresor.
+"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/hpaz13"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text=" años atrás solo tendrían historia en violencia y muertes injustas, siendo así una estructura comunista armada donde se unen las guerrillas liberales, movimiento surgido por Manuel Marulanda Vélez (alias tiro fijo)  convirtiéndose así en el primer líder combatiente de las FARC."/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/hpaz14"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="solo esto hasta el año 2008 perdida su comandante (tiro fijo) falleció todo esto debido a un cáncer terminal , hacia los años 80 exactamente en 1982 en base a Jacobo Arenas un líder ideológico comienza a hacer una reorganización planteando en sus combatientes las ideas y principios que se sometía su lucha política y su lucha armada a partir de ese momento las FARC se nombran ejército del pueblo, hacia esta misma época las FARC comienza a tener un rumbo distinto con un objetivo desviado."/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/hpaz15"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="El candidato al segundo mando es Alfonso cano pero años después en el 2011 Alfonso cano pierde la vida con el nombre es abatido en un bombardeo del ejército en la operación Odiseo, Después llega al poder Rodrigo londoño,  conocido por su apodo( Timochenko), dejaron de ser el ejército del pueblo las personas que un día desearon cuidar y proteger llegó a ser la que más peligro corría frente a ellos causando temor."/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/hpaz16"/>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    </ScrollView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
