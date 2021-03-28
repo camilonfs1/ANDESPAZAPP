@@ -4,6 +4,551 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#8AADEFF8"
     tools:context=".View.Learn.Diversity.History">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8AADEFF8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#8AADEFF8"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="Historia de la diversidad sexual"
+                android:textColor="#ffffff"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Historia de la diversidad sexual:
+Desde la prehistoria y desde las primeras civilizaciones comienzan a existir en el mundo las primeras personas homosexuales, Ejemplo: 4.000 a.C relato héroe Gilgamesh de Babilonia donde cuenta la relación erótica que sostiene con su compañero, otro ejemplo es 2.300 a. C lo Manicuros del Faraon, una tumba egipcia de dos hombres abrazados." />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#8AADEFF8"
+                        android:src="@drawable/hdiversity1" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#8AADEFF8"
+                        android:src="@drawable/hdiversity2" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text=" Hacia el siglo X a.C en Grecia, no se hablaba aun y ni se entendía el tema del gusto por la persona del mismo sexo, pero en el caso de las relaciones el hombre es el que tiene el rol de ser fuerte y la mujer la sumisa, haremos alusión a esto ya que al momento de que un griego decidía estar con otro hombre este debía ser más joven o de un nivel económico y social más bajo en ese caso eran los esclavos." />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#8AADEFF8">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="#8AADEFF8"
+                    android:src="@drawable/hdiversity3" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Hacia esa misma época los pederastas que hoy día es considerado delito, en ese tiempo era un hecho completamente normal, antes era mal visto que habiendo crecido dicho joven con el que su maestro llamado así había mantenido una relación sigan manteniendo una relación se veía como algo inmoral, mientras que mantener la relación con un niño no, importante también aclarar aun en este tiempo no estaba permitido las relaciones entre mujeres también era considerado algo inmoral." />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#8AADEFF8">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="#8AADEFF8"
+                    android:src="@drawable/hdiversity4" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Hacia el siglo La poetisa Safo escribe acerca de 12 mil líneas sobre su amor con otras mujeres en la isla de Lesbos, claro que si Lesbos proviene del término Lesbiana, hacia la misma época en Roma todo es similar que a Grecia a excepción que allí las relaciones hombre con hombres son algo más privados pero la relación pederasta se prohíbe." />
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Emperadores como Julio Cesar, Trajano, Adriano y Nerón practican la sodomía para la época así se le llamaba a la homosexualidad como algo normal, Nerón llega hasta casarse con 3 hombres; dato importante que no se puede dejar atrás el emperador Heliogábalo es el primer transexual de la historia (sacerdote romano emperador dinastía severa llamado también Marco Aurelio)." />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#8AADEFF8">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_weight="1"
+                        android:background="#8AADEFF8"
+                        android:src="@drawable/hdiversity5" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_weight="1"
+                        android:background="#8AADEFF8"
+                        android:src="@drawable/hdiversity6" />
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Entra el siglo IV a.C entra el cristianismo la sodomía se ve como algo inmoral e ilegal, todo esto por el emperador Teodosio I (emperador romano fiel seguidor de la religión cristiana) crea leyes, también entra allí San Agustín (obispo de Hipona en África) interpretando la sodomía como el mayor crimen contra la humanidad, es allí donde la homofobia surge y las persecuciones a todo el que lo practica.
+" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#8AADEFF8">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_weight="1"
+                        android:background="#8AADEFF8"
+                        android:src="@drawable/hdiversity7" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_weight="1"
+                        android:background="#8AADEFF8"
+                        android:src="@drawable/hdiversity8" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Siglo V, cae imperio romano y llega la edad media, monjes y monjas practican la sodomía con frecuencia, también entra la adelphopoiesis (ceremonia practicada por la iglesia cristiana durante la Edad Media, con la finalidad de hermanar o unir espiritualmente a dos personas del mismo sexo en este caso solo hombre con hombre no era considerado casamiento solo una simple unión de apoyo)." />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#8AADEFF8">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_weight="1"
+                        android:background="#8AADEFF8"
+                        android:src="@drawable/hdiversity9" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_weight="1"
+                        android:background="#8AADEFF8"
+                        android:src="@drawable/hdiversity10" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Siglo XIII llega aún más la homofobia considerándose algo anormal la sodomía   época según Santo Tomas de Aquino (fraile, teólogo y filosofo católico, predicador gran figura de la teología); según la biblia y seguidores a Dios considera que todo acto que evite el procrear nuevos seres ni fructífero esta tachado ante la sociedad, siendo los sodomitas  los culpables de todo (enfermedades, catástrofes y malas cosechas)." />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#8AADEFF8">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="#8AADEFF8"
+                    android:src="@drawable/hdiversity11" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="En base a los anteriores acontecimientos surge a sangre fría las torturas a todo aquel que practica la sodomía, otro dato importante el gran pintor Leonardo Davinci es tachado como sodomita en Florencia finalmente es absuelto, con la ilustración y la revolución francesa bajan las persecuciones homofóbicas y la sodomía se despenaliza solo en algunos países. " />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#8AADEFF8">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="#8AADEFF8"
+                    android:src="@drawable/hdiversity12" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Entra la ciencia y la medicina a jugar papeles interesantes y a interesarse acerca del estudio de la homosexualidad, ahora la homosexualidad se comienza a considerar como una enfermedad claro que si es allí donde surge el termino homosexualidad, alejándola completamente de la moral y la ley, llegando a generarse terapias como el electroshock y la logo topia sin resultados fructíferos." />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#8AADEFF8">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="#8AADEFF8"
+                    android:src="@drawable/hdiversity13" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="En algunos países europeos sigue considerándose un crimen la homosexualidad, por Ejemplo, en Inglaterra a toda mujer que la práctica se le realiza la ablación (practica de la extirpación parcial o total de los genitales femeninos), Alemania aprobación de artículo 175 que castiga la homosexualidad (aquí en Alemania surge el movimiento homosexual), entra allí Karl Heinrich Ulrichs activista alemán se proclama homosexual públicamente." />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#8AADEFF8">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="#8AADEFF8"
+                    android:src="@drawable/hdiversity14" />
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#8AADEFF8">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="#8AADEFF8"
+                    android:src="@drawable/hdiversity15" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Surge entonces el comité científico humanitario encaminado por Magnus Herschel (medico sexólogo, judío Alemán defensor derechos de la homosexualidad), movimiento que busca la despenalización de los homosexuales y las personas transexuales, generando este su finalidad la eliminación del artículo 175 que los penalizaba, surgiendo las primeras publicaciones de revistas homosexuales y películas de lesbianismos, 1930 por primera vez a una persona transexual se le cambia de género, al parecer están teniendo un gran avance que por años habían luchado por conseguir, pero esto no dura por mucho tiempo." />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#8AADEFF8">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="#8AADEFF8"
+                    android:src="@drawable/hdiversity16" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Llega el Nacismo como opositor de la homosexualidad en Alemania, Hitler logra la recuperación del artículo 175, así es hombres homosexuales son llevados a los campos de concentración, así como se marcaban a los judíos para diferenciarlos de los Alemanes puros, se les marca a los homosexuales con un triángulo rosa invertido, triangulo rosa que más adelante es utilizado como el símbolo del orgullo homosexual, acabada la segunda guerra mundial el nacismo los homosexuales jamás son considerados como víctimas y siguen aun en persecución, parece que todo el avance que estaba consiguiendo nuevamente se estaba yendo atrás de nuevo." />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#8AADEFF8">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="#8AADEFF8"
+                    android:src="@drawable/hdiversity17" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#8AADEFF8">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="#8AADEFF8"
+                    android:src="@drawable/hdiversity18" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="
+Surgimiento en Europa y América un nuevo movimiento, llamado el movimiento Homófilo, enfatizando el amor en lugar del complemento de la palabra sexual todo esto con la finalidad de lograr una aceptación en la sociedad, pero este movimiento solo defiende a los hombres que gustan de hombres, dejando atrás los Queens las lesbianas y transexuales
+" />
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Hacia 1969 en EE.UU, es aceptada la homosexualidad pero solo en lugares clandestinos, pero muchas veces la policía hacia la redada de costumbre y si tu forma de vestir no coincidía con tu carnet o identificación eras llevado a la cárcel, cansados de esto en un club llamado stonewall las personas hacen resistencia contra la policía  se producen los famoso disturbios de Stonewall así es empieza la liberación de la lucha L.G.B.T, cada vez más apoyo protestas y manifestaciones con organizaciones de apoyo  más enormes, surge el 28 de junio de 1970 (DIA ORGULLO L.G.B.T)." />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#8AADEFF8">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="#8AADEFF8"
+                    android:src="@drawable/hdiversity19" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="
+Hacia 1990 Se borra de la lista de enfermedades la homosexualidad, 1999 países bajos legalizan el matrimonio homosexual, Israel reconoce a una madre ser legalmente la madre de su pareja mujer, 2010 Australia reconoce de forma legal el género Neutro, hacia el año 2012 se aprueba en Honduras la ley de entidad de género, no es una lucha fácil aun para algunos países, pero se ha logrado a lo largos de los años con excelentes avances.
+" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#8AADEFF8">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="#8AADEFF8"
+                    android:src="@drawable/hdiversity20" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+    ↔
 
 </androidx.constraintlayout.widget.ConstraintLayout>
