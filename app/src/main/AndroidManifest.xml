@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".View.Learn.Reconciliation.ReconciliationDevelop"></activity>
+        <activity android:name=".View.Learn.Diversity.Exprecion"></activity>
+        <activity android:name=".View.Learn.Reconciliation.ReconciliationDevelop" />
         <activity android:name=".View.Learn.Reconciliation.ConflicResolution" />
         <activity android:name=".View.Learn.Reconciliation.SchoolViolentecesTypes" />
         <activity android:name=".View.Learn.Reconciliation.ColombianReconciliation" />

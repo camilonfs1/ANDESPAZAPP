@@ -17,6 +17,7 @@ class MainDiversity : AppCompatActivity() {
     var card_2: CardView? = null
     var card_3: CardView? = null
     var card_4: CardView? = null
+    var card_5:CardView?=null
 
     var card_L_: CardView? = null
     var card_G_: CardView? = null
@@ -37,6 +38,7 @@ class MainDiversity : AppCompatActivity() {
         card_2 = card_queesladiversidad
         card_3 = card_historia
         card_4 = card_actividad
+        card_5 = card_extresiones
 
         card_L_ = card_L
         card_G_ = card_G
@@ -59,6 +61,10 @@ class MainDiversity : AppCompatActivity() {
         }
         card_4!!.setOnClickListener {
             var intent = Intent(this, ActivityDiversity::class.java)
+            this.startActivity(intent)
+        }
+        card_5!!.setOnClickListener {
+            var intent = Intent(this, Exprecion::class.java)
             this.startActivity(intent)
         }
 

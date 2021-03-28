@@ -224,6 +224,29 @@
                             android:textStyle="bold" />
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/card_extresiones"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:elevation="6dp"
+                        android:foreground="?selectableItemBackground"
+                        app:cardCornerRadius="8dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Expresiones"
+                            android:textColor="#4dac9d"
+                            android:textSize="23dp"
+                            android:textStyle="bold" />
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
                         android:id="@+id/card_historia"
                         android:layout_width="match_parent"
                         android:layout_height="100dp"

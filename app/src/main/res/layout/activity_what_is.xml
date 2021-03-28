@@ -6,4 +6,267 @@
     android:layout_height="match_parent"
     tools:context=".View.Learn.Diversity.WhatIs">
 
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8AADEFF8">
+
+
+        <LinearLayout
+            android:background="#8AADEFF8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="3"
+                android:gravity="center"
+
+                android:text="¿Qué es la diversidad sexual?"
+                android:textColor="#ffffff"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:background="#8AADEFF8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:background="#8AADEFF8"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@drawable/lgbtolympics"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Todos los seres humanos nacemos con órganos designados biológicamente, pero cada individuo tiene una forma sexuada de ser, para ello comenzaremos explicando acerca del, y se constituye a tras de dimensiones sexuales como." />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:text="Si los crmosomas son XX eres una niña"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/babydiversity"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:text="Si los crmosomas son XY eres un niño"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/babytwo"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="sexo biológico: son las diferencias biológicas entre los hombres y las mujeres, (genitales, cromosomas y las hormonas). "/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:text="¿Qué es identidad de género?"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Es el tipo de comportamiento que tengas ante la sociedad por el hecho de ser hombre o mujer (actuar, vestir, demostrar las cosas que más te gustan) Ejemplo: ser mujer te guste maquillarte, los vestidos entre otras, ser hombre el gusto por carros fútbol, entre otros."/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Al definir de esta forma el género no podemos decir que si eres mujer no te puede gustar el fútbol o que por el hecho de ser hombre no te puede atraer el arte de maquillaje, esto no nos hará perder el género por el hecho de tener un gusto distinto como el que la sociedad está destinada a mostrar desde que naces es decir que para las niñas es el color rosa y para los niños el azul, los niños juegan con carros y las niñas con muñecas a esto se le llama heterosexismo normativo."/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Identidad sexual: O también llamada identidad de género, esa es la respuesta a acerca como te sientes tu (hombre o mujer) dependiendo a qué tipo de gremio sientas que haces parte puede que coincida con tu sexo biológico o no."/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:text="¿Qué es el Sexo?"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Definición de la palabra sexo que tiene permanencia desde el siglo XV que proviene del latín sexum se relaciona a la palabra biología y la reproducción
+"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="El sexo no siempre es la relación genital, existen distintas clases como:"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sexo genético: que tiene que ver con el número de cromosomas que tiene tanto el sexo femenino como el sexo masculino.
+                                  \n\nSexo cromático: Marcado por la presencia o ausencia del cuerpo Barr.
+                                  \n\nSexo hormonal: Presencia de andrógeno y estrógenos.
+                                  \n\nSexo gonadal: Presencia de testículos u ovarios
+                                  \n\nSexo fenotípico:  Se refiere a la diferenciación del sistema de conductos internos y de los genitales externos de la persona y se inicia hacia la semana 7 de gestación. Según el sexo cromosómico y gonadal que haya desarrollado el embrión, el proceso se produce en uno u otro sentido.
+                                  \n\nSexo cerebral: Dado por núcleos e hipotálamos distintos en machos y hembras"/>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

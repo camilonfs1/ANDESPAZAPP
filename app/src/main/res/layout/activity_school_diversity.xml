@@ -40,7 +40,7 @@
                     android:background="#8AADEFF8"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:src="@drawable/icon_1" />
+                    android:src="@drawable/diversityschool" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -83,26 +83,10 @@
                 android:padding="10dp"
                 app:cardCornerRadius="8dp">
 
-                <TextView
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text=""/>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:background="#8AFFFFFF"
-                android:elevation="6dp"
-                android:padding="10dp"
-                app:cardCornerRadius="8dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text=""/>
+                    android:layout_height="match_parent"
+                    android:src="@drawable/diversity1"/>
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -143,11 +127,10 @@
                 android:padding="10dp"
                 app:cardCornerRadius="8dp">
 
-                <TextView
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text=""/>
+                    android:layout_height="match_parent"
+                    android:src="@drawable/diversity2"/>
             </androidx.cardview.widget.CardView>
 
 
