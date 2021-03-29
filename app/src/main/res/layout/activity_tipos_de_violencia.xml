@@ -23,7 +23,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:text="Diversidad Sexual En Las Escuelas"
+                android:text="Tipos de Violencia"
                 android:textColor="#ffffff"
                 android:textSize="25dp"
                 android:textStyle="bold" />

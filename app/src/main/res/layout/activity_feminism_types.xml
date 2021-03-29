@@ -5,5 +5,232 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".View.Learn.Gender.FeminismTypes">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#651FFF">
+    <LinearLayout
+        android:background="#651FFF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="Tipos de Feminismo"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Dos grandes líneas de las cuales ya hemos mencionado acerca del feminismo es entonces el feminismo liberal (busca un balance y una igualdad) feminismo radical (buscando romper el sistema patriarcal en que se vive) generando grandes diferencias, pero con una misma finalidad de defender sus derechos.
+" />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="No estando contenta cierta parte de la población femenina y sintiéndose completamente excluidas surgen diversas clases de feminismos, entre ellos" />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Feminismo negro: influyen alli las mujeres negras de piel oscura que para la epoca las consideraban como esclavas, mientras la mujer blanca salia a protestar por sus derechos las esclavas se quedaban haciendo los que haceres." />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/fem16"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Transfeminismo: Influyen a las personas que tienen un genero distinto que al de su sexo biologico, buscando en convertirse mujeres en este caso, genero que surge por medio de la diversidad sexual." />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/fem17"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Feminismo islámico: Influyen las mujeres de religión islámica, buscando una igualdad ya que por años han sido  minimizadas y desvaloradas a comparación del género masculino." />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/fem18"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="feminismo descolonial: Surge en America Latina, son aquellos feminismo surgidos a partir de la terecera ola feminista sin importar sexo,genreo,religion o raza." />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/fem19"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="feminismo marxista: Viene encaminado de la teoría Marxista, que está en contra del capitalismo (El capitalismo, es un sistema social-económico cuyo principal elemento es el dinero,ya que este es el generador de grandes riquezas)con la finalidad de generar el socialismo el cual busca una igualdad." />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/fem20"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="ecofeminismo: Va de la mano con la naturaleza y la mujer, buscando la no explotación de la naturaleza y generar justicia en las mujeres,transformando la amistad humana con los demás seres vivos." />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/fem21"/>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+

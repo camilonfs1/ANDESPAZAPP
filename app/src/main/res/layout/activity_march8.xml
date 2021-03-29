@@ -4,6 +4,499 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#651FFF"
     tools:context=".View.Learn.Gender.March8">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#651FFF">
+    <LinearLayout
+        android:background="#651FFF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:text="8 de marzo día internacional de la mujer"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Sin importar raza, cultura, religión o nivel socio económico, todo esto por la continua lucha de la mujer a lo largo de los años." />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Fue un 8 de marzo de 1857 un grupo de mujeres obreras textiles toman la decisión de salir a protestar acerca de las condiciones en las que ellas trabajaban en New York, solicitando (disminución de horas de la jornada laboral, igualdad salarial, tiempo de dar de comer a sus hijos)." />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Fallecen más de 140 mujeres quemadas en dicha fábrica, el responsable es el dueño de la fábrica dando un final desafortunado a esas mujeres. " />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/fem1"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="¿Cómo surge el feminismo?:\n\n
+Es la lucha continua por la igualdad entre mujeres y hombres, siendo seres humanos, aparece en el siglo XVII
+" />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/fem2"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="A lo largo de los años se veía como algo muy natural que la mujer tuviese menos valor que el hombre, viéndola simplemente como un ser humano encargado de cuidar a los niños, encargado de cocinar y tenerle a su esposo la cena lista, y encargada de suplir las necesidades sexuales de los hombres " />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/fem3"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Este acontecimiento y minimización hacia ellas hace que se lleguen a sentir enormemente enojadas y con la finalidad de exigir sus derechos hacía eso del siglo XVIII en la época del Renacimiento, se desarrolla un movimiento ideológico y social llamado feminismo." />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/fem4"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Es luego cuando surge la ilustración generando la igualdad sin distinguir clases sociales, llegando así la Revolución Francesa, llegando la declaración de los derechos del hombre (sin incluir al género femenino)" />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/fem5"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Llega la llamada primera ola del feminismo, llega Olympe de Gouges (escritora, dramaturga, filósofa y política francesa) siendo una de las autoras de los derechos de la mujer junto con Mary Wollstonecraft (escritora francesa) planteando ella que la diferencia entre los géneros no es algo completamente natural sino cultural algo por el cual el hombre debería ser educado." />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/fem6"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Olympe de Gouges pese a su forma revolucionaria de pensar fue guillotinada en noviembre de 1793 tras la purga que siguió la Revolución francesa dejando en cárcel a las mujeres de maneras injustas, y además de eso no se permiten que se reúnan más de 5 mujeres en un grupo en las calles " />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/fem7"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Hacia 1800 llega el Código Civil Francés o código de Napoleón, el cual exige que toda mujer debe de obedecer a su esposo, dejándola sin derechos civiles y pues más que claro sin derechos políticos." />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/fem8"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Llegando así la segunda ola del feminismo, el sufragismo en Norteamérica movimiento reformista social, económico y político promoviendo y exigiendo el derecho a votar por el cual vendrá en conexión absolutamente todos los derechos civiles, Lucrettia Mott (defensora de los derechos de la mujer) y Elizabeth Cady Stanton (pionera y sufragista de los derechos de la mujer) " />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/fem9"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="La lucha del Sufragismo en el momento no tiene mucha prosperidad ya que por años siguen siendo burladas y pisoteadas, deciden entrar en acción a través de encadenamientos, huelgas de hambre, saboteos y burlas a líderes políticos, bombas e incendios, generando esto el derecho al voto sólo en algunos países todo esto a partir de la primera guerra mundial.
+" />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/fem10"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="No todo es solución ya que hablarse del género de mujer en ese tiempo era difícil diferenciar quien, si podía ejercer derechos y quien no, pues el movimiento Sufragista solo era para mujeres blancas dejando completamente excluidas a las mujeres de piel oscura, allí aparece Sojourner Truth (nacida en la esclavitud, activista de los derechos de la mujer, primer mujer de piel oscura en ganar un juicio contra un hombre blanco) defendiendo la doble exclusión solo por el hecho de ser mujer y de piel oscura, aparece también Flora Tristán ( escritora,pensadora,socialista precursora del feminismo socialista  Peruana) habla de las mujeres obreras citando la doble represión de clase y el hecho de ser mujer. " />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/fem11"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Aparece entre la primera y segunda guerra mundial Simone de Beauvoir (escritora, profesora y filosofa, luchadora por la igualdad de los derechos de la mujer y por la despenalización del aborto) quien describe al hombre como la norma y la mujer es lo otro es decir la que siempre excluyen por completo y que siempre será lo que el hombre decida que quiera que sea ella llamando esto androcentrismo " />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/fem12"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Llega así la tercera ola feminista pasada ya la segunda guerra mundial la mujer vuelve al hogar y la publicidad hace su trabajo refiriéndose a la mujer con el trabajo del hogar, aparece Betty Friedan (teórica socióloga y líder feminista de origen Judío) escribe mística de la feminidad donde habla acerca del porque la mujer se deprime, y cae en el alcoholismo, ella habla allí de una insatisfacción ya que en pocas palabras ellas se preocupan por otros en vez de si mismas, generando un avance en las mujeres y haciéndolas construir un nivel nuevo de vida, generando también el mayor movimiento de la mujer " />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/fem13"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Es luego cuando se le da comienzo al feminismo liberal capacidad de mantener en equidad las acciones y decisiones de la mujer) se luchan por cambios integrando a la mujer en la parte laboral y en los espacios políticos, así que además de este momento haber podido generar el voto, poder trabajar, ir a la universidad la mujer comienza a ocupar espacios de poder, pero lastimosamente al interior del hogar es todo lo contrario dirimen, malos tratos, explotación económica y violencia. " />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/fem14"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Entra entonces el feminismo radical, llamado así porque el problema de las mujeres en el hogar había que resolverlo de raíz, el problema siempre sería el mismo el patriarcado es decir el hombre y la fuerza del machismo que ejercía sobre la mujer, llegando a generar diversas protestas dentro de lo que exigían de ellas estaban el desacuerdo a los certámenes de belleza ya que se veían como una cosificación hacia la mujer, creando también espacios propios para toda aquella mujer que sufría de maltrato, defensa personal, ginecológico,guarderías generando así la mujer ideal." />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#8AFFFFFF"
+            android:elevation="6dp"
+            android:padding="10dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/fem15"/>
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

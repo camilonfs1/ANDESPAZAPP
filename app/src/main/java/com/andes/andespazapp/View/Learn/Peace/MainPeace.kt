@@ -22,10 +22,7 @@ class MainPeace : AppCompatActivity() {
 
         card1=card_tipos
         card2=card_violenciacolombia
-        card3=card_acuerdosdepaz
-        card4=card_acuerdoshistoria
         card5=card_simbolos
-        card6=card_importancia
         card7=card_activity
 
         card1!!.setOnClickListener {
@@ -36,20 +33,10 @@ class MainPeace : AppCompatActivity() {
             var intent = Intent(this, ViolenciaEnColombia::class.java)
             this.startActivity(intent)
         }
-        card3!!.setOnClickListener {
-            var intent = Intent(this, AcuerdoDePazEnColombia::class.java)
-            this.startActivity(intent)
-        }
-        card4!!.setOnClickListener {
-            var intent = Intent(this, AcuerdoDePazEnColombia::class.java)
-            this.startActivity(intent)
-        }
+
         card5!!.setOnClickListener {
             var intent = Intent(this, SimbolosPaz::class.java)
             this.startActivity(intent)
-        }
-        card6!!.setOnClickListener {
-
         }
         card7!!.setOnClickListener {
             var intent = Intent(this, ActivityPeace::class.java)

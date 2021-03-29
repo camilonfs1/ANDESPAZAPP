@@ -158,52 +158,8 @@
                             android:textSize="23dp"
                             android:textStyle="bold" />
                     </androidx.cardview.widget.CardView>
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_acuerdosdepaz"
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:layout_rowWeight="1"
-                        android:layout_columnWeight="1"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:elevation="6dp"
-                        android:foreground="?selectableItemBackground"
-                        app:cardCornerRadius="8dp">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:text="El acuerdo de paz entre Colombia y las FARC"
-                            android:textColor="#4dac9d"
-                            android:textSize="23dp"
-                            android:textStyle="bold" />
-                    </androidx.cardview.widget.CardView>
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_acuerdoshistoria"
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:layout_rowWeight="1"
-                        android:layout_columnWeight="1"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:elevation="6dp"
-                        android:foreground="?selectableItemBackground"
-                        app:cardCornerRadius="8dp">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:text="Acuerdos de paz a lo largo de los años en Colombia"
-                            android:textColor="#4dac9d"
-                            android:textSize="23dp"
-                            android:textStyle="bold" />
-                    </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
                         android:id="@+id/card_simbolos"
                         android:layout_width="match_parent"
@@ -227,29 +183,7 @@
                             android:textSize="23dp"
                             android:textStyle="bold" />
                     </androidx.cardview.widget.CardView>
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card_importancia"
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:layout_rowWeight="1"
-                        android:layout_columnWeight="1"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:elevation="6dp"
-                        android:foreground="?selectableItemBackground"
-                        app:cardCornerRadius="8dp">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:text="Importancia de la paz en Colombia"
-                            android:textColor="#4dac9d"
-                            android:textSize="23dp"
-                            android:textStyle="bold" />
-                    </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
                         android:id="@+id/card_activity"
                         android:layout_width="match_parent"
