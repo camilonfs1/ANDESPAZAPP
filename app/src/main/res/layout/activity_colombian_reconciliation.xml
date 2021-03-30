@@ -6,4 +6,87 @@
     android:layout_height="match_parent"
     tools:context=".View.Learn.Reconciliation.ColombianReconciliation">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8AADEFF8">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#8AADEFF8"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="La Reconciliación En La Sociedad Colombiana"
+                android:textColor="#ffffff"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Es necesaria la humanización de la sociedad colombiana,  a medida que avanza el tiempo el país entra en ese resentimiento generando daños irreparables y dejando lejos esa reconstrucción hacia la paz, es necesario que las alternativas por llegar a un acuerdo surjan desde ya, se necesita un pais con mas sensibilidad hacia todas aquellas victimas que no lograron ganar la batalla, que a lo largo de los años han generado historia, pero recuerda que la historia es para no repetirla si no para aprender de ella." />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Es necesaria la humanización de la sociedad colombiana,  a medida que avanza el tiempo el país entra en ese resentimiento generando daños irreparables y dejando lejos esa reconstrucción hacia la paz, es necesario que las alternativas por llegar a un acuerdo surjan desde ya, se necesita un pais con mas sensibilidad hacia todas aquellas victimas que no lograron ganar la batalla, que a lo largo de los años han generado historia, pero recuerda que la historia es para no repetirla si no para aprender de ella." />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Poner en marcha a todas aquellas organizaciones encargadas de curar desde lo más profundo a cada persona a nivel psicológico y emocional, por medio de actividades que incentiven a la reconciliación, el perdón y el cambio, este cambio no solo se generará por reconstrucción y saneamiento, es necesaria la importancia de no volver a repetir ni generar más violencia." />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/colombiareconciliation"/>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

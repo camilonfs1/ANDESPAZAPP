@@ -6,4 +6,223 @@
     android:layout_height="match_parent"
     tools:context=".View.Learn.Reconciliation.FamilyReconciliation">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8AADEFF8">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#8AADEFF8"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="3"
+                android:gravity="center"
+
+                android:text="¿Qué es la diversidad sexual?"
+                android:textColor="#ffffff"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Se habla que desde la familia comienzan o dirimen los problemas que después llegan hacia las escuelas, saliendo de parientes cercanos, esto hace que todos los miembros de la familia lleguen a encontrarse afectados teniendo los niños ciertas repercusiones que pueden llegar a afectar hasta el resto de su vida" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Generando esta problemática una especie de ciclo de protección generando muchísima más violencia Ejemplo: Alberto ve como su padre golpea continuamente a su mama generando en Alberto una especie de trauma en su vida adulta y por una parte puede que Alberto se convierta en un hombre violento o en un hombre temeroso." />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Tipos de violencia en la familia:" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="VIOLENCIA FÍSICA" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/familiarecon1"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="VIOLENCIA PSICOLÓGICA" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/familiarecon2"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text=" VIOLENCIA SEXUAL" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/familiarecon3"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="VIOLENCIA ECONÓMICA" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/familiarecon4"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="ES.PE.RE:\n\nGenerado como una estrategia de la fundación para la reconciliación, plantea las soluciones de conflicto, a través de la convivencia, la solidaridad y la justicia, con la finalidad de superar sus diferencias con todos los miembros que nos rodean
+" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Nace a partir del año 2002 en 60 barrios de Bogotá durante la alcaldía de Antanas Mockus, en el proyecto que se llama eco barrios \n\n
+Se busca el esclarecimiento de la violencia como sanación de traumas, originado y encaminado acerca de la violencia que afronta Colombia \n\n
+Originada desde de la Universidad de Harvard a cabo de una reflexión a cabo de 18 meses por un equipo interdisciplinario bajo los auspicios de PICAR \n
+" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
