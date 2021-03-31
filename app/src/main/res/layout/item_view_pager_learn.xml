@@ -15,7 +15,7 @@
             <ImageView
                 android:id="@+id/image"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"/>
+                android:layout_height="250dp"/>
             <TextView
                 android:id="@+id/title"
                 android:textColor="#262626"
@@ -42,8 +42,9 @@
             <LinearLayout
                 android:layout_below="@id/desc"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:gravity="center"
+                android:visibility="invisible"
                 android:orientation="vertical">
                 <TextView
                     android:id="@+id/textViewHorizontalProgress"
@@ -62,12 +63,6 @@
                     android:progress="1"
                     android:progressBackgroundTint="@android:color/darker_gray"
                     android:progressTint="@color/color7" />
-                <Button
-                    android:id="@+id/btnmas"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="horizontalDeterminate"
-                    android:text="MAS" />
 
             </LinearLayout>
 

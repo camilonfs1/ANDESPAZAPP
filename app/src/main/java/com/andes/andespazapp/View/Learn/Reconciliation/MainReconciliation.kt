@@ -15,7 +15,6 @@ class MainReconciliation : AppCompatActivity() {
     private var card2: CardView? = null
     private var card3: CardView? = null
     private var card5: CardView? = null
-    private var card6: CardView? = null
     private var card7: CardView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +25,6 @@ class MainReconciliation : AppCompatActivity() {
         card2 =escolar
         card3 =sociedad
         card5 =resolucion_conflictos
-        card6 =comenzar
         card7 =actividad
 
         card1!!.setOnClickListener {
@@ -43,10 +41,6 @@ class MainReconciliation : AppCompatActivity() {
         }
         card5!!.setOnClickListener {
             var intent = Intent(this, ConflicResolution::class.java)
-            this.startActivity(intent)
-        }
-        card6!!.setOnClickListener {
-            var intent = Intent(this, ReconciliationDevelop::class.java)
             this.startActivity(intent)
         }
         card7!!.setOnClickListener {

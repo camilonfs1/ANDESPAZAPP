@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.Window
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
@@ -48,6 +49,7 @@ class MainStudentMenu : AppCompatActivity() {
     var btn_close_back: CardView? = null
     var btn_lear: CardView? = null
     var txt_name:TextView? = null
+    var btn_andes:CardView? = null
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,6 +58,8 @@ class MainStudentMenu : AppCompatActivity() {
         name = txt_name_student
         roll = txt_roll
         image =image_student
+
+        btn_andes =andesbtn
 
         //database = LocalDB.getDatabase(this)
 
@@ -90,14 +94,6 @@ class MainStudentMenu : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
         }
 
-
-
-
-        /*var db = DB_Administrator(this)
-        var user = db.readData("6")
-
-        txt_name!!.setText(user.id)*/
-
         btn_close_back!!.setOnClickListener{
             SigOut()
         }
@@ -106,6 +102,9 @@ class MainStudentMenu : AppCompatActivity() {
             val intent = Intent(this, CRUD_Individual_User::class.java)
             intent.putExtra("id", "123456")
             startActivity(intent)
+        }
+        btn_andes!!.setOnClickListener{
+            Toast.makeText(this,"Esta seccion proximamente estara disponible", Toast.LENGTH_LONG).show()
         }
 
         btn_lear!!.setOnClickListener{

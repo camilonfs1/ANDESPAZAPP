@@ -18,6 +18,7 @@
     <Button
         android:id="@+id/btnBackk"
         android:text="Volver!"
+        android:visibility="invisible"
         android:textColor="#fff"
         android:background="@drawable/btn_back"
         android:paddingLeft="30dp"

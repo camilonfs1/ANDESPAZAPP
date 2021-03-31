@@ -46,7 +46,6 @@ class AdapterViewPager_Learn (context: Context): PagerAdapter()   {
         var image: ImageView = view.findViewById(R.id.image)
         var title: TextView = view.findViewById(R.id.title)
         var desc: TextView = view.findViewById(R.id.desc)
-        var btn: Button = view.findViewById(R.id.btnmas)
         var text: TextView = view.findViewById(R.id.textViewHorizontalProgress)
         var bar: ProgressBar = view.findViewById(R.id.progressBarHorizontal)
 
