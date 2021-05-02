@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.andes.andespazapp.Model.Firebase.User_Firebase
 import com.andes.andespazapp.R
 import com.andes.andespazapp.View.Student.MainStudentMenu
 import com.andes.andespazapp.ViewModel.Login_ViewModel
@@ -31,6 +32,8 @@ class MainActivity : AppCompatActivity() {
         btn_enter = btn_inter
 
         var login = Login_ViewModel()
+
+
 
         btn_enter!!.setOnClickListener{
             if(txt_email!!.text.toString()==""||txt_pass!!.text.toString()==""){

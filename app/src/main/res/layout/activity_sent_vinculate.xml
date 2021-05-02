@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context=".View.Vinculate.Sent_vinculate">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="center"
+                android:text="Envianos Tus Datos"
+                android:textColor="#4dac9d"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:id="@+id/linar_nom"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_above="@+id/lin_departmen"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginEnd="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/input_login">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txt_name_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:hint="Nombre completo"
+                    android:shadowColor="#4dac9d"
+                    android:textColor="#4dac9d"
+                    android:textColorHighlight="#4dac9d"
+                    android:textColorHint="#4dac9d"
+                    android:textColorLink="#4dac9d" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linar_id"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_above="@+id/lin_departmen"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginEnd="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/input_login">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txt_tel_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:autoText="false"
+                    android:hint="Numero de telefono"
+                    android:shadowColor="#4dac9d"
+                    android:textColor="#4dac9d"
+                    android:textColorHighlight="#4dac9d"
+                    android:textColorHint="#4dac9d"
+                    android:textColorLink="#4dac9d"
+                    android:inputType="number"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_departmen"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_above="@+id/lin_departmen"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginEnd="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/input_login">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txt_region"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:autoText="false"
+                    android:hint="Lugar de recidencia"
+                    android:shadowColor="#4dac9d"
+                    android:textColor="#4dac9d"
+                    android:textColorHighlight="#4dac9d"
+                    android:textColorHint="#4dac9d"
+                    android:textColorLink="#4dac9d"/>
+
+            </LinearLayout>
+
+
+            <Button
+
+                android:id="@+id/btn_sent_vinculate"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="46dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/boton_main"
+                android:text="Registrar"
+                android:textColor="#ffff"
+                tools:layout_editor_absoluteX="159dp"
+                tools:layout_editor_absoluteY="629dp" />
+
+            <Button
+                android:id="@+id/back_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="46dp"
+                android:layout_marginBottom="110dp"
+                android:background="@drawable/boton_main"
+                android:text="Volver"
+                android:textColor="#ffff"
+                tools:layout_editor_absoluteX="159dp"
+                tools:layout_editor_absoluteY="629dp" />
+
+        </LinearLayout>
+
+
+</LinearLayout>

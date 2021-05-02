@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".View.Learn.Peace.SimbolosPaz"></activity>
+        <activity android:name=".View.Vinculate.Sent_vinculate"></activity>
+        <activity android:name=".View.Learn.Peace.SimbolosPaz" />
         <activity android:name=".View.Learn.Diversity.Exprecion" />
         <activity android:name=".View.Learn.Reconciliation.ReconciliationDevelop" />
         <activity android:name=".View.Learn.Reconciliation.ConflicResolution" />

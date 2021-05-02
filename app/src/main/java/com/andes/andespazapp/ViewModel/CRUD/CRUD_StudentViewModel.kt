@@ -18,7 +18,7 @@ class CRUD_StudentViewModel {
     }
 
     fun updatelogin(email:String, pass:String ):Boolean{
-        var confirm =UserDB.UpdateLogin(email,pass)
-        return confirm
+       // var confirm =UserDB.UpdateLogin(email,pass)
+        return true
     }
 }

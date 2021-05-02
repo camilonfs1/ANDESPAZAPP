@@ -1,9 +1,11 @@
 package com.andes.andespazapp.View.Student
 
+import android.content.ContentValues
 import android.content.Intent
 import android.media.Image
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.Window
 import android.widget.ImageView
 import android.widget.TextView
@@ -14,6 +16,7 @@ import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import com.andes.andespazapp.DB.LocalDB
 import com.andes.andespazapp.Model.Firebase.Login_Firebase
+import com.andes.andespazapp.Model.Firebase.User_Firebase
 import com.andes.andespazapp.Model.Person
 import com.andes.andespazapp.R
 import com.andes.andespazapp.View.CRUD.CRUD_Individual_User
@@ -22,8 +25,11 @@ import com.andes.andespazapp.View.Complaints.Sent_Complaint
 import com.andes.andespazapp.View.Learn.Main_Learn
 import com.andes.andespazapp.View.MainActivity
 import com.andes.andespazapp.View.Module_Blog.Blog_main
+import com.andes.andespazapp.View.Vinculate.Vinculate_Sent
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_main_student_menu.*
 
 class MainStudentMenu : AppCompatActivity() {
@@ -34,6 +40,8 @@ class MainStudentMenu : AppCompatActivity() {
     private var mDatabaseReference: DatabaseReference? = null
     private var mDatabase: FirebaseDatabase? = null
     private var mUserReference: DatabaseReference? = null
+
+    val user1 = Firebase.auth.currentUser
 
     private var userLocal: Person? = null
 
@@ -98,13 +106,29 @@ class MainStudentMenu : AppCompatActivity() {
             SigOut()
         }
 
+        var firebase = User_Firebase()
         btn_profile!!.setOnClickListener{
+            val emailAddress = "camilonfs1@gmail.com"
+            user1
+            System.out.println("")
+
+            Firebase.auth.sendPasswordResetEmail(emailAddress)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        Log.d(ContentValues.TAG, "Email sent.")
+                    }
+                }
+
+        /*
             val intent = Intent(this, CRUD_Individual_User::class.java)
             intent.putExtra("id", "123456")
-            startActivity(intent)
+            startActivity(intent)*/
         }
         btn_andes!!.setOnClickListener{
-            Toast.makeText(this,"Esta seccion proximamente estara disponible", Toast.LENGTH_LONG).show()
+            val intent = Intent(this, Vinculate_Sent::class.java)
+            intent.putExtra("id", id)
+            intent.putExtra("username",txt_name!!.text)
+            startActivity(intent)
         }
 
         btn_lear!!.setOnClickListener{
