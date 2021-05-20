@@ -1,28 +1,29 @@
 package com.andes.andespazapp.Model.Firebase
 
 import com.andes.andespazapp.Model.Learn_Item
+import com.andes.andespazapp.R
 
 class Learn_Firebase {
     var item: ArrayList<Learn_Item>? = ArrayList()
-    fun readDB(): ArrayList<Learn_Item>{
+    fun readDB(): ArrayList<Learn_Item> {
         item = ArrayList()
         item!!.add(
-            Learn_Item("1", "Memoria", "", 2131230989,100)
+            Learn_Item("1", "Memoria", "", R.drawable.memoriamain, 100)
         )
         item!!.add(
-            Learn_Item("2", "Paz", "", 2131231022,100)
+            Learn_Item("2", "Paz", "", R.drawable.pazmain, 100)
         )
         item!!.add(
-            Learn_Item("3", "Reconciliacion", "", 2131231028,100)
+            Learn_Item("3", "Reconciliacion", "", R.drawable.reconciliacionmain, 100)
         )
         item!!.add(
-            Learn_Item("3", "Genero", "", 2131230911,100)
+            Learn_Item("3", "Genero", "", R.drawable.generomain, 100)
         )
         item!!.add(
-            Learn_Item("3", "Diversidad", "", 2131230875,100)
+            Learn_Item("3", "Diversidad", "", R.drawable.diversidadmain, 100)
         )
         item!!.add(
-            Learn_Item("3", "Objetores", "", 2131230875,100)
+            Learn_Item("3", "Objetores", "", R.drawable.objetores1, 100)
         )
         return item!!
     }

@@ -48,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.google.android.material.card.MaterialCardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/profile_student_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -75,8 +75,8 @@
                         android:layout_height="wrap_content"/>
 
                 </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-            <com.google.android.material.card.MaterialCardView
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
                 android:id="@+id/btn_learn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -103,8 +103,8 @@
                         android:layout_height="wrap_content"/>
 
                 </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-            <com.google.android.material.card.MaterialCardView
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
                 android:id="@+id/card_blog_student"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -131,8 +131,8 @@
                         android:layout_height="wrap_content"/>
 
                 </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-            <com.google.android.material.card.MaterialCardView
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
                 android:id="@+id/ddhh_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -159,8 +159,8 @@
                         android:layout_height="wrap_content"/>
 
                 </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-            <com.google.android.material.card.MaterialCardView
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
                 android:id="@+id/andesbtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -187,10 +187,10 @@
                         android:layout_height="wrap_content"/>
 
                 </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+            </androidx.cardview.widget.CardView>
 
 
-            <com.google.android.material.card.MaterialCardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/btn_complaint"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -216,8 +216,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-            <com.google.android.material.card.MaterialCardView
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
                 android:id="@+id/btn_close"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -243,7 +243,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+
+            </androidx.cardview.widget.CardView>
         </GridLayout>
     </LinearLayout>
 </ScrollView>

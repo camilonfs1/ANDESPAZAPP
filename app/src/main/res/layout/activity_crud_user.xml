@@ -90,7 +90,7 @@
             android:columnOrderPreserved="false"
             android:rowCount="2">
 
-            <com.google.android.material.card.MaterialCardView
+            <androidx.cardview.widget.CardView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -114,9 +114,9 @@
                         android:src="@drawable/icon_1" />
 
                 </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+            </androidx.cardview.widget.CardView>
 
-            <com.google.android.material.card.MaterialCardView
+            <androidx.cardview.widget.CardView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -140,9 +140,9 @@
                         android:src="@drawable/icon_2" />
 
                 </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+            </androidx.cardview.widget.CardView>
 
-            <com.google.android.material.card.MaterialCardView
+            <androidx.cardview.widget.CardView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -166,9 +166,9 @@
                         android:src="@drawable/icon_3" />
 
                 </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+            </androidx.cardview.widget.CardView>
 
-            <com.google.android.material.card.MaterialCardView
+            <androidx.cardview.widget.CardView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -192,9 +192,9 @@
                         android:src="@drawable/icon_4" />
 
                 </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+            </androidx.cardview.widget.CardView>
 
-            <com.google.android.material.card.MaterialCardView
+            <androidx.cardview.widget.CardView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -218,9 +218,9 @@
                         android:src="@drawable/icon_5" />
 
                 </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+            </androidx.cardview.widget.CardView>
 
-            <com.google.android.material.card.MaterialCardView
+            <androidx.cardview.widget.CardView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -244,9 +244,9 @@
                         android:src="@drawable/icon_6" />
 
                 </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+            </androidx.cardview.widget.CardView>
 
-            <com.google.android.material.card.MaterialCardView
+            <androidx.cardview.widget.CardView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -270,9 +270,9 @@
                         android:src="@drawable/icon_7" />
 
                 </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+            </androidx.cardview.widget.CardView>
 
-            <com.google.android.material.card.MaterialCardView
+            <androidx.cardview.widget.CardView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -296,9 +296,9 @@
                         android:src="@drawable/icon_8" />
 
                 </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+            </androidx.cardview.widget.CardView>
 
-            <com.google.android.material.card.MaterialCardView
+            <androidx.cardview.widget.CardView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -322,9 +322,9 @@
                         android:src="@drawable/icon_9" />
 
                 </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+            </androidx.cardview.widget.CardView>
 
-            <com.google.android.material.card.MaterialCardView
+            <androidx.cardview.widget.CardView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -348,9 +348,9 @@
                         android:src="@drawable/icon_10" />
 
                 </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+            </androidx.cardview.widget.CardView>
 
-            <com.google.android.material.card.MaterialCardView
+            <androidx.cardview.widget.CardView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -374,9 +374,9 @@
                         android:src="@drawable/icon_12" />
 
                 </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+            </androidx.cardview.widget.CardView>
 
-            <com.google.android.material.card.MaterialCardView
+            <androidx.cardview.widget.CardView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -400,7 +400,7 @@
                         android:src="@drawable/icon_11" />
 
                 </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+            </androidx.cardview.widget.CardView>
 
         </GridLayout>
 

@@ -108,21 +108,10 @@ class MainStudentMenu : AppCompatActivity() {
 
         var firebase = User_Firebase()
         btn_profile!!.setOnClickListener{
-            val emailAddress = "camilonfs1@gmail.com"
-            user1
-            System.out.println("")
-
-            Firebase.auth.sendPasswordResetEmail(emailAddress)
-                .addOnCompleteListener { task ->
-                    if (task.isSuccessful) {
-                        Log.d(ContentValues.TAG, "Email sent.")
-                    }
-                }
-
-        /*
             val intent = Intent(this, CRUD_Individual_User::class.java)
-            intent.putExtra("id", "123456")
-            startActivity(intent)*/
+            intent.putExtra("id", id)
+            intent.putExtra("username",txt_name!!.text)
+            startActivity(intent)
         }
         btn_andes!!.setOnClickListener{
             val intent = Intent(this, Vinculate_Sent::class.java)

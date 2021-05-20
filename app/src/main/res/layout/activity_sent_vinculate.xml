@@ -133,25 +133,7 @@
                 tools:layout_editor_absoluteX="159dp"
                 tools:layout_editor_absoluteY="629dp" />
 
-            <Button
-                android:id="@+id/back_button"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="50dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginEnd="50dp"
-                android:layout_marginRight="46dp"
-                android:layout_marginBottom="110dp"
-                android:background="@drawable/boton_main"
-                android:text="Volver"
-                android:textColor="#ffff"
-                tools:layout_editor_absoluteX="159dp"
-                tools:layout_editor_absoluteY="629dp" />
+           
 
         </LinearLayout>
 

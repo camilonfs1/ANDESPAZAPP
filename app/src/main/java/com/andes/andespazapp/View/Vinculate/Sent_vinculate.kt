@@ -20,15 +20,10 @@ class Sent_vinculate : AppCompatActivity() {
 
         sent = btn_sent_vinculate
 
-        back = back_button
 
         var id = intent.getStringExtra("id")
 
-        back!!.setOnClickListener{
-            val intent = Intent(this, Sent_vinculate::class.java)
-            intent.putExtra("id", id)
-            startActivity(intent)
-        }
+       
         sent!!.setOnClickListener {
             //Get data
 

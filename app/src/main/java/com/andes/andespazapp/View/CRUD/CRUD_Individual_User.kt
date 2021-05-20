@@ -94,7 +94,7 @@ class CRUD_Individual_User : AppCompatActivity() {
         card.add(icon_34!!)
 
         var id = intent.getStringExtra("id")
-        var person = db.readData(id)
+    /*    var person = db.readData(id)
 
         txtname!!.text = Editable.Factory.getInstance().newEditable(person.name)
         txtid!!.text = Editable.Factory.getInstance().newEditable(person.identify.toString())
@@ -195,6 +195,6 @@ class CRUD_Individual_User : AppCompatActivity() {
             var cardItem = i
             cardItem.setBackgroundColor(Color.parseColor("#FFFFFF"))
         }
-        cardSelecte.setBackgroundColor(Color.parseColor("#01ff90"))
+        cardSelecte.setBackgroundColor(Color.parseColor("#01ff90"))*/
     }
 }
