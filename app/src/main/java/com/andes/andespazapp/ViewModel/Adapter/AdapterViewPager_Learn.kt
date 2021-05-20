@@ -12,6 +12,7 @@ import com.andes.andespazapp.R
 import com.andes.andespazapp.View.Learn.Diversity.MainDiversity
 import com.andes.andespazapp.View.Learn.Gender.MainGender
 import com.andes.andespazapp.View.Learn.Memory.Learn1
+import com.andes.andespazapp.View.Learn.Objectors.Main_objectors
 import com.andes.andespazapp.View.Learn.Peace.MainPeace
 import com.andes.andespazapp.View.Learn.Reconciliation.MainReconciliation
 import com.andes.andespazapp.ViewModel.LearnViewModel
@@ -74,6 +75,10 @@ class AdapterViewPager_Learn (context: Context): PagerAdapter()   {
                 }
                 4 ->{
                     var intent = Intent(context, MainDiversity::class.java)
+                    view.context!!.startActivity(intent)
+                }
+                5 ->{
+                    var intent = Intent(context, Main_objectors::class.java)
                     view.context!!.startActivity(intent)
                 }
                 else ->{

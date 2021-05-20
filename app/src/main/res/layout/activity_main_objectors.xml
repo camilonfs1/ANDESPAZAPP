@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.Learn.Objectors.Main_objectors">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8ABDBDBD">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#8AEFEFEF"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="¿COMO SER OBJETOR POR CONCIENCIA? "
+                android:textColor="#01D36D"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8A9F5B5B"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:background="#00E676"
+                    android:textStyle="bold"
+                    android:textColor="#ffff"
+                    android:text="1. ¿De qué manera?" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#00E676"
+
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:background="#00E676"
+                    android:text="De acuerdo con la ley 1861, el ejército debe realizar la inscripción sin embargo se recomienda inscribirse en la plataforma virtual www.libretamilitar.mil.co ." />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:background="#00E676"
+                    android:text="Escanear documentos individuales y tomar pantallazo de cada paso.
+Si tiene problemas con la plataforma radique los documentos de inscripción (pantallazos) ante defensoría del pueblo o personería mas cercana.
+" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+                <TextView
+                    android:background="#00B0FF"
+                    android:textColor="#ffff"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="2. Presente solicitud de objeción de conciencia " />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+                <TextView
+                    android:background="#00B0FF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Si ya realizó su inscripción web y está registrado se recomienda tramitar la solicitud de objeción de conciencia personalmente o por correo certificado a cualquier  Distrito militar del país.
+" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+                <TextView
+                    android:background="#00B0FF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="En caso de citación a un Distrito Militar presentarse con solicitud impresa y permanezca comunicado con alguien externo de las instalaciones militares
+" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+                <TextView
+                    android:background="#00B0FF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="La información registrada en la solicitud de la objeción de conciencia está concebida bajo gravedad de juramento y debe contener:
+" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+                <TextView
+                    android:background="#00B0FF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="-\t\tNombres y apellidos completos del objetor o de su apoderado.
+                                  \n-\t\tDocumento de identificación.
+                                  \n-\t\tDomicilio.
+                                  \n-\t\tCelular.
+                                  \n-\t\tLugar de Notificación.
+                                  \n-\t\tCorreo electrónico.
+                                  \n-\t\tLas razones religiosas, éticas o filosóficas como objetor por conciencia.
+                                  \n-\t\tAnexar los documentos o pruebas que acrediten sus convicciones claras, profundas, fijas y sinceras." />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+                <TextView
+                    android:background="#00B0FF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textColor="#ffff"
+                    android:textStyle="bold"
+                    android:text="¡Recuerda que!" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+                <TextView
+                    android:background="#00B0FF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="-\t\tPuedes presentar tu solicitud de objetor por conciencia en forma verbal, y en este caso tienes 10 días hábiles para anexar documentos que lo acrediten.
+                                \n\n-\t\tPuede presentar la solicitud en todo tiempo, aun cuando haya sido incorporado a las filas.
+                                \n\n-\t\tLa presentación de la solicitud de objetor por conciencia verbal o escrita suspende el proceso de incorporación a las filas." />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+                <TextView
+                    android:background="#FF9100"
+                    android:textColor="#ffff"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="3. Respuesta de comisión interdisciplinaria de objetores por conciencia." />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+                <TextView
+                    android:background="#FF9100"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="La comisión interdisciplinaria deberá citarle a una audiencia en la que usted sustentará su objeción, en un término máximo de 15 días hábiles desde la presentación de su solicitud de objeción verbal o escrita." />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+                <TextView
+                    android:background="#FF9100"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="-\t\tLa comisión estará compuesta por varios miembros de las fuerzas armadas y un miembro del ministerio público (procuraduría, defensoría del pueblo, personería).
+                              \n\n-\t\tLa audiencia culminará con una resolución o acto administrativo que lo declare o no como objetor de conciencia, exponiendo las razones para ello." />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+                <TextView
+                    android:textColor="#ffff"
+                    android:textStyle="bold"
+                    android:background="#FF9100"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Recuerda que:" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#8AFFFFFF"
+                android:elevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="8dp">
+                <TextView
+                    android:background="#FF9100"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="-\t\tSi la comisión interdisciplinaria no responde a tu solicitud de objetar por conciencia en un término de 15 días hábiles puede emprender una acción de tutela en protección de su derecho de petición.
+                              \n\n-\t\tSi la comisión interdisciplinaria niega declararlo como objetor, puede apelar a un recurso de reposición para que la comisión nacional de objetores por conciencia evalúe en segunda instancia.
+                              \n\n-\t\tSi la comisión nacional de objetores por conciencia niega nuevamente su solicitud vulnerando su derecho a la libertad de conciencia, puede presentar una acción de tutela para que sea un juez quien de una respuesta.
+                              \n\n-\t\tSi el juez no protege sus derechos, puede impugnar la sentencia y si esta se le niega puede comunicarse con la defensoría del pueblo para que se revise el caso por parte de la corte constitucional." />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

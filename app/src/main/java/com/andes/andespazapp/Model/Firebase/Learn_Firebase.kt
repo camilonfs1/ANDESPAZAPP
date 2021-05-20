@@ -21,6 +21,9 @@ class Learn_Firebase {
         item!!.add(
             Learn_Item("3", "Diversidad", "", 2131230875,100)
         )
+        item!!.add(
+            Learn_Item("3", "Objetores", "", 2131230875,100)
+        )
         return item!!
     }
 
