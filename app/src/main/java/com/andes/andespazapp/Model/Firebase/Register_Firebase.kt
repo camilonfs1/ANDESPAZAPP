@@ -20,7 +20,8 @@ class Register_Firebase {
 
     private lateinit var database: LocalDB
 
-    fun RegisterUser(user: Person,context: Context,Pass:String){
+    fun RegisterUser(user: Person,context: Context,Pass:String, querer:Boolean){
+
         mDatabase = FirebaseDatabase.getInstance().reference
         mMessageReference = FirebaseDatabase.getInstance().getReference("message")
         val mUser = mAuth!!.currentUser
@@ -37,6 +38,7 @@ class Register_Firebase {
                     mDatabase!!.child("Email").setValue(user.email!!)
                     mDatabase!!.child("icon").setValue(user.icon!!)
                     mDatabase!!.child("Id").setValue(user.identify!!)
+                    mDatabase!!.child("¿Quiere ser de la ANDES?").setValue(querer)
                     Toast.makeText(context,"Usuario registrado!!",Toast.LENGTH_LONG).show()
                     regNew(context)
                 }else{

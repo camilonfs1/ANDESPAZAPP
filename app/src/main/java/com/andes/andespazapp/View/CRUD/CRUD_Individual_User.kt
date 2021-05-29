@@ -4,13 +4,13 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
-import android.widget.Button
-import android.widget.EditText
-import android.widget.LinearLayout
-import android.widget.Toast
+import android.widget.*
+import androidx.room.PrimaryKey
 import com.andes.andespazapp.Model.Person
 import com.andes.andespazapp.R
 import com.andes.andespazapp.ViewModel.CRUD.CRUD_StudentViewModel
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_crud_user.*
 import kotlinx.android.synthetic.main.activity_main_register.*
 import kotlinx.android.synthetic.main.activity_main_register.icon_11_card
@@ -41,6 +41,11 @@ class CRUD_Individual_User : AppCompatActivity() {
     var icon_33: LinearLayout? = null
     var icon_34: LinearLayout? = null
 
+    private var mDatabaseReference: DatabaseReference? = null
+    private var mDatabase: FirebaseDatabase? = null
+    private var mUserReference: DatabaseReference? = null
+    private var mAuth: FirebaseAuth? = FirebaseAuth.getInstance()
+    private var mDatabase2: DatabaseReference? = null
     var card = ArrayList<LinearLayout>()
     var icon: Int = 0
 
@@ -51,9 +56,9 @@ class CRUD_Individual_User : AppCompatActivity() {
     var txtconfirmpass: EditText? = null
 
     var btnupdate: Button? = null
+    var person: Person? = null
+    var spinAge: Spinner? = null
 
-
-    var db = CRUD_StudentViewModel()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_crud_user)
@@ -61,8 +66,6 @@ class CRUD_Individual_User : AppCompatActivity() {
         txtname = txtNameCrud
         txtid = txtidCrud
         txtemail = txtemailCrud
-        txtpass = txtpassCrud
-        txtconfirmpass = txtconfirmpassCrud
 
         btnupdate = BtnUpdateCrud
 
@@ -94,12 +97,8 @@ class CRUD_Individual_User : AppCompatActivity() {
         card.add(icon_34!!)
 
         var id = intent.getStringExtra("id")
-    /*    var person = db.readData(id)
+        readDB(id)
 
-        txtname!!.text = Editable.Factory.getInstance().newEditable(person.name)
-        txtid!!.text = Editable.Factory.getInstance().newEditable(person.identify.toString())
-        txtemail!!.text = Editable.Factory.getInstance().newEditable(person.email)
-        icon(person.icon!!.toInt())
 
         icon_11!!.setOnClickListener {
             icon = 1
@@ -150,44 +149,95 @@ class CRUD_Individual_User : AppCompatActivity() {
             icon_selected(icon_34!!)
         }
 
+        spinAge = spin_age_register1
+
 
 
         btnupdate!!.setOnClickListener {
             var user2: Person
-            if (person.name != txtname!!.text.toString() || person.name != txtid!!.text.toString() || person.email != txtemail!!.text.toString() || person.icon != icon) {
+            if (person!!.name != txtname!!.text.toString() || person!!.name != txtid!!.text.toString() || person!!.region != txtemail!!.text.toString() || person!!.icon != icon || spinAge!!.getSelectedItem()
+                    .toString() != person!!.age.toString()
+            ) {
+
                 user2 = Person(
-                    person.roll,
-                    person.andes_asociate!!,
+                    person!!.roll,
+                    person!!.andes_asociate!!,
                     txtname!!.text.toString(),
-                    person.identify,
-                    person.region.toString(),
-                    person.age.toString(),
+                    person!!.identify,
                     txtemail!!.text.toString(),
-                    icon!!
+                    spinAge!!.getSelectedItem().toString(),
+                    person!!.email,
+                    iconSelected()!!
                 )
-                db.update(user2, this)
+                writeDB(user2)
             }
-            if(person.email != txtemail!!.text.toString() || txtpass!!.text.toString() != "" ){
-                if (txtpass!!.text.toString() != ""){
-                    if(txtpass!!.text.toString() != txtconfirmpass!!.text.toString()){
-                        Toast.makeText(this, "Verifica el password ingresado",Toast.LENGTH_SHORT).show()
-                    }else{
-                        db.updatelogin(txtemail!!.text.toString(),txtpass!!.text.toString())
-                    }
-                }else{
-                    db.updatelogin(txtemail!!.text.toString(),"")
-                }
-            }
+
 
         }
+
+
     }
 
-    fun verificate(pass: Person): Int {
-        return 0
+    fun writeDB(user: Person) {
+        mDatabase2 = FirebaseDatabase.getInstance().reference
+        mDatabase2 = mDatabase2!!.child("Usuarios").child(user.identify!!.toString())
+
+
+        mDatabase2!!.child("Nombre").setValue(user.name!!)
+        mDatabase2!!.child("Roll").setValue(user.roll!!)
+        mDatabase2!!.child("Edad").setValue(user.age!!)
+        mDatabase2!!.child("Region").setValue(user.region!!)
+        mDatabase2!!.child("Andes").setValue(user.andes_asociate!!)
+        mDatabase2!!.child("Email").setValue(user.email!!)
+        mDatabase2!!.child("icon").setValue(user.icon!!)
+        mDatabase2!!.child("Id").setValue(user.identify!!)
+        Toast.makeText(this, "Datos actualizados!!", Toast.LENGTH_LONG).show()
+
+
+    }
+
+    fun iconSelected():Int{
+        icon_11!!.setOnClickListener {
+            icon = 1
+        }
+        icon_12!!.setOnClickListener {
+            icon = 2
+        }
+        icon_13!!.setOnClickListener {
+            icon = 3
+        }
+        icon_14!!.setOnClickListener {
+            icon = 4
+        }
+        icon_21!!.setOnClickListener {
+            icon = 5
+        }
+        icon_22!!.setOnClickListener {
+            icon = 6
+        }
+        icon_23!!.setOnClickListener {
+            icon = 7
+        }
+        icon_24!!.setOnClickListener {
+            icon = 8
+        }
+        icon_31!!.setOnClickListener {
+            icon = 9
+        }
+        icon_32!!.setOnClickListener {
+            icon = 10
+        }
+        icon_33!!.setOnClickListener {
+            icon = 11
+        }
+        icon_34!!.setOnClickListener {
+            icon = 12
+        }
+        return icon!!
     }
 
     fun icon(cardSelecte: Int) {
-        card[cardSelecte].setBackgroundColor(Color.parseColor("#01ff90"))
+        card[cardSelecte-1].setBackgroundColor(Color.parseColor("#01ff90"))
     }
 
     fun icon_selected(cardSelecte: LinearLayout) {
@@ -195,6 +245,61 @@ class CRUD_Individual_User : AppCompatActivity() {
             var cardItem = i
             cardItem.setBackgroundColor(Color.parseColor("#FFFFFF"))
         }
-        cardSelecte.setBackgroundColor(Color.parseColor("#01ff90"))*/
+        cardSelecte.setBackgroundColor(Color.parseColor("#01ff90"))
+    }
+
+    fun readDB(id: String) {
+
+        mDatabase = FirebaseDatabase.getInstance()
+        mDatabaseReference = mDatabase!!.reference
+        mUserReference = mDatabaseReference!!.child("Usuarios")
+        mUserReference?.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists()) {
+                    for (e in snapshot.children) {
+
+                        var key = e.child("Id").value.toString()
+                        if (key == id) {
+
+                            var Nombre = e.child("Nombre").value.toString()
+                            var Roll = e.child("Roll").value.toString()
+                            var Edad = e.child("Edad").value.toString()
+                            var Region = e.child("Region").value.toString()
+                            var Andes = e.child("Andes").value as Boolean
+                            var Email = e.child("Email").value.toString()
+                            var icon = Integer.parseInt(e.child("icon").value.toString())
+                            var user = Person(
+                                Roll!!,
+                                Andes!!,
+                                Nombre,
+                                Integer.parseInt(key.toString()),
+                                Region,
+                                Edad,
+                                Email,
+                                icon
+                            )
+                            putuser(user)
+                        }
+                    }
+
+
+                } else {
+
+                }
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+
+            }
+        })
+    }
+
+    fun putuser(user: Person) {
+        this.person = user
+        txtname!!.text = Editable.Factory.getInstance().newEditable(user.name)
+        txtid!!.text = Editable.Factory.getInstance().newEditable(user.identify.toString())
+        txtemail!!.text = Editable.Factory.getInstance().newEditable(user.region)
+        spin_age_register1.setSelection(Integer.parseInt(user.age)-7)
+        icon(user.icon!!.toInt())
     }
 }

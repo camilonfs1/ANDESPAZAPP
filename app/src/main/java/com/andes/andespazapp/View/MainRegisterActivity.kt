@@ -3,7 +3,9 @@ package com.andes.andespazapp.View
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.*
+import androidx.core.view.isVisible
 import com.andes.andespazapp.Model.Person
 import com.andes.andespazapp.R
 import com.andes.andespazapp.ViewModel.RegisterViewModel
@@ -38,6 +40,8 @@ class MainRegisterActivity : AppCompatActivity() {
 
     var radiogroup_roll: RadioGroup? = null
     var radiogroup_andes: RadioGroup? = null
+    var radiogroup_ser_andes: RadioGroup? = null
+    var andes_querer:RadioButton? = null
 
     var nameTxt: TextView? = null
     var txt_Email: TextView? = null
@@ -51,6 +55,7 @@ class MainRegisterActivity : AppCompatActivity() {
     var andes: Boolean? = null
     var name: String? = null
     var icon: Int = 0
+    var querer = false
 
     var card = ArrayList<LinearLayout>()
 
@@ -60,6 +65,8 @@ class MainRegisterActivity : AppCompatActivity() {
 
         radiogroup_roll = radio_grupo_rol
         radiogroup_andes = radio_grup_andes
+        radiogroup_ser_andes = ser_andes
+        andes_querer = querer_andes
         nameTxt = txt_name_register
         txt_Email = txt_email_register
         txt_pass = txt_pass_register
@@ -94,6 +101,32 @@ class MainRegisterActivity : AppCompatActivity() {
         card.add(icon_32!!)
         card.add(icon_33!!)
         card.add(icon_34!!)
+
+        spinCourse = spin_school
+        spinAge = spin_age_register
+
+
+
+        radiogroup_andes?.setOnCheckedChangeListener { group, checkedId ->
+            val radio: RadioButton = findViewById(checkedId)
+            if (radio.text.toString() == "Si") {andes = true
+
+                //change state radio button
+                radiogroup_ser_andes!!.setVisibility(View.INVISIBLE)
+                andes_querer!!.isChecked = false
+            } else {
+                andes = false
+                radiogroup_ser_andes!!.setVisibility(View.VISIBLE)
+
+            }
+        }
+
+
+        radiogroup_roll?.setOnCheckedChangeListener { group, checkedId ->
+            val radio: RadioButton = findViewById(checkedId)
+            roll = radio.text.toString()
+
+        }
 
         icon_11!!.setOnClickListener {
             icon = 1
@@ -132,22 +165,11 @@ class MainRegisterActivity : AppCompatActivity() {
             icon = 12
             icon_selected(icon_34!!)}
 
-        spinCourse = spin_school
-        spinAge = spin_age_register
-
-
-
-        radiogroup_andes?.setOnCheckedChangeListener { group, checkedId ->
-            val radio: RadioButton = findViewById(checkedId)
-            if (radio.text.toString() == "Si") {andes = true
-            } else {andes = false}
-        }
-        radiogroup_roll?.setOnCheckedChangeListener { group, checkedId ->
-            val radio: RadioButton = findViewById(checkedId)
-            roll = radio.text.toString()
-
-        }
         btn_regis!!.setOnClickListener {
+
+
+
+
             if (roll == null)                                                                            {Toast.makeText(this, "Valida tu Roll", Toast.LENGTH_SHORT).show()
             } else if (andes == null)                                                                    {Toast.makeText(this, "Valida si eres de la ANDES", Toast.LENGTH_SHORT).show()
             } else if (nameTxt!!.text.toString() == "")                                                  {Toast.makeText(this, "Ingresa un nombre", Toast.LENGTH_SHORT).show()
@@ -159,6 +181,11 @@ class MainRegisterActivity : AppCompatActivity() {
             } else if (txt_confirm_pass!!.text.toString() != (txt_pass!!.text.toString()))               {Toast.makeText(this, "Ingresa contraseña valida e igual", Toast.LENGTH_SHORT).show()
             } else if (icon == 0)                                                                        {Toast.makeText(this, "Selecciona un icono", Toast.LENGTH_SHORT).show()
             } else {
+
+                if(andes_querer!!.isChecked){
+                    querer = true
+                }
+
                 var person = Person (
                     roll!!,
                     andes!!,
@@ -168,10 +195,13 @@ class MainRegisterActivity : AppCompatActivity() {
                     spinAge!!.getSelectedItem().toString(),
                     txt_Email!!.text.toString(),
                     icon)
-                registerView.writebd(person, txt_pass!!.text.toString(), this)
-                registerView.writelocal(person,this)
+                registerView.writebd(person, txt_pass!!.text.toString(), this, querer)
+                //registerView.writelocal(person,this)
             }
         }
+    }
+    fun getIconSelected(){
+
     }
     fun icon_selected(cardSelecte: LinearLayout) {
         for (i in card) {

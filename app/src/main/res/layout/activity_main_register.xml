@@ -68,6 +68,32 @@
                     android:text="No"
                     android:textColor="#4dac9d" />
             </RadioGroup>
+            <RadioGroup
+                android:id="@+id/ser_andes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/spinner"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="15dp"
+                android:background="#F4F0F0"
+                android:visibility="invisible"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/querer_andes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="¿Quieres pertenecer a la ANDES?"
+                    android:textColor="#4dac9d" />
+            </RadioGroup>
 
 
             <LinearLayout
@@ -150,7 +176,7 @@
                     android:layout_height="40dp"
                     android:layout_marginHorizontal="10dp"
                     android:autoText="false"
-                    android:hint="Lugar de recidencia"
+                    android:hint="Colegio"
                     android:shadowColor="#4dac9d"
                     android:textColor="#4dac9d"
                     android:textColorHighlight="#4dac9d"
@@ -316,7 +342,7 @@
                 android:columnOrderPreserved="false"
                 android:rowCount="2">
 
-                <com.google.android.material.card.MaterialCardView
+                <androidx.cardview.widget.CardView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -340,9 +366,9 @@
                             android:src="@drawable/icon_1" />
 
                     </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                </androidx.cardview.widget.CardView>
 
-                <com.google.android.material.card.MaterialCardView
+                <androidx.cardview.widget.CardView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -366,9 +392,9 @@
                             android:src="@drawable/icon_2" />
 
                     </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                </androidx.cardview.widget.CardView>
 
-                <com.google.android.material.card.MaterialCardView
+                <androidx.cardview.widget.CardView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -392,9 +418,9 @@
                             android:src="@drawable/icon_3" />
 
                     </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                </androidx.cardview.widget.CardView>
 
-                <com.google.android.material.card.MaterialCardView
+                <androidx.cardview.widget.CardView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -418,9 +444,9 @@
                             android:src="@drawable/icon_4" />
 
                     </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                </androidx.cardview.widget.CardView>
 
-                <com.google.android.material.card.MaterialCardView
+                <androidx.cardview.widget.CardView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -444,9 +470,9 @@
                             android:src="@drawable/icon_5" />
 
                     </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                </androidx.cardview.widget.CardView>
 
-                <com.google.android.material.card.MaterialCardView
+                <androidx.cardview.widget.CardView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -470,9 +496,9 @@
                             android:src="@drawable/icon_6" />
 
                     </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                </androidx.cardview.widget.CardView>
 
-                <com.google.android.material.card.MaterialCardView
+                <androidx.cardview.widget.CardView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -496,9 +522,9 @@
                             android:src="@drawable/icon_7" />
 
                     </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                </androidx.cardview.widget.CardView>
 
-                <com.google.android.material.card.MaterialCardView
+                <androidx.cardview.widget.CardView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -522,9 +548,9 @@
                             android:src="@drawable/icon_8" />
 
                     </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                </androidx.cardview.widget.CardView>
 
-                <com.google.android.material.card.MaterialCardView
+                <androidx.cardview.widget.CardView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -548,9 +574,9 @@
                             android:src="@drawable/icon_9" />
 
                     </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                </androidx.cardview.widget.CardView>
 
-                <com.google.android.material.card.MaterialCardView
+                <androidx.cardview.widget.CardView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -574,9 +600,9 @@
                             android:src="@drawable/icon_10" />
 
                     </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                </androidx.cardview.widget.CardView>
 
-                <com.google.android.material.card.MaterialCardView
+                <androidx.cardview.widget.CardView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -600,9 +626,9 @@
                             android:src="@drawable/icon_12" />
 
                     </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                </androidx.cardview.widget.CardView>
 
-                <com.google.android.material.card.MaterialCardView
+                <androidx.cardview.widget.CardView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -626,7 +652,7 @@
                             android:src="@drawable/icon_11" />
 
                     </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                </androidx.cardview.widget.CardView>
 
             </GridLayout>
 

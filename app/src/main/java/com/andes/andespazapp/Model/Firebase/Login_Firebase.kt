@@ -13,6 +13,7 @@ class Login_Firebase {
     private var mAuth: FirebaseAuth? = FirebaseAuth.getInstance()
 
     fun login(context: Context, Email :String, Pass: String) {
+        System.out.println("consultando login")
         mAuth?.signInWithEmailAndPassword(Email,Pass)!!
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {

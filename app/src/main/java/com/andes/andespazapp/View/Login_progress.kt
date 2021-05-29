@@ -32,11 +32,15 @@ class Login_progress : AppCompatActivity() {
             this@Login_progress,
             R.color.colorPrimaryDark
         )
+
         var email = intent.getStringExtra("email")
         readDB(email)
     }
 
     private fun readDB(email: String) {//This function read database firebase, search user and consult local databse if key or identify isnot register in local then download all data and regist all data in local
+
+        System.out.println("Inicio modulo login")
+
         mDatabase = FirebaseDatabase.getInstance()
         mDatabaseReference = mDatabase!!.reference
         mAuth = FirebaseAuth.getInstance()
@@ -50,31 +54,6 @@ class Login_progress : AppCompatActivity() {
                         if (key == email) {
                             var Id = Integer.parseInt(e.child("Id").value.toString())
                             next(Id.toString())
-                           /* // if (readdb(Id).value == null) {
-                            var Nombre = e.child("Nombre").value.toString()
-                            var Roll = e.child("Roll").value.toString()
-                            var Edad = e.child("Edad").value.toString()
-                            var Region = e.child("Region").value.toString()
-                            var Andes = e.child("Andes").value as Boolean
-                            var Email = e.child("Email").value.toString()
-                            var icon = Integer.parseInt(e.child("icon").value.toString())
-                            var user = Person(
-                                Roll!!,
-                                Andes!!,
-                                Nombre,
-                                Integer.parseInt(Id.toString()),
-                                Region,
-                                Edad,
-                                Email,
-                                icon
-                            )
-                            System.out.println("--------------------------------WRITE")*/
-                            //writedb(user)
-
-                            /*} else {
-                                System.out.println("--------------------------------NO WRITE")
-                                next(readdb(Id))
-                            }*/
                         }
                     }
                 } else {
@@ -89,25 +68,10 @@ class Login_progress : AppCompatActivity() {
 
 
     }
-
-    /*  fun readdb(id: Int) : LiveData<Person>{
-          database = LocalDB.getDatabase(this)
-           var res =  database.persons().get(id)
-          return res!!
-      }
-      fun writedb(user: Person){
-          database = LocalDB.getDatabase(this)
-          CoroutineScope(Dispatchers.IO).launch {
-              database.persons().InsertAll(user)
-          }
-          System.out.println("valor key "+user.identify)
-         // next(readdb(user.identify))
-      }*/
     fun next(Id: String) {
-        // var user1 = user.value
-        //  System.out.println("valor key "+user1)
         val intent = Intent(this, MainStudentMenu::class.java)
         intent.putExtra("id", Id)
+        intent.putExtra("internet", "OK")
         startActivity(intent)
     }
 

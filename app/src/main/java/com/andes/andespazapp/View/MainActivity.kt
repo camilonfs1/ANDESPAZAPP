@@ -1,6 +1,8 @@
 package com.andes.andespazapp.View
 
+import android.content.Context
 import android.content.Intent
+import android.net.ConnectivityManager
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -21,6 +23,7 @@ class MainActivity : AppCompatActivity() {
     private var txt_email: TextInputEditText? =null
     private var txt_pass: TextInputEditText?=null
 
+    private var TextInternetConection: TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
         var login = Login_ViewModel()
 
-
+        internetCon()
 
         btn_enter!!.setOnClickListener{
             if(txt_email!!.text.toString()==""||txt_pass!!.text.toString()==""){
@@ -51,7 +54,19 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
+    private fun internetCon() {
+        TextInternetConection = txtInternetConection1
+        val cm = baseContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val networkInfo = cm.activeNetworkInfo
+        if (networkInfo != null && networkInfo.isConnectedOrConnecting) {
+            TextInternetConection!!.setText("")
+        } else {
+            TextInternetConection!!.setText("--> Sin INTERNET <--")
+            val intent = Intent(this, MainStudentMenu::class.java)
+            intent.putExtra("internet", "FAIL")
+            startActivity(intent)
+        }
+    }
 
 
 }
