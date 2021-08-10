@@ -170,8 +170,7 @@ class MainRegisterActivity : AppCompatActivity() {
 
 
 
-            if (roll == null)                                                                            {Toast.makeText(this, "Valida tu Roll", Toast.LENGTH_SHORT).show()
-            } else if (andes == null)                                                                    {Toast.makeText(this, "Valida si eres de la ANDES", Toast.LENGTH_SHORT).show()
+            if (andes == null)                                                                    {Toast.makeText(this, "Valida si eres de la ANDES", Toast.LENGTH_SHORT).show()
             } else if (nameTxt!!.text.toString() == "")                                                  {Toast.makeText(this, "Ingresa un nombre", Toast.LENGTH_SHORT).show()
             } else if (txt_id!!.text.toString() == "")                                                   {Toast.makeText(this, "Ingresa un numero de identificacion", Toast.LENGTH_SHORT).show()
             } else if (txtRegion!!.text.toString() == "Region : ")                                       {Toast.makeText(this, "Ingresa una region", Toast.LENGTH_SHORT).show()
@@ -187,7 +186,7 @@ class MainRegisterActivity : AppCompatActivity() {
                 }
 
                 var person = Person (
-                    roll!!,
+                    "Estudiante",
                     andes!!,
                     nameTxt!!.text.toString(),
                     Integer.parseInt(txt_id!!.text.toString()),

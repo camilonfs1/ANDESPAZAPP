@@ -58,6 +58,7 @@ class CRUD_Individual_User : AppCompatActivity() {
     var btnupdate: Button? = null
     var person: Person? = null
     var spinAge: Spinner? = null
+    var icon_select=1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -155,9 +156,10 @@ class CRUD_Individual_User : AppCompatActivity() {
 
         btnupdate!!.setOnClickListener {
             var user2: Person
-            if (person!!.name != txtname!!.text.toString() || person!!.name != txtid!!.text.toString() || person!!.region != txtemail!!.text.toString() || person!!.icon != icon || spinAge!!.getSelectedItem()
+            if (person!!.name != txtname!!.text.toString() || person!!.name != txtid!!.text.toString() || person!!.Colegio != txtemail!!.text.toString() || person!!.icon != icon || spinAge!!.getSelectedItem()
                     .toString() != person!!.age.toString()
             ) {
+                icon_select =  iconSelected()!!
 
                 user2 = Person(
                     person!!.roll,
@@ -186,7 +188,7 @@ class CRUD_Individual_User : AppCompatActivity() {
         mDatabase2!!.child("Nombre").setValue(user.name!!)
         mDatabase2!!.child("Roll").setValue(user.roll!!)
         mDatabase2!!.child("Edad").setValue(user.age!!)
-        mDatabase2!!.child("Region").setValue(user.region!!)
+        mDatabase2!!.child("Region").setValue(user.Colegio!!)
         mDatabase2!!.child("Andes").setValue(user.andes_asociate!!)
         mDatabase2!!.child("Email").setValue(user.email!!)
         mDatabase2!!.child("icon").setValue(user.icon!!)
@@ -233,6 +235,7 @@ class CRUD_Individual_User : AppCompatActivity() {
         icon_34!!.setOnClickListener {
             icon = 12
         }
+        icon = icon
         return icon!!
     }
 
@@ -264,7 +267,7 @@ class CRUD_Individual_User : AppCompatActivity() {
                             var Nombre = e.child("Nombre").value.toString()
                             var Roll = e.child("Roll").value.toString()
                             var Edad = e.child("Edad").value.toString()
-                            var Region = e.child("Region").value.toString()
+                            var Region = e.child("Colegio").value.toString()
                             var Andes = e.child("Andes").value as Boolean
                             var Email = e.child("Email").value.toString()
                             var icon = Integer.parseInt(e.child("icon").value.toString())
@@ -298,8 +301,10 @@ class CRUD_Individual_User : AppCompatActivity() {
         this.person = user
         txtname!!.text = Editable.Factory.getInstance().newEditable(user.name)
         txtid!!.text = Editable.Factory.getInstance().newEditable(user.identify.toString())
-        txtemail!!.text = Editable.Factory.getInstance().newEditable(user.region)
+        txtemail!!.text = Editable.Factory.getInstance().newEditable(user.Colegio)
         spin_age_register1.setSelection(Integer.parseInt(user.age)-7)
+        icon_select = user.icon!!.toInt()
+        icon = user.icon!!.toInt()
         icon(user.icon!!.toInt())
     }
 }

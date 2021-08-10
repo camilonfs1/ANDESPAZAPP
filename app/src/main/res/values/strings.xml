@@ -2,7 +2,7 @@
     <string name="app_name">ANDESPAZAPP</string>
     <string name="ul_new_user"> <u>¿Quieres Registrarte?</u> </string>
     <string-array name="age">
-        <item>Edad :</item>
+
         <item>8</item>
         <item>9</item>
         <item>10</item>
@@ -74,5 +74,3 @@
 
 
 </resources>
-
-

@@ -33,7 +33,7 @@ class Register_Firebase {
                     mDatabase!!.child("Nombre").setValue(user.name!!)
                     mDatabase!!.child("Roll").setValue(user.roll!!)
                     mDatabase!!.child("Edad").setValue(user.age!!)
-                    mDatabase!!.child("Region").setValue(user.region!!)
+                    mDatabase!!.child("Colegio").setValue(user.Colegio!!)
                     mDatabase!!.child("Andes").setValue(user.andes_asociate!!)
                     mDatabase!!.child("Email").setValue(user.email!!)
                     mDatabase!!.child("icon").setValue(user.icon!!)

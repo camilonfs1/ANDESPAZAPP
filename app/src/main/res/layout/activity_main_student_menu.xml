@@ -11,6 +11,17 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txt_Back"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/txt_name_student"
+            android:text="SALIR"
+            android:textAlignment="viewEnd"
+            android:layout_marginRight="20dp"
+            android:textSize="12dp"
+            android:textColor="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
         <RelativeLayout
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
@@ -217,34 +228,7 @@
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:id="@+id/btn_close"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                app:elevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
-                <LinearLayout
-                    android:padding="16dp"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                    <ImageView
-                        android:src="@drawable/back_icon"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"/>
-                    <TextView
-                        android:layout_marginTop="12dp"
-                        android:textSize="18dp"
-                        android:text="Salir"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                </LinearLayout>
 
-            </androidx.cardview.widget.CardView>
         </GridLayout>
     </LinearLayout>
 </ScrollView>

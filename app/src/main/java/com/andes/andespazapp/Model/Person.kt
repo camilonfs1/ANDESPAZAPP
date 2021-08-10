@@ -9,7 +9,7 @@ data class Person(
     var andes_asociate: Boolean,
     var name: String,
     var identify: Int,
-    var region: String,
+    var Colegio: String,
     var age: String,
     var email: String,
     var icon: Int,

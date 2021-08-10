@@ -46,6 +46,7 @@ class MainStudentMenu : AppCompatActivity() {
 
     var name: TextView? = null
     var roll: TextView? = null
+    var back: TextView? = null
 
     var image: ImageView? = null
 
@@ -66,6 +67,7 @@ class MainStudentMenu : AppCompatActivity() {
         name = txt_name_student
         roll = txt_roll
         image = image_student
+        back = txt_Back
 
         btn_andes = andesbtn
         btn_complain = btn_complaint
@@ -74,7 +76,11 @@ class MainStudentMenu : AppCompatActivity() {
         btn_lear = btn_learn
         txt_name = txt_name_student
         btn_ddhh = ddhh_card
-        btn_close_back = btn_close
+
+        back!!.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
 
 
         //database = LocalDB.getDatabase(this)
@@ -86,6 +92,7 @@ class MainStudentMenu : AppCompatActivity() {
                 SigOut()
             }
             btn_profile!!.setOnClickListener {
+
                 Toast.makeText(this,"Solo disponible con conexion a internet", Toast.LENGTH_LONG).show()
             }
             btn_andes!!.setOnClickListener {
@@ -122,9 +129,6 @@ class MainStudentMenu : AppCompatActivity() {
             window.statusBarColor = ContextCompat.getColor(this@MainStudentMenu, R.color.color3)
 
 
-            btn_close_back!!.setOnClickListener {
-                SigOut()
-            }
 
 
             btn_profile!!.setOnClickListener {
@@ -148,6 +152,7 @@ class MainStudentMenu : AppCompatActivity() {
                 val intent = Intent(this, Blog_main::class.java)
                 intent.putExtra("id", id)
                 intent.putExtra("username", txt_name!!.text)
+                intent.putExtra("roll", roll!!.text)
                 startActivity(intent)
             }
             btn_complain!!.setOnClickListener {
@@ -182,7 +187,7 @@ class MainStudentMenu : AppCompatActivity() {
                             var Nombre = e.child("Nombre").value.toString()
                             var Roll = e.child("Roll").value.toString()
                             var Edad = e.child("Edad").value.toString()
-                            var Region = e.child("Region").value.toString()
+                            var Region = e.child("Colegio").value.toString()
                             var Andes = e.child("Andes").value as Boolean
                             var Email = e.child("Email").value.toString()
                             var icon = Integer.parseInt(e.child("icon").value.toString())

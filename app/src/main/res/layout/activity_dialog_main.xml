@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".View.Module_Blog.Blog_main"
     android:orientation="vertical">
     <LinearLayout
@@ -28,27 +29,34 @@
             android:layout_height="match_parent">
 
             <Button
-                android:layout_weight="1"
                 android:id="@+id/btn_postBlog"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/button_oval"
                 android:layout_toStartOf="@+id/image_home"
                 android:layout_toLeftOf="@+id/image_home"
                 android:layout_toEndOf="@+id/txt_name_student"
                 android:layout_toRightOf="@+id/txt_name_student"
-                android:background="#673AB7"
+                android:layout_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:enabled="false"
                 android:gravity="center"
                 android:text="Bloguea"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:visibility="invisible"
+                />
             <Button
                 android:layout_weight="1"
 
                 android:id="@+id/btn_home"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:layout_marginHorizontal="10dp"
                 android:layout_toEndOf="@+id/btnSentChatlog"
                 android:layout_toRightOf="@+id/btnSentChatlog"
-                android:background="#673AB7"
+                android:background="@drawable/button_oval"
                 android:gravity="center"
                 android:text="Atras"
                 android:textColor="@android:color/white"

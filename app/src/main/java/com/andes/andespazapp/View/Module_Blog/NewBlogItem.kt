@@ -58,6 +58,13 @@ class NewBlogItem : AppCompatActivity() {
         var item: BlogItem? = null
 
         var texto = title!!.text.toString()
+
+        var text_lenght = texto.length
+
+        if(text_lenght>100){
+            Toast.makeText(this,"Muy largo", Toast.LENGTH_LONG).show()
+        }
+
         item = BlogItem(
             max,
             username,

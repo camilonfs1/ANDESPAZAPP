@@ -1,10 +1,14 @@
 package com.andes.andespazapp.View.Module_Blog
 
+import android.content.Context
 import android.content.Intent
+import android.net.ConnectivityManager
 import android.os.Build
 import android.os.Bundle
+import android.view.View
 import android.view.Window
 import android.widget.Button
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -17,6 +21,7 @@ import com.andes.andespazapp.ViewModel.Adapter.AdapterRecyclerHorizontal_blog
 import com.andes.andespazapp.ViewModel.Adapter.AdapterRecyclerVertical_blog
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_dialog_main.*
+import kotlinx.android.synthetic.main.activity_main.*
 
 class Blog_main : AppCompatActivity() {
 
@@ -49,19 +54,40 @@ class Blog_main : AppCompatActivity() {
 
         home = btn_home
         post = btn_postBlog
+
+
         var id = intent.getStringExtra("id")
         var username = intent.getStringExtra("username")
+        var roll = intent.getStringExtra("roll")
+
+
+        Toast.makeText(this,roll,Toast.LENGTH_SHORT).show()
+        if(roll=="Instructor"){
+            post!!.setVisibility(View.VISIBLE)
+        }
 
         readDB(id,username)
 
+        var internet =""
+        val cm = baseContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val networkInfo = cm.activeNetworkInfo
+        if (networkInfo != null && networkInfo.isConnectedOrConnecting) {
+            internet = "OK"
+        } else {
+            internet = "FAIL"
+        }
+
         //Button home
         home!!.setOnClickListener {
+
             val intent = Intent(this, MainStudentMenu::class.java)
             intent.putExtra("id", id)
             intent.putExtra("username", username)
+            intent.putExtra("internet", internet)
             startActivity(intent)
             this.finish()
         }
+
 
         //Button new blog
         post!!.setOnClickListener {
