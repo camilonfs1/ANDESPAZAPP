@@ -107,12 +107,19 @@ class Detail_Blog : AppCompatActivity() {
         username: String
     ) {
         var text = new_commentary!!.text.toString()
-        mDatabase = FirebaseDatabase.getInstance()
-        var firebase = Blog_Firebase()
-        var commentary = Commentary("1", username, text, "1", username)
-        firebase.new_commentary(commentary, key)
-        recharge(key!!, owner!!, color!!, title!!, id!!, username!!)
-        this.finish()
+
+        var text_lenght = text.length
+
+        if(text_lenght>100){
+            Toast.makeText(this,"Debe ser menor a 100 caracteres", Toast.LENGTH_LONG).show()
+        }else{
+            mDatabase = FirebaseDatabase.getInstance()
+            var firebase = Blog_Firebase()
+            var commentary = Commentary("1", username, text, "1", username)
+            firebase.new_commentary(commentary, key)
+            recharge(key!!, owner!!, color!!, title!!, id!!, username!!)
+            this.finish()
+        }
     }
 
     fun list_commentary(key: String) {

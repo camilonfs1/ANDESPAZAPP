@@ -36,6 +36,7 @@ class NewBlogItem : AppCompatActivity() {
         database = LocalDB.getDatabase(this)
 
         post_button!!.setOnClickListener {
+            System.out.println("camiloooooooooooooooo")
             create(Integer.parseInt(key), id, username)
             post_text.text.clear()
         }
@@ -46,9 +47,7 @@ class NewBlogItem : AppCompatActivity() {
             startActivity(intent)
             this.finish()
         }
-
     }
-
 
     fun create(max: Int, id: String, username: String) {
 
@@ -62,25 +61,20 @@ class NewBlogItem : AppCompatActivity() {
         var text_lenght = texto.length
 
         if(text_lenght>100){
-            Toast.makeText(this,"Muy largo", Toast.LENGTH_LONG).show()
+            Toast.makeText(this,"Debe ser menor a 100 caracteres", Toast.LENGTH_LONG).show()
+        }else{
+            item = BlogItem(
+                max,
+                username,
+                texto,
+                1,
+                1,
+                0,
+                "#fffff"
+            )
+            blog!!.new_blogItem(item!!)
+            blog = Blog_Firebase()
+            Toast.makeText(this, title!!.text.toString(), Toast.LENGTH_LONG).show()
         }
-
-        item = BlogItem(
-            max,
-            username,
-            texto,
-            1,
-            1,
-            0,
-            "#fffff"
-        )
-
-        blog!!.new_blogItem(item!!)
-
-        blog = Blog_Firebase()
-
-        Toast.makeText(this, title!!.text.toString(), Toast.LENGTH_LONG).show()
-
-
     }
 }
